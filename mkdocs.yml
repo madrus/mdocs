@@ -1,0 +1,9 @@
+site_name: Bloglet
+extra:
+  version: '0.1.0'
+  palette:
+    primary: 'teal'
+    accent: 'orange'
+theme: 'material'
+markdown_extensions:
+  - codehilite(css_class=code)
