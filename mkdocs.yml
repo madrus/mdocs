@@ -6,7 +6,7 @@ site_url: 'http://madrus4u.com/mdocs/'
 site_favicon: 'images/favicon.ico'
 
 # Repository
-repo_name: 'GitHub'
+#repo_name: 'GitHub'  # will it work with GitLab?
 repo_url: 'https://github.com/madrus/mdocs'
 
 # Copyright
@@ -18,9 +18,11 @@ theme: 'material'
 
 # Pages structure
 pages:
-  - 'About': 'index.md'
-  - 'Umbraco':
-    - 'Technical Features': 'umbraco/technical_features.md'
+  - Home: index.md
+  - MkDocs:
+    - Custom Styling: mkdocs/custom_styling.md
+  - Umbraco:
+    - Technical Features: umbraco/technical_features.md
 
 # Options
 extra:
@@ -39,10 +41,9 @@ extra:
     github: 'madrus'
     twitter: 'madrusnl'
 
-markdown_extensions:
+markdown_extensions: 
   - admonition
   - codehilite(css_class=code)
-  - smarty
   - toc:
       permalink: '#'
 
