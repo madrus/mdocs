@@ -1,19 +1,9 @@
-# Welcome to MkDocs
+# About this documentation
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+Here I am collecting some important tips and tricks. I am doing it "along the way", every time I get stuck and need a good advice for the next time. Therefore, the documentation is never complete and finished. It is always work in progress.
 
-## Commands
+Here are some important links I used as initial input:
 
-*   `mkdocs new [dir-name]` - Create a new project.
-*   `mkdocs serve` - Start the live-reloading docs server.
-*   `mkdocs build` - Build the documentation site.
-*   `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        posts/
-            Web-What.md # web what article
-        ...       # Other markdown pages, images and other files.
+* Latest official [MkDocs documentation](http://mkdocs.readthedocs.io/en/latest/)
+* [MkDocs User Guide](http://www.mkdocs.org/user-guide/writing-your-docs/)
+* [Material Design Theme for MkDocs](http://squidfunk.github.io/mkdocs-material/)

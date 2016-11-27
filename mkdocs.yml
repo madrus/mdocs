@@ -1,9 +1,53 @@
-site_name: Bloglet
+# Project information
+site_name: "Madrus's Docs"
+site_description: 'A short description of my project'
+site_author: 'Madrus'
+site_url: 'https://madrus.github.io/mdocs'
+
+# Repository
+repo_name: 'GitHub'
+repo_url: 'https://github.com/madrus/mdocs'
+
+use_directory_urls: true
+strict: true
+
+# Copyright
+copyright: 'Copyright (c) 2016 Madrus'
+
+# Documentation and theme
+docs_dir: 'docs'
+theme: 'material'
+
+pages:
+  - 'About': 'index.md'
+  - 'Umbraco':
+    - 'Technical Features': 'umbraco/technical_features.md'
+
+# Options
 extra:
-  version: '0.1.0'
+  # version: '0.1.0'
+  logo: 'images/logo.png'
   palette:
     primary: 'teal'
     accent: 'orange'
-theme: 'material'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  i18n:
+    prev: 'Previous'
+    next: 'Next'
+  author:
+    github: 'madrus'
+    twitter: 'madrusnl'
+
 markdown_extensions:
+  - admonition
   - codehilite(css_class=code)
+  - smarty
+  - toc:
+      permalink: '#'
+
+# Google Analytics
+google_analytics:
+  - 'UA-XXXXXXXX-X'
+  - 'auto'
