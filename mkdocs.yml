@@ -16,6 +16,7 @@ copyright: 'Copyright (c) 2016 Madrus'
 docs_dir: 'docs'
 theme: 'material'
 
+# Pages structure
 pages:
   - 'About': 'index.md'
   - 'Umbraco':
