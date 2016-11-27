@@ -4,6 +4,6 @@ In this documentation, I am collecting tips and tricks that at some point proved
 
 On the **About** page, you can find more details about installation and styling of the website.
 
-Website can be seen at [https://madrus.github.io/mdocs/](https://madrus.github.io/mdocs/).
+Website can be seen at [http://madrus4u.com/mdocs/](http://madrus4u.com/mdocs/).
 
 
