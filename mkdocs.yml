@@ -48,5 +48,5 @@ markdown_extensions:
 
 # Google Analytics
 google_analytics:
-  - 'UA-XXXXXXXX-X'
+  - 'UA-52692182-5'
   - 'auto'
