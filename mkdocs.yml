@@ -3,13 +3,11 @@ site_name: "Madrus's Docs"
 site_description: 'A short description of my project'
 site_author: 'Madrus'
 site_url: 'https://madrus.github.io/mdocs'
+site_favicon: 'images/favicon.ico'
 
 # Repository
 repo_name: 'GitHub'
 repo_url: 'https://github.com/madrus/mdocs'
-
-use_directory_urls: true
-strict: true
 
 # Copyright
 copyright: 'Copyright (c) 2016 Madrus'
@@ -29,7 +27,7 @@ extra:
   logo: 'images/logo.png'
   palette:
     primary: 'teal'
-    accent: 'orange'
+    accent: 'deep orange'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

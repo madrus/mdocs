@@ -2,4 +2,4 @@
 
 Website can be seen at [https://madrus.github.io/mdocs/](https://madrus.github.io/mdocs/).
 
-The pallette colors can be found [here]().
+The pallette colors can be found [here](https://www.materialui.co/colors).
