@@ -11,7 +11,7 @@
 
 **Syntax**
 
-```text
+```none
 !!! special_word "some text within double quotes"
     Any number of lines aligned with the special_word
 ```
@@ -38,10 +38,9 @@ These special words result in a colored adminition blocks. It is nice to experim
 
 A custom text message on the first line...
 
-```text
+```none
 !!! note "Explicit title within double quotes"
     Any number of other indented markdown elements.
-
     This is the second paragraph.
 ```
 
@@ -49,12 +48,11 @@ A custom text message on the first line...
 
 !!! note "Explicit title within double quotes"
     Any number of other indented markdown elements.
-
     This is the second paragraph.
 
 Any single word on the first line...
 
-```text
+```none
 !!! hint
     You should note that the title will be automatically capitalized.
 ```
@@ -66,7 +64,7 @@ Any single word on the first line...
 
 The empty custom title...
 
-```text
+```none
 !!! warning ""
     This is an admonition box without a title.
 ```
@@ -78,7 +76,7 @@ The empty custom title...
 
 The word "warning" plus custom title...
 
-```text
+```none
 !!! danger "Don't try this at home"
     Or you will regret it for the rest of your life!
 ```
@@ -87,3 +85,34 @@ The word "warning" plus custom title...
 
 !!! danger "Don't try this at home"
     Or you will regret it for the rest of your life!
+
+## SmartyPants syntax
+
+Adding 
+
+```yaml
+  - smarty:
+      smart_angled_quotes: true
+```
+
+to `markdown_extentions` gives you the possibility to print out nicely looking ASCII dashes, quotes and ellipes:
+
+You write:
+
+```none
+'single quotes'
+"double qoutes"
+<<angled quotes>>
+... ellipsis
+-- ndash
+--- mdash
+```
+
+You get:
+
+'single quotes'
+"double qoutes"
+<<angled quotes>>
+... ellipsis
+-- ndash
+--- mdash

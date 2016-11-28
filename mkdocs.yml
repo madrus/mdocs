@@ -24,6 +24,8 @@ pages:
     - Custom Styling: mkdocs/custom_styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
+  - Test:
+    - Test: test/test.md
 
 # Options
 extra:
@@ -44,7 +46,11 @@ extra:
 
 markdown_extensions: 
   - admonition
-  - codehilite(css_class=code)
+  - codehilite(css_class=code):
+      guess_lang: false
+  - nl2br
+  - smarty:
+      smart_angled_quotes: true
   - toc:
       permalink: '#'
 
