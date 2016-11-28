@@ -2,7 +2,7 @@
 
 [TOC]
 
-## Admonition extension for Markdown
+## Admonition extension
 
 !!! warning "This does not always work correctly with Material theme"
     Unfortunately, with Material theme this does not always give correct result. It works fine with the standard ReadTheDocs theme though.
@@ -86,7 +86,7 @@ The word "warning" plus custom title...
 !!! danger "Don't try this at home"
     Or you will regret it for the rest of your life!
 
-## SmartyPants syntax
+## SmartyPants extension
 
 Adding 
 
@@ -116,3 +116,31 @@ You get:
 ... ellipsis
 -- ndash
 --- mdash
+
+## nl2br extension
+
+Adding 
+
+```yaml
+  - nl2br
+```
+
+to `markdown_extentions` creates a newline within fences when you make a newline in Markdown. You type:
+
+```none
+line 1
+line 2
+```
+
+Without `nl2br` you see this:
+
+```none
+line 1 line 2
+```
+
+With `nl2br` you see this:
+
+```none
+line 1
+line 2
+```

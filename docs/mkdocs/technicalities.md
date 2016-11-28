@@ -1,4 +1,4 @@
-# Technicalities
+# Some technical details
 
 [TOC]
 

@@ -12,10 +12,6 @@ repo_url: 'https://github.com/madrus/mdocs'
 # Copyright
 copyright: 'Copyright (c) 2016 Madrus'
 
-# Documentation and theme
-docs_dir: 'docs'
-theme: 'material'
-
 # Pages structure
 pages:
   - Home: index.md
@@ -24,8 +20,13 @@ pages:
     - Custom Styling: mkdocs/custom_styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
-  - Test:
-    - Test: test/test.md
+  - Sandbox:
+    - TODOs: sandbox/todo.md
+    - Test Document: sandbox/test.md
+
+# Documentation and theme
+docs_dir: 'docs'
+theme: 'material'
 
 # Options
 extra:
