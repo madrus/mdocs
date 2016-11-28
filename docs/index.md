@@ -12,13 +12,13 @@ mkdocs serve
 
 ## Publishing the project
 
-To publish the project to **GitHub Pages** as a subdomain, e.g. `/mdocs` of the main [http://your-github-login.github.io](http://your-github-login.github.io) website, one needs first to create the repository with that name, e.g. `mdocs` and add it to one's project as a remote. Now, open the command prompt in the root directory (on the `master` branch) and type:
+To publish the project to **GitHub Pages** as a subdomain, e.g. `/mdocs` of the main [your-github-login.github.io](your-github-login.github.io) website, one needs first to create the repository with that name, e.g. `mdocs` and add it to one's project as a remote. Now, open the command prompt in the root directory (on the `master` branch) and type:
 
-```javascript
+```bash
 mkdocs gh-publish
 ```
 
-After that, the project website is available at [http://your-github-login.github.io/mdocs](http://your-github-login.github.io/mdocs).
+After that, the project website is available at [your-github-login.github.io/mdocs](your-github-login.github.io/mdocs).
 
 ## References
 

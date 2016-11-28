@@ -20,9 +20,10 @@ theme: 'material'
 pages:
   - Home: index.md
   - MkDocs:
+    - Technicalities: mkdocs/technicalities.md
     - Custom Styling: mkdocs/custom_styling.md
   - Umbraco:
-    - Technical Features: umbraco/technical_features.md
+    - Technicalities: umbraco/technicalities.md
 
 # Options
 extra:
