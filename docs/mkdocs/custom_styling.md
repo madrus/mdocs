@@ -1,3 +1,7 @@
+# Custom Styling
+
+[TOC]
+
 ## Admonition extension for Markdown
 
 !!! warning "This does not always work correctly with Material theme"

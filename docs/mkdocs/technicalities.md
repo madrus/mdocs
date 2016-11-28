@@ -1,3 +1,7 @@
+# Technicalities
+
+[TOC]
+
 ## Project layout
 
     mkdocs.yml    # The configuration file.

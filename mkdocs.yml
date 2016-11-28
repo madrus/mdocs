@@ -31,7 +31,7 @@ extra:
   logo: 'images/logo.png'
   palette:
     primary: 'teal'
-    accent: 'deep orange'
+    accent: 'teal'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
