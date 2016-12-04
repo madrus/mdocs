@@ -20,9 +20,11 @@ pages:
     - Custom Styling: mkdocs/custom_styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
-  - Sandbox:
-    - TODOs: sandbox/todo.md
-    - Test Document: sandbox/test.md
+  - Vue.js:
+    - Basics: vuejs/basics.md
+  - Playground:
+    - TODOs: playground/todo.md
+    - Test Document: playground/test.md
 
 # Documentation and theme
 docs_dir: 'docs'
@@ -45,7 +47,7 @@ extra:
     github: 'madrus'
     twitter: 'madrusnl'
 
-markdown_extensions: 
+markdown_extensions:
   - admonition
   - codehilite(css_class=code):
       guess_lang: false
@@ -54,6 +56,9 @@ markdown_extensions:
       smart_angled_quotes: true
   - toc:
       permalink: '#'
+
+#Copyright
+copyright: Copyright &copy; 2016 <a href="https://madrus4u.com">Balans4U</a>
 
 # Google Analytics
 google_analytics:
