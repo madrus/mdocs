@@ -90,9 +90,8 @@ script:
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - mkdocs build
-deploy:
-  skip_cleanup: true
-  - mkdocs gh-deploy --force
+- test $TRAVIS_PULL_REQUEST = false \
+  && mkdocs gh-deploy --force
 ```
 
 The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the **Personal access token** you have created.
