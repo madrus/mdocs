@@ -1,0 +1,16 @@
+sudo: false
+language: python
+python: '2.7'
+
+install:
+  - pip install --upgrade pip
+  - pip --version
+  - pip install -r requirements.txt
+  # - pip install mkdocs pygments pymdown-extensions
+  # - pip install mkdocs-bootstrap mkdocs-bootswatch
+  # - pip install mkdocs-alabaster mkdocs-cinder
+  - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+  - mkdocs --version
+
+script:
+  - mkdocs build
