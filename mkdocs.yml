@@ -17,7 +17,11 @@ pages:
   - Home: index.md
   - MkDocs:
     - Technicalities: mkdocs/technicalities.md
-    - Custom Styling: mkdocs/custom_styling.md
+    - Styling: mkdocs/styling.md
+  - Aurelia:
+    - Technicalities: aurelia/technicalities.md
+  - Git:
+    - Styling: git/styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
   - Vue.js:
