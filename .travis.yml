@@ -14,4 +14,4 @@ install:
 
 script:
   - mkdocs build
-  - mkdocs gh-deploy
+
