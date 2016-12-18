@@ -90,8 +90,8 @@ script:
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - mkdocs build
-- if [ $TRAVIS_TEST_RESULT == 0 ]
-    mkdocs gh-deploy --force
+- if [ $TRAVIS_TEST_RESULT == 0 ]; then
+    mkdocs gh-deploy --force;
   fi
 ```
 
