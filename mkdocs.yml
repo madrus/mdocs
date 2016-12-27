@@ -20,10 +20,14 @@ pages:
     - Styling: mkdocs/styling.md
   - Aurelia:
     - Technicalities: aurelia/technicalities.md
+  - .NET Core:
+    - Notes: dotnet/notes.md
+    - Tips: dotnet/tips.md
   - Git:
     - Styling: git/styling.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
+    - FAQ: umbraco/faq.md
   - Vue.js:
     - Basics: vuejs/basics.md
   - Playground:
