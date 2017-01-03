@@ -1,0 +1,17 @@
+sudo: false
+language: python
+python: '2.7'
+install:
+- pip install --upgrade pip
+- pip install -r requirements.txt
+- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+script:
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- mkdocs build
+- if [ $TRAVIS_TEST_RESULT == 0 ]; then
+    mkdocs gh-deploy --force;
+  fi
+env:
+  global:
+    secure: OxQC+vkwhAUrIflLgsaZLv+GFCfrWcElM+ej59NbasaXt3wt8uRh1uOym2coGnBZrD26UO2Sf54Q5mxYA5pf9rutUKLF7WRDWkaCjA4y4zaTL3/WibysXVybCllknrrzShw6ND225Yw7OI5SounRJp2GdlcZgDoxHNS5TnX9K0WVY4e64irx3Z9CkhXcP5oiZyytntjGluWnzdxmTHxszhhJbAmTVF/97bLt0TGl7zZWiKVsIlYymIMJ5nD2sKb0m2Igvlq5glY5Mzpukdr/j7PZAPHCG3sTT0znxLnaaAzBT9IjDQhZ+v9oO+ZvzD3nX/oBq62Qy+tFRx6xbZwgqp9ylmtMCr9KBUzRZX50Px8hhZKG1Hvl2lMZjKDBLxlY7ERUYf93qqbTZNJkTiSJQFSaQcSjKAbIcX9oW2MWwoyqMLaASEMNnYsD6uT9vcfcKgY3ydSw9qhKD8SMMBUkhK93GEOee0TZp96vcVG0PY2UdWhN2GClhOXCQMYDUL09F7Py5JEl7/Kw8qMrN8Xyyo/ARgHERNSrUkQrmu3SslDGMp/o+G+XYrPNIXMV+AbBo8Kg5fcMQKG1RSCioU0tLOH+Z6z1ClvHRVA7QtMrm14aZnhFl3FwJIFzB2ag5MQv8NSuAM+NTvihajrpQHwjd94zezrv7roduD0bsB6prvY=
