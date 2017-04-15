@@ -1,7 +1,5 @@
 # Custom Styling
 
-[TOC]
-
 ## Admonition extension
 
 !!! warning "This does not always work correctly with Material theme"

@@ -1,7 +1,5 @@
 # TODOs
 
-[TOC]
-
 ### Functionality
 
 * Food / Non-Food (Umbraco)

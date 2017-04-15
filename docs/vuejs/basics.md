@@ -1,8 +1,6 @@
 # Basics of Vue.js
 
-[TOC]
-
-## Quick Installation
+### Quick Installation
 
 ```text
 npm install -g vue-cli

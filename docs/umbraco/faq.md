@@ -1,7 +1,5 @@
 # Issues and solutions
 
-[TOC]
-
 ### Bundling and minifying
 
 Most of the information comes from [here](https://our.umbraco.org/forum/developers/razor/72069-how-to-bundle-css-and-js) and from [Bundling and minification in Umbraco](https://gist.github.com/jkarsrud/5143239).

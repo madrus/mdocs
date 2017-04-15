@@ -1,7 +1,5 @@
 # Some technical details
 
-[TOC]
-
 ## Using SSL in Production
 
 (This is a tip of **Sebastiaan Janssen** at [Our Umbraco](https://our.umbraco.org/forum/umbraco-7/using-umbraco-7/57637-Auto-redirect-to-HTTPS-for-some-pages-in-MVC).)

@@ -1,8 +1,6 @@
 # Test Document
 
-[TOC]
-
-## Table
+### Table
 
 This is an example of a table:
 

@@ -1,7 +1,5 @@
 # Notes on ASP.NET Core
 
-[TOC]
-
 I have written these notes while working on a couple of great books on the subject. See [Sources used](#sources-used).
 
 `Models` - the `M` in `MVC` - contain the data that users work with. There are two broad types of model:

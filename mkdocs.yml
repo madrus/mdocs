@@ -60,8 +60,6 @@ markdown_extensions:
   - nl2br
   - smarty:
       smart_angled_quotes: true
-  - toc:
-      permalink: '#'
 
 #Copyright
 copyright: 'Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a>'

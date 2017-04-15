@@ -1,7 +1,5 @@
 # Some Technical Notes
 
-[TOC]
-
 ### Font Awesome in Aurelia project
 
 Add new `prepare-font-awesome.ts` task file to `aurelia_project/tasks`:

@@ -1,7 +1,5 @@
 # Git Prompt Styling
 
-[TOC]
-
 ### Powerline Fonts
 
 Taken from the [Powerline fonts](https://github.com/powerline/fonts) repository. Start by cloning:
