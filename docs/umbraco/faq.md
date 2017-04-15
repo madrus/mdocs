@@ -35,7 +35,7 @@ Error during web deploy
 
 Find the deployment profile `energydiet4u.nl - Web Deploy.pubxml`
 
-![energydiet4u.nl - Web Deploy.pubxml](../images/webdeploy.PNG)
+![energydiet4u.nl - Web Deploy.pubxml](../img/webdeploy.PNG)
 
 and add the following key to the `PropertyGroup` section:
 
@@ -49,7 +49,7 @@ and add the following key to the `PropertyGroup` section:
 
 Website runtime error after deployment to GoDaddy:
 
-![CodeDOM error](../images/roslyn_csc_error.PNG)
+![CodeDOM error](../img/roslyn_csc_error.PNG)
 
 #### Answer
 

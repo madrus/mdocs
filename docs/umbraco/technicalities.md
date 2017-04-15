@@ -26,11 +26,11 @@ GoDaddy offers a `SHA-2` type SSL-certificate.
 
 You can also place the **SSL Certificate security seal** on your website that looks like this:
 
-![godaddy ssl certificate security seal](/images/ssl_seal.png)
+![godaddy ssl certificate security seal](../img/ssl_seal.png)
 
 GoDaddy provides the snippet for this. When you click on the seal, you see the confirmation:
 
-![godaddy verified ssl certificate](/images/ssl_verified.png)
+![godaddy verified ssl certificate](../img/ssl_verified.png)
 
 **Step 3** Add the following transformations to your `Web.Release.config` file:
 

@@ -1,6 +1,6 @@
 # Notes on Madrus's Docs
 
-In this documentation, I am collecting tips and tricks that at some point proved to be useful. I am doing it "along the way": every time I get stuck and later later find the solution. Therefore, it is never complete and finished. **It is always work in progress**.
+In this documentation, I am collecting tips and tricks that at some point proved to be useful. I am doing it "along the way": every time I get stuck and later later find the solution. Therefore, it is never complete and finished. __It is always work in progress__.
 
 The website can be seen at http://madrus4u.com/mdocs/.
 
@@ -8,13 +8,13 @@ The website can be seen at http://madrus4u.com/mdocs/.
 
 * `pip install mkdocs`
 * `mkdocs --version`
-* `mkdocs new kdocs`
-* `cd kdocs`
+* `mkdocs new mdocs`
+* `cd mdocs`
 * `curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md` -- Add a new dummy page
 
 ## Installing prerequisites
 
-In order to view the documents offline, you need **Python** and the following dependencies:
+In order to view the documents offline, you need __Python__ and the following dependencies:
 
 ```bash
 pip install mkdocs pygments pymdown-extensions
@@ -36,7 +36,7 @@ mkdocs serve
 Add some bits and pieces to mkdocs.yml:
 
 ```ruby
-site_name: kdocs
+site_name: mdocs
 pages:
   - Blog: index.md
   - About: about.md
@@ -57,7 +57,7 @@ You will notice that the website will look like __FeinCMS__ [documentation][fein
 * add `theme: 'material'` to the `mkdocs.yml`
 * `mkdocs serve`
 
-> Color names can be written upper- or lowercase but must match the names of the [material design color palette][m-colors]. Valid values are: __red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey and blue grey__. The last three colors can only be used as a primary color.
+> Color names can be written upper- or lowercase but must match the names of the [material design color palette][m-colors]. Valid values are: __red, pink, purple, deep purple, indigo, blue, light blue, cyan, teal, green, light green, lime, yellow, amber, orange, deep orange, brown, grey__ and __blue grey__. The last three colors can only be used as a primary color.
 
 See for more details the [Material for MkDocs][material] page. Also a full example configuration for a [mkdocs.yml][full-config].
 
@@ -69,7 +69,7 @@ See for more details the [Material for MkDocs][material] page. Also a full examp
 ## Deploying to GitHub pages
 
 * `git push -u origin master`
-* `mkdocs gh-deploy` -- this will build the docs and use [ghp-import][ghp] tool to commit them to the gh-pages branch and push the gh-pages branch to GitHub. Use `mkdocs gh-deploy --help` to get a full list of options available for the `gh-deploy` command.
+* `mkdocs gh-deploy` -- this will build the docs and use [ghp-import][ghp] tool to commit them to the `gh-pages` branch and push the `gh-pages` branch to GitHub. Use `mkdocs gh-deploy --help` to get a full list of options available for the `gh-deploy` command.
 
 ## Read the Docs
 

@@ -11,7 +11,7 @@ I have written these notes while working on a couple of great books on the subje
 
 In ASP.NET Core MVC, `controllers` are C# classes, usually derived from the `Microsoft.AspNetCore.Mvc.Controller` class. Each **public** method in a class derived from `Controller` is an `action method`, which is associated with a `URL`.
 
-![bla](../images/interactions_in_mvc_applications.png)
+![bla](../img/interactions_in_mvc_applications.png)
 
 ### Conventions
 
@@ -557,7 +557,7 @@ public static IEnumerable<object[]> GetData
 {
     get
     {
-    	// ...
+        // ...
         yield return new object[] { 8, 21 };
         yield return new object[] { 16, 987 };
     }
