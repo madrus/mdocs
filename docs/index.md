@@ -10,6 +10,7 @@ In order to view the documents offline, you need Python and the following depend
 
 ```bash
 pip install mkdocs pygments pymdown-extensions
+pip install mkdocs-material fontawesome-markdown
 ```
 
 ## Running the project locally

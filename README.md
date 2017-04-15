@@ -18,8 +18,6 @@ In order to view the documents offline, you need __Python__ and the following de
 
 ```bash
 pip install mkdocs pygments pymdown-extensions
-pip install mkdocs-bootstrap mkdocs-bootswatch
-pip install mkdocs-alabaster mkdocs-cinder
 pip install fontawesome-markdown
 ```
 
@@ -74,6 +72,14 @@ See for more details the [Material for MkDocs][material] page. Also a full examp
 ## Read the Docs
 
 [Read the Docs][rtdocs] offers free documentation hosting. You can import your docs using any major version control system, including Mercurial, Git, Subversion, and Bazaar. Read the Docs supports MkDocs out-of-the-box. Follow the [instructions][instructions] on their site to arrange the files in your repository properly, create an account and point it at your publicly hosted repository. If properly configured, your documentation will update each time you push commits to your public repository.
+
+## Other themes
+
+* [MkDocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+* [Bootstrap](https://github.com/mkdocs/mkdocs-bootstrap) theme
+* 12 [Bootswatch](http://mkdocs.github.io/mkdocs-bootswatch/) themes
+* [Cinder](http://sourcefoundry.org/cinder/) theme
+* [Alabaster](https://github.com/iamale/mkdocs-alabaster) theme (quite simple)
 
 [feincms]: https://feincms-django-cms.readthedocs.io/en/latest/#
 [ghp]: https://github.com/davisp/ghp-import

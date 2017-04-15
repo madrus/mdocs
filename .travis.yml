@@ -2,9 +2,8 @@ sudo: false
 language: python
 python: '2.7'
 install:
-- pip install --upgrade pip
+- pip install -U pip
 - pip install -r requirements.txt
-- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GH_TOKEN}:@github.com" > .git/credentials

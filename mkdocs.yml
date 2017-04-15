@@ -9,9 +9,6 @@ site_favicon: 'img/favicon.ico'
 #repo_name: 'GitHub'  # will it work with GitLab?
 repo_url: 'https://github.com/madrus/mdocs'
 
-# Copyright
-copyright: 'Copyright (c) 2016 Madrus'
-
 # Pages structure
 pages:
   - Home: index.md
@@ -35,12 +32,12 @@ pages:
     - Test Document: playground/test.md
 
 # Documentation and theme
-docs_dir: 'docs'
+docs_dir: docs
 theme: 'material'
 
 # Options
 extra:
-  # version: '0.1.0'
+  version: 0.2.0
   logo: 'img/logo.png'
   palette:
     primary: 'teal'
@@ -59,6 +56,7 @@ markdown_extensions:
   - admonition
   - codehilite(css_class=code):
       guess_lang: false
+  - fontawesome_markdown
   - nl2br
   - smarty:
       smart_angled_quotes: true
@@ -66,7 +64,7 @@ markdown_extensions:
       permalink: '#'
 
 #Copyright
-copyright: Copyright &copy; 2016 <a href="https://madrus4u.com">Balans4U</a>
+copyright: 'Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a>'
 
 # Google Analytics
 google_analytics:
