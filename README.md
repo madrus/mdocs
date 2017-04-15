@@ -20,7 +20,7 @@ In order to view the documents offline, you need __Python__ and the following de
 pip install mkdocs pygments pymdown-extensions
 pip install mkdocs-bootstrap mkdocs-bootswatch
 pip install mkdocs-alabaster mkdocs-cinder
-pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+pip install fontawesome-markdown
 ```
 
 ## Running the project in DEV
