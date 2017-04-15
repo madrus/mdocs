@@ -12,9 +12,9 @@ repo_url: 'https://github.com/madrus/mdocs'
 # Pages structure
 pages:
   - Home: index.md
-  - MkDocs:
-    - Technicalities: mkdocs/technicalities.md
-    - Styling: mkdocs/styling.md
+  - MkDocs Engine:
+    - Technicalities: engine/technicalities.md
+    - Styling: engine/styling.md
   - Aurelia:
     - Technicalities: aurelia/technicalities.md
   - .NET Core:
