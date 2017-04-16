@@ -60,7 +60,7 @@ function writeBundles() {
 }
 ```
 
-Finally, add 
+Finally, add
 
 ```html
 <link rel="stylesheet" href="scripts/css/font-awesome.min.css">
@@ -68,7 +68,7 @@ Finally, add
 
 to `wwwroot/index.html`. Now, if you run `au build`, you will see two new directories created under `wwwwroot/scripts`:
 
-*   css
-*   fonts
+* css
+* fonts
 
-and inside these folders the **Font Awesome** stylesheet and fonts.
+and inside these folders the __Font Awesome__ stylesheet and fonts.

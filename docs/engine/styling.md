@@ -1,27 +1,27 @@
 # Custom Styling
 
-## Admonition extension
+### Admonition extension
 
 !!! warning "This does not always work correctly with Material theme"
     Unfortunately, with Material theme this does not always give correct result. It works fine with the standard ReadTheDocs theme though.
 
 [Admonition extension](https://pythonhosted.org/Markdown/extensions/admonition.html) for the MkDocs Markdown provides for a way to draw attention of the reader. In order to use this extension
 
-**Syntax**
+__Syntax__
 
 ```none
 !!! special_word "some text within double quotes"
     Any number of lines aligned with the special_word
 ```
 
-1. 3 exclamation marks ( **!!!** ) at the beginning of the line
+1. 3 exclamation marks ( __!!!__ ) at the beginning of the line
 2. 1 space
 3. 1 special word (see below)
 4. 1 space
 5. (optional) some text within double quotes
 6. (optional) any number of lines beginning at pos. 4 (aligned with the special word after the exclamation marks)
 
-**Special words**
+__Special words__
 
 These special words result in a colored adminition blocks. It is nice to experiment with them.
 
@@ -30,9 +30,9 @@ These special words result in a colored adminition blocks. It is nice to experim
 * `warning`, `caution`, `attention` - beige/brown
 * `danger`, `error` - pink/red
 
-**NOTE:** The special word can be also any other word. In that case, the color will always be light blue.
+__NOTE:__ The special word can be also any other word. In that case, the color will always be light blue.
 
-**Some examples**
+__Some examples__
 
 A custom text message on the first line...
 
@@ -84,13 +84,13 @@ The word "warning" plus custom title...
 !!! danger "Don't try this at home"
     Or you will regret it for the rest of your life!
 
-## SmartyPants extension
+### SmartyPants extension
 
 Adding 
 
-```yaml
-  - smarty:
-      smart_angled_quotes: true
+```ruby
+- smarty:
+    smart_angled_quotes: true
 ```
 
 to `markdown_extentions` gives you the possibility to print out nicely looking ASCII dashes, quotes and ellipes:
@@ -115,11 +115,13 @@ You get:
 -- ndash
 --- mdash
 
-## nl2br extension
+---
+
+### nl2br extension
 
 Adding 
 
-```yaml
+```ruby
   - nl2br
 ```
 
@@ -141,4 +143,30 @@ With `nl2br` you see this:
 ```none
 line 1
 line 2
+```
+
+---
+
+### Custom Theme
+
+It is possible to add extra customization via a __Custom Theme__ option.
+
+* create the `custom_theme` and `custom_theme/css` directories under `doc_dir` (see `mkdocs.yml` file)
+* inside the `custom_theme/css` directory create `extra.less` file with your styles
+* use any LESS compiler to compile the `extra.less` file to the minified `extra.min.css` and its map `extra.min.css.map`
+* add the following lines to `mkdoc.yml` under the `doc_dir` variable:
+
+```ruby
+  theme_dir: custom_theme
+  extra_css: 
+  - css/extra.min.css
+```
+
+* now when you build and serve the website, you should see the custom styling in action
+
+Similarly, it is possible to add extra JavaScript inside the `custom_theme/js` directory. You add the corresponding setting to the `mkdocs.yml` file:
+
+```ruby
+  extra_javascript: 
+  - js/your-js-file.min.js
 ```

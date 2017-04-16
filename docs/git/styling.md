@@ -33,19 +33,21 @@ or just for the current user:
 pip install --user powerline-status
 ```
 
+---
+
 ### Cmder
 
-**Main Font**
+#### Main Font
 
 I like these fonts for the terminal:
 
-*   Roboto Mono for Powerline
-*   Droid Sans Mono Slashed for Powerline
-*   Anonymice Powerline
+* Roboto Mono for Powerline
+* Droid Sans Mono Slashed for Powerline
+* Anonymice Powerline
 
-**Color Scheme**
+#### Color Scheme
 
-I like **Murena Scheme** with some tweaks in **Features/Colors**:
+I like __Murena Scheme__ with some tweaks in __Features/Colors__:
 
 | Position | Color Code  | Role                    |
 | :------: | :---------: | ----------------------- |

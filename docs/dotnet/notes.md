@@ -7,14 +7,16 @@ I have written these notes while working on a couple of great books on the subje
 * `view models`, which represent just data passed from the controller to the view, and
 * `domain models`, which contain the data in a business domain, along with the operations, transformations, and rules for creating, storing, and manipulating that data, collectively referred to as the model logic.
 
-In ASP.NET Core MVC, `controllers` are C# classes, usually derived from the `Microsoft.AspNetCore.Mvc.Controller` class. Each **public** method in a class derived from `Controller` is an `action method`, which is associated with a `URL`.
+In ASP.NET Core MVC, `controllers` are C# classes, usually derived from the `Microsoft.AspNetCore.Mvc.Controller` class. Each __public__ method in a class derived from `Controller` is an `action method`, which is associated with a `URL`.
 
 ![bla](../img/interactions_in_mvc_applications.png)
+
+---
 
 ### Conventions
 
 * put the third-party JavaScript and CSS packages you rely on in the `wwwroot/lib` folder.
-* **convention over configuration**
+* __convention over configuration__
 * the controller for `/product` uri should have the name `ProductController.cs` and reside in the `/Controllers` folder; from other parts in the project, such as when using an HTML helper method, you specify the first part of the name (`Product`), and MVC automatically appends `Controller` to the name and starts looking for the controller class.
 * views for `/product` uri associated with `ProductController` should all reside in the `/Views/Product` folder.
 * MVC expects that the `default view` for an `action method` should be named after that method. For example, the default view associated with an action method called `List` should be called `List.cshtml`. Thus, for the `List action method` in the `ProductController` class, the `default view` is expected to be `/Views/Product/List.cshtml`. The `default view` is used when you return the result of calling the `View` method in an action method, like this:
@@ -45,6 +47,8 @@ In ASP.NET Core MVC, `controllers` are C# classes, usually derived from the `Mic
     Layout = null;
   }
 ```
+
+---
 
 ### Extension methods
 
@@ -168,6 +172,8 @@ namespace LanguageFeatures.Models
 }
 ```
 
+---
+
 ### Lambda anonymous functions
 
 We can repeat this process indefinitely and create a different filter method for every property and every combination of properties that we are interested in. A more elegant approach is to separate out the code that processes the enumeration from the selection criteria. C# makes this easy by allowing functions to be passed around as objects. We can then create a single extension method that filters an enumeration of Product objects but that delegates the decision about which ones are included in the results to a separate function.
@@ -203,6 +209,8 @@ decimal nameFilterTotal = productArray
 ```csharp
 public bool NameBeginsWithS => Name?[0] == 'S';
 ```
+
+---
 
 ### Asynchronous methods
 
@@ -255,6 +263,8 @@ namespace LanguageFeatures.Controllers
 }
 ```
 
+---
+
 ### Getting property names with nameof
 
 If we use lambdas the classic way:
@@ -272,6 +282,8 @@ products.Select(p => $"{nameof(p.Name)}: {p.Name}, {nameof(p.Price)}: {p.Price}"
 ```
 
 but then we will get intellisense and type safety.
+
+---
 
 ### Workflow with an empty project
 
@@ -302,6 +314,22 @@ namespace LanguageFeatures
     }
 }
 ```
+
+---
+
+### The JSON Configuration Files
+
+| Name | Description |
+| :---- | :---- |
+| global.json | This file, which is found in the Solution Items folder, is responsible for telling Visual Studio where to find the projects in the solution and which version of the .NET execution environment should be used to run the application.  |
+| launchSettings.json | This file, which is revealed by expanding the Properties item in the MVC application project, is used to specify how the application is started. |
+| appsettings.json | This file is used to define application-specific settings. |
+| bower.json | This file is used by Bower to list the client-side packages that are installed into the project. |
+| bundleconfig.json | This file is used to bundle and minify JavaScript and CSS files. |
+| project.json | This file is used to specify the NuGet packages that are installed into the application. This file is also used for other project settings. |
+| project.lock.json | This file, which is revealed by expanding the project.json item in the Solution Explorer, contains detailed dependencies between packages installed in the project. It is generated automatically and should not be edited manually. |
+
+---
 
 ### Razor
 
@@ -364,6 +392,8 @@ default:
 
 We do not have to put the elements or expressions in quotes or denote them in any special way—the Razor engine will interpret these as output to be processed. However, if we want to insert literal text into the view when it is not contained in an HTML element, then we need to give Razor a helping hand and prefix the line with an `@` character (see above).
 
+---
+
 ### Visual Studio tips and tricks
 
 #### Enable Developer Exception Page
@@ -373,6 +403,8 @@ In `Startup.cs` add this line to the `Configure` method:
 ```csharp
 app.UseDeveloperExceptionPage();
 ```
+
+---
 
 ### Browser Link Loader
 
@@ -410,6 +442,8 @@ Run the project without debugging (Ctrl + F5) and you see this kind of code adde
     `[14:07:17 GMT+0200 (West-Europa (zomertijd))] Browser Link: Failed to invoke return value`
     `callback: TypeError: Cannot read property 'files' of null`
 
+---
+
 ### Static files
 
 ASP.NET Core includes support for delivering `static files` from the wwwroot folder to clients but it isn’t enabled by default when the Empty template is used to create the project. To enable static file support, add
@@ -426,20 +460,23 @@ app.UseStaticFiles();
 
 to the `Configure` method of `Startup.cs`.
 
+---
+
 ### Bundling and minifying
 
 Install `Bundler and Minifier` extension for the Visual Studio. After that it is possible to add `css` or `js` files to the bundle by selecting them one by one and choosing `Bundler & Minifier | Bundle and Minify Files (Shift + Alt + F)` from the right mouse button menu.
 
 This will create a `bundle.css` or `bundle.js` file and also `bundleconfig.json` in the project root folder. Make sure the order of the files is what you need as `loading order`.
 
-### Unit Testing with `xUnit` Framework
+---
+
+### Unit Testing with xUnit Framework
 
 #### Preparation
 
 * create `test` folder inside the solution folder next to `src` folder
 * add new `.NET Core | Class Library (.NET Core)` project inside the `test` folder
 * add this code to its `project.json` file (check the latest versions):
-
 ```json
   {
       "version": "1.0.0-*",
@@ -461,13 +498,11 @@ This will create a `bundle.css` or `bundle.js` file and also `bundleconfig.json`
       }
   }
 ```
-
 * this configuration tells Visual Studio that three packages are required:
     * the `Microsoft.NETCore.App` package provides the `.NET Core API`.
     * the `xunit` package provides the testing framework.
     * the `dotnet-test-xunit` package provides the integration between `xUnit` and `Visual Studio`.
 * add the main project reference to the dependencies, e.g.
-
 ```json
   {
       "dependencies": {
@@ -481,7 +516,6 @@ This will create a `bundle.css` or `bundle.js` file and also `bundleconfig.json`
 #### Fact and Theory
 
 * In the `xUnit` framework, a `Fact` is one single unit test. Example:
-
 ```csharp
   [Fact]
   public void IndexActionModelIsComplete() {
@@ -499,9 +533,7 @@ This will create a `bundle.css` or `bundle.js` file and also `bundleconfig.json`
               && p1.Price == p2.Price));
   }
 ```
-
 * A `Theory` is a way to parametrize the unit test in such a way that it becomes possible to run the same test multiple times, each time with a different set of parameter values. Example:
-
 ```csharp
   [Theory]
   [InlineData(275, 48.95, 19.50, 24.95)]
@@ -564,6 +596,8 @@ public static IEnumerable<object[]> GetData
 
 Every `yield` statement should return an array of objects to substitute for the Product properties. And the method itself should be of type `IEnumerable<object[]>`.
 
+---
+
 ### Mocking with MOQ
 
 `Microsoft` created a special fork of the `Moq` project and ported it to work with `.NET Core`.
@@ -608,11 +642,12 @@ Explanation:
 * `Repository = mock.Object` - `Object` is the special property that gives back the object we mock for this test
 * `mock.VerifyGet(m => m.Products, Times.Once);` - one of the verify methods to inspect the getter property
 
+---
+
 ### SportsStore
 
 * Create a new empty `ASP.NET Core Web Application (.NET Core)` project/solution.
 * Add these packages/tools to the `project.json` file:
-
 ```json
   "dependencies": {
       ...
@@ -630,7 +665,6 @@ Explanation:
 ```
 * In addition to the packages in the `dependencies` section, there is an addition to the `tools` section of the `project.json` file that configures the `Microsoft.AspNetCore.Razor.Tools` package for use in Visual Studio and enables IntelliSense for the built-in tag helpers, which are used to create HTML content that is tailored to the configuration of the MVC application.
 * Here is the `Startup.cs`:
-
 ```csharp
   using Microsoft.AspNetCore.Builder;
   using Microsoft.AspNetCore.Hosting;
@@ -662,14 +696,12 @@ Explanation:
 * The `Configure` method is used to set up the features that receive and process `HTTP requests`.
 * add these folders: `Models`, `Controllers`, `Views`
 * in the `Views` folder add `_ViewImports.cshtml` file:
-
 ```csharp
   @using SportsStore.Models
   @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 ```
 * create the unit test project `SportsStore.Tests` in the `test` folder.
 * Configure its `project .json` as follows:
-
 ```json
   {
       "version": "1.0.0-*",
@@ -695,7 +727,6 @@ Explanation:
 * Make sure that both `project.json` files refer to the same `ASP.NET Core MVC` version.
 * Add your model class `Product.cs`, repository interface `IProductRepository` and a simple fake repository `FakeProductRepository`
 * Register the fake repository as a service in `Startup.cs`:
-
 ```csharp
   public void ConfigureServices(IServiceCollection services)
   {
@@ -707,12 +738,10 @@ Explanation:
   * `Views/Shared/_Layout.cshtml`
   * `Views/_ViewStart.cshtml` refering to `_Layout.cshtml` by default
 * Example of setting up the default route in `Startup.cs`. Substitute
-
 ```csharp
   app.UseMvcWithDefaultRoute();
 ```
 * with
-
 ```csharp
   app.UseMvc(routes =>
   {
@@ -721,6 +750,8 @@ Explanation:
           template: "{controller=Product}/{action=List}/{id?}");
   });
 ```
+
+---
 
 ### Scaffolding
 
@@ -755,10 +786,11 @@ Some people prefer to have certain features automatically created when they crea
 ...
 ```
 
+---
+
 ### Setup the database
 
 * add `EntityFramework` packages to `package.json`:
-
 ```json
   "dependencies": {
       ...
@@ -767,7 +799,6 @@ Some people prefer to have certain features automatically created when they crea
   }
 ```
 * and the tools:
-
 ```json
   "tools": {
       ...
@@ -777,9 +808,7 @@ Some people prefer to have certain features automatically created when they crea
       }
   }
 ```
-
 * The `database context class` is the bridge between the `application` and the `EF Core` and provides access to the application’s data using model objects. To create the database context class for the `SportsStore` application, we add a class file called `ApplicationDbContext.cs` to the `Models` folder:
-
 ```csharp
   using Microsoft.EntityFrameworkCore;
 
@@ -794,7 +823,6 @@ Some people prefer to have certain features automatically created when they crea
   }
 ```
 * To populate the database initially with some data, we use `SeedData.cs` class:
-
 ```csharp
   using System.Linq;
   using Microsoft.AspNetCore.Builder;
@@ -829,7 +857,6 @@ Some people prefer to have certain features automatically created when they crea
 * The static `EnsurePopulated` method receives an `IApplicationBuilder` argument, which is the class used in the `Configure` method of the `Startup` class to register middleware classes to handle HTTP requests, which is where we ensure that the database has content.
 * The `EnsurePopulated` method obtains an `ApplicationDbContext` object through the `IApplicationBuilder` interface and uses it to check whether there are any `Product` objects in the database. If there are no objects, then the database is populated using a collection of `Product` objects using the `AddRange` method and then written to the database using the `SaveChanges` method.
 * The next step is to create a class that implements the `IProductRepository` interface and gets its data using `Entity Framework Core` from the `ApplicationDbContext`.
-
 ```csharp
   using System.Collections.Generic;
 
@@ -847,7 +874,6 @@ Some people prefer to have certain features automatically created when they crea
   }
 ```
 * create `appsettings.json` file in the project root folder based on the `ASP.NET Configuration File` template and configure the connection string:
-
 ```json
   {
       "Data": {
@@ -858,7 +884,6 @@ Some people prefer to have certain features automatically created when they crea
   }
 ```
 * add a new dependency to read the `json` configuration file:
-
 ```json
   "dependencies": {
       ...
@@ -866,7 +891,6 @@ Some people prefer to have certain features automatically created when they crea
   },
 ```
 * configure the `Startup.cs`:
-
 ```csharp
   ...
   using Microsoft.EntityFrameworkCore;
@@ -905,12 +929,13 @@ Some people prefer to have certain features automatically created when they crea
   }
 ```
 * open `Tools | Nuget Package Manager | Package Manager Console` to create and apply database migrations:
-
 ```bash
   Add-Migration Initial
   Update-Database
 ```
 * rebuild the solution and run - we will see the list of products loaded from the database.
+
+---
 
 ### ViewModels and TagHelpers
 
@@ -918,6 +943,8 @@ Some people prefer to have certain features automatically created when they crea
 * `TagHelpers` are one of the most useful ways that you can introduce C# logic into your views. The code for a tag helper can look tortured because C# and HTML don’t mix easily. But using tag helpers is preferable to including blocks of C# code in a view because a tag helper can be easily `unit tested`. Most MVC components, such as controllers and views, are discovered automatically, but tag helpers `have to be registered` in `_ViewImports.cshtml`.
 * To test the `tag helper` class, I call the `Process` method with test data and provide a `TagHelperOutput` object that is inspected to see the HTML that was generated.
 * When we pass the data to the view via a view model, we need to replace the type. E.g. it can become `@model ProductsListViewModel` and `Model.Products` instead of `@model IEnumerable<Product>` and `Model`.
+
+---
 
 ### Installing Bootstrap package
 
@@ -934,6 +961,8 @@ Add `bower.json` file to the project root:
 ```
 
 This will add `wwwroot/lib` folder and inside it `bootstrap` and `jquery` sources.
+
+---
 
 ### Improving the URLs
 
@@ -955,6 +984,8 @@ routes.MapRoute(
 ```
 
 It is important that this route is added `before` the default route.
+
+---
 
 ### Enabling Sessions
 
@@ -986,11 +1017,13 @@ public void Configure(IApplicationBuilder app,
 !!! important "AddMemoryCache"
     The `AddMemoryCache` method call sets up the in-memory data store. The `AddSession` method registers the services used to access session data, and the `UseSession` method allows the session system to automatically associate requests with sessions when they arrive from the client.
 
+---
+
 ### Annotations
 
 * `BindNever` attribute prevents the user supplying values for these properties in an HTTP request.
 
-** Adding migrations
+#### Adding migrations
 
 Suppose we add a new `DbSet` to our `ApplicationDbContext.cs`:
 
@@ -1014,9 +1047,11 @@ To update the database schema, run the following command:
 
 `Update-Database`
 
+---
+
 ### Resetting the Database
 
-When you are making frequent changes to the model, there will come a point when your migrations and your database schema get out of sync. The easiest thing to do is delete the database and start over. However, this applies **only during development**, of course, because you will lose any data you have stored.
+When you are making frequent changes to the model, there will come a point when your migrations and your database schema get out of sync. The easiest thing to do is delete the database and start over. However, this applies __only during development__, of course, because you will lose any data you have stored.
 
 * Select the `SQL Server Object Explorer` item from the Visual Studio `View` menu and click the `Add Sql Server` button.
 * Enter `(localdb)\mssqllocaldb` into the `Server Name` field and click the `Connect` button. A new item will appear in the `SQL Server Object Explorer` window, which you can expand to see the `LocalDB` databases that have been created.
@@ -1026,6 +1061,8 @@ When you are making frequent changes to the model, there will come a point when 
 `Update-Database`
 
 * This will reset the database so that it accurately reflects your model and allow you to return to developing your application.
+
+---
 
 ### Using TempData
 
@@ -1061,11 +1098,15 @@ So, the `temp data` feature is the perfect fit. The data is restricted to a `sin
 
 The message will be displayed once and disappear if you reload the screen with the template using this `temp data`, because `TempData` is deleted when it is read. That is convenient since we do not want old messages hanging around.
 
+---
+
 ### Localization hell
 
 By the time we get to editing with validation, something bad happens. It looks that by default the `jQuery-validation` (client side validation) expects `"en-US"` as its culture and the server side validation expects `"nl-NL"`. Therefore, when I see `€` as currency and `","` as decimal separator, I cannot change the price. Neither `","` nor `"."` are accepted. One is rejected by the client side and the other by the server side validation.
 
 Temporary workaround was to configure `"en-US"` as the default culture, so that `"$"` and `"."` are displayed on the screen. Then the validation works.
+
+---
 
 ### Adding Identity
 
@@ -1165,12 +1206,16 @@ namespace SportsStore.Models
 }
 ```
 
+---
+
 ### Adding Identity migrations
 
 * `Add-Migration Initial -Context AppIdentityDbContext`
 * `Update-Database -Context AppIdentityDbContext`
 
 This will create the new database and add the `AspNetUsers` and `AspNetRoles` in it.
+
+---
 
 ### Adding Authorization
 
@@ -1186,7 +1231,7 @@ public ViewResult List() =>
 public IActionResult MarkShipped(int orderID) {...}
 ```
 
-We want to protect **all of the action methods** defined by the `Admin` controller, and we can do this by applying the `Authorize`attribute to the controller class, which then applies the authorization policy to all the action methods it contains.
+We want to protect __all of the action methods__ defined by the `Admin` controller, and we can do this by applying the `Authorize`attribute to the controller class, which then applies the authorization policy to all the action methods it contains.
 
 ```csharp
 [Authorize]
@@ -1196,6 +1241,8 @@ public class AdminController : Controller
 
 !!! warning "Caution"
     In general, using client-side data validation is a good idea. It offloads some of the work from your server and gives users immediate feedback about the data they are providing. However, you should not be tempted to perform authentication at the client, as this would typically involve sending valid credentials to the client so they can be used to check the username and password that the user has entered, or at least trusting the client’s report of whether they have successfully authenticated. Authentication should always be done at the server.
+
+---
 
 ### Sources used
 

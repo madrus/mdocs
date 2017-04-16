@@ -2,10 +2,14 @@
 
 ### Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+```yml
+mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
+```
+
+---
 
 ### Useful Commands
 
@@ -14,13 +18,15 @@
 * `mkdocs build` - Build the documentation site.
 * `mkdocs help` - Print this help message.
 
+---
+
 ### Font Awesome
 
 [Font Awesome](https://fortawesome.github.io) gives you scalable vector icons that can instantly be customized -- size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these [examples](http://fontawesome.io/examples/).
 
 [Font Awesome Markdown](http://bmcorser.github.io/fontawesome-markdown/) is a Markdown extension that looks for things like `:fa-coffee:` (:fa-coffee:) or `:fa-refresh:` (:fa-refresh:) and replaces them with the Font Awesome icon markup.
 
-__Examples__
+#### Examples
 
 This examples use the fontawesome_markdown extension:
 
@@ -45,6 +51,8 @@ markdown_extensions:
   - fontawesome_markdown
 ```
 
+---
+
 ### Deployment to GitHub Pages directly
 
 The first step you'll need to do is simply make sure you have a __gh-pages__ branch that exists, if it doesn't:
@@ -65,6 +73,8 @@ This will push the __master__  branch to the remote __gh-pages__. After that, yo
 
 [http://your-github-name.github.io/mkdocs-repo-name](http://your-github-name.github.io/mkdocs-repo-name)
 
+---
+
 ### Deployment to GitHub pages via Travis CI
 
 Go to your GitHub account and create a new __Personal access token__ in your Developer settings. Copy the hash string.
@@ -76,7 +86,7 @@ In the Travis CI settings of your project add a new __GH_TOKEN__ environment var
 
 Configure the `.travis.yml` file. You may start with something like this:
 
-```yaml
+```ruby
 sudo: false
 language: python
 python: '2.7'
@@ -111,10 +121,10 @@ travis encrypt GH_TOKEN="the-token-from-github" --add
 
 This will add the following block at the end of the file:
 
-```yaml
+```ruby
 env:
   global:
-    - secure: "lots-of-seemingly-random-characters"
+  - secure: "lots-of-seemingly-random-characters"
 ```
 
 Now, when you push your changes to the remote __master__, Travis CI should publish the compiled website to __GitHub Pages__ if the build succeeds.

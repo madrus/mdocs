@@ -2,16 +2,17 @@
 
 ### Bundling and minifying
 
-Most of the information comes from [here](https://our.umbraco.org/forum/developers/razor/72069-how-to-bundle-css-and-js) and from [Bundling and minification in Umbraco](https://gist.github.com/jkarsrud/5143239).
+Most of the information comes from two articles: [How to bundle CSS and JS](https://our.umbraco.org/forum/developers/razor/72069-how-to-bundle-css-and-js) and [Bundling and minification in Umbraco](https://gist.github.com/jkarsrud/5143239).
 
-*   Added `App_Start` folder
-*   Created `BundleConfig.cs` class with bundles for JavaScript and CSS files
-*   Added `BundleTable.EnableOptimizations = true;` in `BundleConfig.cs` to be able to test bundling and minification.
-*   At the same time, added `<compilation debug="true" />` in `<system.web>` section of `Web.config`, `<compilation debug="false" />` in `web.Release.config`.
+* Added `App_Start` folder
+* Created `BundleConfig.cs` class with bundles for JavaScript and CSS files
+* Added `BundleTable.EnableOptimizations = true;` in `BundleConfig.cs` to be able to test bundling and minification.
+* At the same time, added `<compilation debug="true" />` in `<system.web>` section of `Web.config`, `<compilation debug="false" />` in `web.Release.config`.
 
-  **Important:** `EnableOptimizations` takes precedence of `compilation debug` value.
+!!! danger "Important"
+    `EnableOptimizations` takes precedence of `compilation debug` value.
 
-*   It is also important to make sure that `bundles` are included in the `umbracoReservedPaths`:
+* It is also important to make sure that `bundles` are included in the `umbracoReservedPaths`:
 
 ```xml
   <appSettings>
@@ -20,6 +21,8 @@ Most of the information comes from [here](https://our.umbraco.org/forum/develope
     ...
   </appSettings>
 ```
+
+---
 
 ### Web Deployment - Could not find part of the path
 
@@ -41,6 +44,8 @@ and add the following key to the `PropertyGroup` section:
 <AutoParameterizationWebConfigConnectionStrings>False</AutoParameterizationWebConfigConnectionStrings>
 ```
 
+---
+
 ### Web Deployment - Group policy prevents Roslyn's csc.exe from running
 
 #### Question
@@ -53,7 +58,7 @@ Website runtime error after deployment to GoDaddy:
 
 Since the .NET 4.5 version, Roslyn compilation is the default way of compiling. This means if you create any web application either Web Forms or MVC using .NET 4.5 you get this Roslyn csc.exe compilation pre-installed in your project.
 
-*   Uninstall `Microsoft.CodeDOM.Providers.DotNetCompilerPlatform` NuGet package, rebuild and redeploy the website
-*   Delete the corresponding .dll's from the `bin` directory
+* Uninstall `Microsoft.CodeDOM.Providers.DotNetCompilerPlatform` NuGet package, rebuild and redeploy the website
+* Delete the corresponding .dll's from the `bin` directory
 
-**NOTE** This will be probably necessary to do every time **Umbraco** is upgraded.
+__NOTE__ This will be probably necessary to do every time __Umbraco__ is upgraded.

@@ -1,10 +1,12 @@
 # Welcome
 
-## About this documentation
+### About this documentation
 
 Collecting tips and tricks is huge fun. I am doing it "along the way" every time I get stuck and later find the solution. Every bit of information here has at some point proved to be useful to me. So, the documentation is never complete and finished. __It is always "work in progress"__.
 
-## Installing prerequisites
+---
+
+### Installing prerequisites
 
 In order to view the documents offline, you need Python and the following dependencies:
 
@@ -13,7 +15,9 @@ pip install mkdocs pygments pymdown-extensions
 pip install mkdocs-material fontawesome-markdown
 ```
 
-## Running the project locally
+---
+
+### Running the project locally
 
 Open the command prompt in the project root directory and type:
 
@@ -23,7 +27,9 @@ mkdocs serve
 
 Then open your browser and navigate to [http://localhost:8000](http://localhost:8000/).
 
-## Publishing the project
+---
+
+### Publishing the project
 
 To publish the project to __GitHub Pages__ as a subdomain, e.g. `/mdocs` of the main [your-github-login.github.io](your-github-login.github.io) website, one needs first to create the repository with that name, e.g. `mdocs` and add it to one's project as a remote. Now, open the command prompt in the root directory (on the `master` branch) and type:
 
@@ -33,7 +39,9 @@ mkdocs gh-publish
 
 After that, the project website is available at [your-github-login.github.io/mdocs](your-github-login.github.io/mdocs).
 
-## Themes
+---
+
+### Themes
 
 * [MkDocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
 * 12 [Bootswatch](http://mkdocs.github.io/mkdocs-bootswatch/) themes
@@ -41,7 +49,9 @@ After that, the project website is available at [your-github-login.github.io/mdo
 * [Alabaster](https://github.com/iamale/mkdocs-alabaster) theme (quite simple)
 * [Bootstrap](https://github.com/mkdocs/mkdocs-bootstrap) theme
 
-## References
+---
+
+### References
 
 Here are the most important links that have inspired me:
 
