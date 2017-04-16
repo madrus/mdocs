@@ -2,12 +2,9 @@
 
 ### Admonition extension
 
-!!! warning "This does not always work correctly with Material theme"
-    Unfortunately, with Material theme this does not always give correct result. It works fine with the standard ReadTheDocs theme though.
-
 [Admonition extension](https://pythonhosted.org/Markdown/extensions/admonition.html) for the MkDocs Markdown provides for a way to draw attention of the reader. In order to use this extension
 
-__Syntax__
+#### Syntax
 
 ```none
 !!! special_word "some text within double quotes"
@@ -19,9 +16,10 @@ __Syntax__
 3. 1 special word (see below)
 4. 1 space
 5. (optional) some text within double quotes
-6. (optional) any number of lines beginning at pos. 4 (aligned with the special word after the exclamation marks)
+6. (optional) 1 empty line
+7. (optional) any number of lines beginning at pos. 4 (aligned with the special word after the exclamation marks)
 
-__Special words__
+#### Special words
 
 These special words result in a colored adminition blocks. It is nice to experiment with them.
 
@@ -30,63 +28,73 @@ These special words result in a colored adminition blocks. It is nice to experim
 * `warning`, `caution`, `attention` - beige/brown
 * `danger`, `error` - pink/red
 
-__NOTE:__ The special word can be also any other word. In that case, the color will always be light blue.
+!!! note 
 
-__Some examples__
+    The special word can be also any other word. In that case, the color will always be light blue.
+
+#### Some examples
 
 A custom text message on the first line...
 
 ```none
 !!! note "Explicit title within double quotes"
+
     Any number of other indented markdown elements.
-    This is the second paragraph.
+    And this is the second paragraph.
 ```
 
 ...replaces the 1st word:
 
 !!! note "Explicit title within double quotes"
+
     Any number of other indented markdown elements.
-    This is the second paragraph.
+    And this is the second paragraph.
 
 Any single word on the first line...
 
 ```none
 !!! hint
+
     You should note that the title will be automatically capitalized.
 ```
 
 ...will be capitalized:
 
 !!! hint
+
     You should note that the title will be automatically capitalized.
 
 The empty custom title...
 
 ```none
 !!! warning ""
+
     This is an admonition box without a title.
 ```
 
 ...results in no title:
 
 !!! warning ""
+
     This is an admonition box without a title.
 
 The word "warning" plus custom title...
 
 ```none
 !!! danger "Don't try this at home"
+
     Or you will regret it for the rest of your life!
 ```
 
 ...results in the red background:
 
 !!! danger "Don't try this at home"
+
     Or you will regret it for the rest of your life!
 
 ### SmartyPants extension
 
-Adding 
+Adding
 
 ```ruby
 - smarty:
@@ -119,10 +127,10 @@ You get:
 
 ### nl2br extension
 
-Adding 
+Adding
 
 ```ruby
-  - nl2br
+- nl2br
 ```
 
 to `markdown_extentions` creates a newline within fences when you make a newline in Markdown. You type:
@@ -134,7 +142,7 @@ line 2
 
 Without `nl2br` you see this:
 
-```none
+``` none
 line 1 line 2
 ```
 
@@ -148,6 +156,11 @@ line 2
 ---
 
 ### Custom Theme
+
+!!! Note
+
+    If you are looking for third party themes, they are listed in the MkDocs
+    [community wiki](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
 
 It is possible to add extra customization via a __Custom Theme__ option.
 
