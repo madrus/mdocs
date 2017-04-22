@@ -2,6 +2,8 @@
 
 ### ConEmu
 
+Here is the main link to [Conemu](https://conemu.github.io/) website. 
+
 #### Show Branch Name on Command Line
 
 Run `GitShowBranch /i` to install showing branch, `GitShowBranch /u` to uninstall.
@@ -51,6 +53,63 @@ You can also create the __Admin__ version of the same command with minimal chang
 !!! note "TODO"
 
     It would also be nice to be able to open the __ConEmu__ folder from within the __Far Manager__ window.
+
+---
+
+### Cmder
+
+This tool combines most of the features of [Conemu](#conemu) and [Clink](https://mridgers.github.io/clink/).
+
+#### Environment variables
+
+!!! important "No spaces in the path names!"
+
+    Make sure there are no spaces in the path. If necessary, substitute those paths with their short versions. You can find them by running `dir /X` in their parent directory.
+
+Add the following environment system variables to Windows according to your specific situation:
+
+`CMDER_ROOT = C:\PROGRA~1\Cmder`
+
+Add the path to `Cmder.exe` to the `PATH` variable:
+
+`C:\PROGRA~1\Cmder`
+
+#### Shortcut to open Cmder in a chosen folder
+
+1. Open a terminal as an __Administrator__
+2. Navigate to the directory in which you have placed __Cmder__
+3. Execute `.\cmder.exe /REGISTER ALL`. If you get _"Access Denied"_ ensure you are executing the command in an __Administrator__ prompt
+
+In the Windows explorer window right click in or on a directory to see `Cmder Here` in the context menu.
+
+#### Tips and Tricks
+
+#### Aliases
+
+You can create an alias to any command by an `alias` command, e.g.:
+
+```bash
+alias push=git push -u $*
+```
+
+!!! important "No space in between!"
+
+    Make sure there is no space between the alias and the equality sign `=`
+
+Undo the alias by `unalias push`.
+
+The aliases can be found in `config` subdirectory of the cmder install directory in the `user-aliases.cmd` file or by running `alias` command with no parameters.
+
+#### Standard Aliases
+
+* `cmderr` - open cmder window in the cmder install directory, e.g. `C:\Program Files\Cmder`
+* `history` - show latest commands
+
+#### Links
+
+* [Cmder: Super Command Line Tool Window](https://www.youtube.com/watch?v=ncBPkuhpszY)
+
+---
 
 ### Far Manager
 
