@@ -2,10 +2,11 @@
 
 ### Requirements
 
-* install the latest full version of [Git Extenstions](https://gitextensions.github.io/)
-* start command prompt and check that `git --version` shows no error
-* add a new Windows environment variable: `GIT_SSH = C:\Program Files (x86)\GitExtensions\PuTTY`
-* Add the path of the `PuTTY` directory to the System __PATH__ variable: `C:\Program Files (x86)\GitExtensions\PuTTY`
+* The latest (full) version of [Git Extenstions](https://gitextensions.github.io/) is installed
+* `git --version` shows no errors; if not, add the location of the __Git__ folder to the __PATH__
+* There exists the `GIT_SSH` Windows environment variable (necessary for `plink`): `C:\Program Files (x86)\GitExtensions\PuTTY`
+* `PuTTY` directory is on the system __PATH__: `C:\Program Files (x86)\GitExtensions\PuTTY`
+* `where ssh` command shows the location of `ssh.exe`; if not, add the location of the `Git\usr\bin` folder to the system __PATH__
 
 ---
 
