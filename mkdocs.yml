@@ -22,6 +22,7 @@ pages:
     - Notes: dotnet/notes.md
     - Tips: dotnet/tips.md
   - Git:
+    - GitFlow: git/gitflow.md
     - Tools: git/tools.md
     - Styling: git/styling.md
     - SSH: git/ssh.md

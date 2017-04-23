@@ -62,7 +62,7 @@ This tool combines most of the features of [Conemu](#conemu) and [Clink](https:/
 
 #### Environment variables
 
-!!! important "No spaces in the path names!"
+!!! warning "No spaces in the path names!"
 
     Make sure there are no spaces in the path. If necessary, substitute those paths with their short versions. You can find them by running `dir /X` in their parent directory.
 
@@ -92,7 +92,7 @@ You can create an alias to any command by an `alias` command, e.g.:
 alias push=git push -u $*
 ```
 
-!!! important "No space in between!"
+!!! warning "No space in between!"
 
     Make sure there is no space between the alias and the equality sign `=`
 
