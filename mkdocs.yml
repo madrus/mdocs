@@ -45,7 +45,7 @@ extra:
   logo: 'img/logo.png'
   palette:
     primary: 'blue grey'
-    accent: 'deep purple'
+    accent: 'deep orange'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

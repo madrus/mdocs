@@ -41,6 +41,15 @@ After that, the project website is available at [your-github-login.github.io/mdo
 
 ---
 
+### Theme Customization
+
+A lot can be found on the [main website](http://squidfunk.github.io/mkdocs-material/customization/)
+ itself. 
+ 
+The color table to choose the main and accent colors can be found on the [Getting Started](http://squidfunk.github.io/mkdocs-material/getting-started/) page.
+
+---
+
 ### Themes
 
 * [MkDocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
