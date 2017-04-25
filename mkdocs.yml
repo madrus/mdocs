@@ -44,8 +44,8 @@ extra:
   version: 0.2.0
   logo: 'img/logo.png'
   palette:
-    primary: 'teal'
-    accent: 'teal'
+    primary: 'blue grey'
+    accent: 'deep purple'
   font:
     text: 'Roboto'
     code: 'Roboto Mono'

@@ -68,7 +68,8 @@ This tool combines most of the features of [Conemu](#conemu) and [Clink](https:/
 
 Add the following environment system variables to Windows according to your specific situation:
 
-`CMDER_ROOT = C:\PROGRA~1\Cmder`
+* `CMDER_ROOT = C:\PROGRA~1\Cmder`
+* `GIT_INSTALL_ROOT = C:\PROGRA~1\Git`
 
 Add the path to `Cmder.exe` to the `PATH` variable:
 
@@ -84,6 +85,33 @@ In the Windows explorer window right click in or on a directory to see `Cmder He
 
 #### Configuring Tasks
 
+In the Settings (`Win+Alt+P`) click on `Startup/Tasks`. Then choose one of the predefined tasks or add a new one by clicking on the `"+"` button at the bottom of the screen.
+
+Study the `init.bat` file in the `vendor` subfolder of `Cmder` installation folder. Substitute `git-for-windows` for `git` if you have Git installed separately.
+
+!!! warning "Changes will be overridden"
+
+    Notice that this file is overridden with every installation. So, any changes in it will be lost.
+
+`init.bat` gives better UX for those developers working with Git as it shows branch names, changes stats, and uses colors similarly to the classic `bash` prompt.
+
+#### Parameters
+
+Here is an example of how to specify the __icon__ of the console window -- place this string in the `Task parameters` input field:
+
+`/icon "%CMDER_ROOT%\icons\cmder.ico"`
+
+To start Cmder in normal mode, you can use something like this:
+
+`cmd.exe /k "%ConEmuDir%\..\init.bat"  -new_console:d:I:\src`
+
+And here is how to start the same in the Administrative mode:
+
+`cmd.exe /k "%ConEmuDir%\..\init.bat"  -new_console:d:I:\src -cur_console:a`
+
+* `new_console` specifies to start a new window with some parameters
+* `cur_console` specifies extra parameters for the window started with the previous `new_console`
+
 Here is a good example of how to configure the environment for editing files not related to Visual Studio and .NET. Another neat functionality are customized Tasks. Use those to store different project workspaces. One task equals one workspace. Thanks to that it is possible to easily start another 'project' and initialize it by opening specific folders and specific files in Vim. It is a lot faster than doing everything manually.
 
 In the Settings navigate to __Startup -> Tasks__ and create a new predefined task with a "+" sign. Then add this code:
@@ -95,7 +123,7 @@ In the Settings navigate to __Startup -> Tasks__ and create a new predefined tas
 -cur_console:d:D:\ "%ProgramFiles%\Git\bin\sh.exe" --login -i cur_console:n:sT66H cmd.exe -new_console:d:D:\ -i -cur_console:n:sT50H
 ```
 
-What does those commands do? 
+What do those commands do?
 
 1. Creates new screen and opens Vim in my Dropbox folder context
 2. Creates new screen with Vim pointing to D:\
