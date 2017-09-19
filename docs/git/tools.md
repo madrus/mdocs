@@ -1,5 +1,8 @@
 # Git Command Line Tools
 
+[TOC]
+
+---
 ### ConEmu
 
 Here is the main link to [Conemu](https://conemu.github.io/) website. 
@@ -68,8 +71,7 @@ This tool combines most of the features of [Conemu](#conemu) and [Clink](https:/
 
 Add the following environment system variables to Windows according to your specific situation:
 
-* `CMDER_ROOT = C:\PROGRA~1\Cmder`
-* `GIT_INSTALL_ROOT = C:\PROGRA~1\Git`
+`CMDER_ROOT = C:\PROGRA~1\Cmder`
 
 Add the path to `Cmder.exe` to the `PATH` variable:
 
@@ -85,33 +87,6 @@ In the Windows explorer window right click in or on a directory to see `Cmder He
 
 #### Configuring Tasks
 
-In the Settings (`Win+Alt+P`) click on `Startup/Tasks`. Then choose one of the predefined tasks or add a new one by clicking on the `"+"` button at the bottom of the screen.
-
-Study the `init.bat` file in the `vendor` subfolder of `Cmder` installation folder. Substitute `git-for-windows` for `git` if you have Git installed separately.
-
-!!! warning "Changes will be overridden"
-
-    Notice that this file is overridden with every installation. So, any changes in it will be lost.
-
-`init.bat` gives better UX for those developers working with Git as it shows branch names, changes stats, and uses colors similarly to the classic `bash` prompt.
-
-#### Parameters
-
-Here is an example of how to specify the __icon__ of the console window -- place this string in the `Task parameters` input field:
-
-`/icon "%CMDER_ROOT%\icons\cmder.ico"`
-
-To start Cmder in normal mode, you can use something like this:
-
-`cmd.exe /k "%ConEmuDir%\..\init.bat"  -new_console:d:I:\src`
-
-And here is how to start the same in the Administrative mode:
-
-`cmd.exe /k "%ConEmuDir%\..\init.bat"  -new_console:d:I:\src -cur_console:a`
-
-* `new_console` specifies to start a new window with some parameters
-* `cur_console` specifies extra parameters for the window started with the previous `new_console`
-
 Here is a good example of how to configure the environment for editing files not related to Visual Studio and .NET. Another neat functionality are customized Tasks. Use those to store different project workspaces. One task equals one workspace. Thanks to that it is possible to easily start another 'project' and initialize it by opening specific folders and specific files in Vim. It is a lot faster than doing everything manually.
 
 In the Settings navigate to __Startup -> Tasks__ and create a new predefined task with a "+" sign. Then add this code:
@@ -123,7 +98,7 @@ In the Settings navigate to __Startup -> Tasks__ and create a new predefined tas
 -cur_console:d:D:\ "%ProgramFiles%\Git\bin\sh.exe" --login -i cur_console:n:sT66H cmd.exe -new_console:d:D:\ -i -cur_console:n:sT50H
 ```
 
-What do those commands do?
+What does those commands do? 
 
 1. Creates new screen and opens Vim in my Dropbox folder context
 2. Creates new screen with Vim pointing to D:\
@@ -154,32 +129,6 @@ The aliases can be found in `config` subdirectory of the cmder install directory
 #### How to update ConEmu within Cmder
 
 __Maximus5__, the author of Cmder, explains how to update ConEmu to a new version. Current Cmder can contain an older ConEmu version. To update ConEmu, get the new package from the [ConEmu website](https://conemu.github.io) and copy its content to 'your cmder installation'/vendor/conemu-maximus5 folder.
-
-#### Add "Cmder Here" to the Windows context menu
-
-It is convenient to be able to open the __Cmder__ windows at the current location. You would then want to be able to either
-
-1. right click either on the folder itself, or 
-2. right click inside the white area within the folder open in the __Windows Explorer__.
-
-Create (if not already created by the __Cmder__ installation) the same group of keys and string values in the __Windows Registry__ in the following two locations respectively:
-
-1. `HCR/Directory/shell`
-2. `HCR/Directory/Background/shell`
-
-Key: __Cmder__
-
-| Name                 | Type     | Data                                     |
-| :------------------- | :------- | :--------------------------------------- |
-| `(Default)`          | `REG_SZ` | `Cmder Here`                             |
-| `Icon`               | `REG_SZ` | `C:\Program Files\Cmder\icons\cmder.ico` |
-| `NoWorkingDirectory` | `REG_SZ` |                                          |
-
-Subkey: __command__
-
-| Name        | Type     | Data                                        |
-| :---------- | :------- | :------------------------------------------ |
-| `(Default)` | `REG_SZ` | `"C:\Program Files\Cmder\Cmder.exe"` `"%V"` |
 
 #### Links
 
@@ -218,3 +167,4 @@ Subkey: __command__
 
     In the `shell`, replace X with __1__ and in the `Background/shell` with __2__.
 
+---

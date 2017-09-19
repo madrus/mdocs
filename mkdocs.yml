@@ -1,7 +1,7 @@
 # Project information
-site_name: "Madrus's Docs"
+site_name: 'Madrus's Docs'
 site_description: 'A short description of my project'
-site_author: 'Madrus'
+site_author: Madrus
 site_url: 'http://madrus4u.com/mdocs/'
 site_favicon: 'img/favicon.ico'
 
