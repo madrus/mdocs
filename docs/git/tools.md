@@ -155,6 +155,32 @@ The aliases can be found in `config` subdirectory of the cmder install directory
 
 __Maximus5__, the author of Cmder, explains how to update ConEmu to a new version. Current Cmder can contain an older ConEmu version. To update ConEmu, get the new package from the [ConEmu website](https://conemu.github.io) and copy its content to 'your cmder installation'/vendor/conemu-maximus5 folder.
 
+#### Add "Cmder Here" to the Windows context menu
+
+It is convenient to be able to open the __Cmder__ windows at the current location. You would then want to be able to either
+
+1. right click either on the folder itself, or 
+2. right click inside the white area within the folder open in the __Windows Explorer__.
+
+Create (if not already created by the __Cmder__ installation) the same group of keys and string values in the __Windows Registry__ in the following two locations respectively:
+
+1. `HCR/Directory/shell`
+2. `HCR/Directory/Background/shell`
+
+Key: __Cmder__
+
+| Name                 | Type     | Data                                     |
+| :------------------- | :------- | :--------------------------------------- |
+| `(Default)`          | `REG_SZ` | `Cmder Here`                             |
+| `Icon`               | `REG_SZ` | `C:\Program Files\Cmder\icons\cmder.ico` |
+| `NoWorkingDirectory` | `REG_SZ` |                                          |
+
+Subkey: __command__
+
+| Name        | Type     | Data                                        |
+| :---------- | :------- | :------------------------------------------ |
+| `(Default)` | `REG_SZ` | `"C:\Program Files\Cmder\Cmder.exe"` `"%V"` |
+
 #### Links
 
 * [Cmder: Super Command Line Tool Window](https://www.youtube.com/watch?v=ncBPkuhpszY)

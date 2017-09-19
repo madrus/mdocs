@@ -26,11 +26,13 @@ pages:
     - Tools: git/tools.md
     - Styling: git/styling.md
     - SSH: git/ssh.md
+  - Vue.js:
+    - Basics: vuejs/basics.md
+  - Mac:
+    - NGINX: mac/nginx.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
-  - Vue.js:
-    - Basics: vuejs/basics.md
   - Playground:
     - TODOs: playground/todo.md
     - Test Document: playground/test.md
