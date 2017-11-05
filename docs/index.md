@@ -1,4 +1,4 @@
-# Welcome to My Personal Notes
+# Welcome to My Personal Docs
 
 ### About this documentation
 
