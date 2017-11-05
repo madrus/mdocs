@@ -82,7 +82,7 @@ Go to your GitHub account and create a new __Personal access token__ in your Dev
 !!! warning "Keep well the hash string!"
     You will see it only once when you create it.
 
-In the Travis CI settings of your project add a new __GH_TOKEN__ environment variable with the value of the hash string your have just copied. Don't forget to turn in __ON__ and to __ADD__.
+In the Travis CI settings of your project add a new __GITHUB_TOKEN__ environment variable with the value of the hash string your have just copied. Don't forget to turn in __ON__ and to __ADD__.
 
 Configure the `.travis.yml` file. You may start with something like this:
 
@@ -96,14 +96,14 @@ install:
 - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
 - git config credential.helper "store --file=.git/credentials"
-- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
 - mkdocs build
 - if [ $TRAVIS_TEST_RESULT == 0 ]; then
     mkdocs gh-deploy --force;
   fi
 ```
 
-The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the __Personal access token__ you have created. 
+The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the __Personal access token__ you have created.
 
 Also, I have put deployment inside the __script__ fase instead of __after_success__ as a workaround (see the tip of Chronial on this [Travis issue #758](https://github.com/travis-ci/travis-ci/issues/758)). Otherwise, the batch succeeds with a successful build even if deploy __fails__ after it.
 
@@ -113,10 +113,10 @@ Next, you need to have __travis__ Rubygem installed on your local machine. If no
 gem install travis
 ```
 
-Using __travis__, add the encrypted token to `.travis.yml`: 
+Using __travis__, add the encrypted token to `.travis.yml`:
 
 ```bash
-travis encrypt GH_TOKEN="the-token-from-github" --add
+travis encrypt GITHUB_TOKEN="the-token-from-github" --add
 ```
 
 This will add the following block at the end of the file:
