@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/madrus/mdocs.svg?branch=gh-pages)](https://travis-ci.org/madrus/mdocs)
+[![Build Status](https://travis-ci.org/madrus/mdocs.svg?branch=master)](https://travis-ci.org/madrus/mdocs)
 
 # Notes on Madrus's Docs
 
