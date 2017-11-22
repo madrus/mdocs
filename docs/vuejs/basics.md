@@ -9,23 +9,23 @@
 ### Quick and dirty
 
 ```bash
-npm install -g vue-cli
+npm i -g vue-cli
 vue init webpack-simple my-app
 cd my-app
 yarn install
 yarn upgrade
-npm run dev
+yarn run dev
 ```
 
 ### Normal Development
 
 ```bash
-npm install -g vue-cli
+npm i -g vue-cli
 vue init webpack my-app
 cd my-app
 yarn install
 yarn upgrade
-npm run dev
+yarn run dev
 ```
 
 When answering questions, choose standard installation (not airbnb) unless you like to fight with eslint and prefer to use semicolons everywhere.
@@ -100,11 +100,10 @@ new Vue({
   el: '#app',
   components: { App },
   render: (createElement) => createElement(App)
-  }
 })
 ```
 
-And with that, your app is free of any DOM template!
+And with that, your app is free of any DOM templates!
 
 If you can eliminate all string and DOM templates from your app you can use the smaller runtime-only build of Vue. This is an ideal project architecture and is the one you’ll see used in vue-cli templates.
 
