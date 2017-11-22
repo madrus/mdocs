@@ -29,6 +29,7 @@ pages:
     - Basics: vuejs/basics.md
   - Mac:
     - NGINX: mac/nginx.md
+    - SSH on Sierra: mac/ssh.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
@@ -68,7 +69,7 @@ markdown_extensions:
       smart_angled_quotes: true
 
 #Copyright
-copyright: 'Copyright &copy; 2017 <a href="https://madrus4u.com">Balans4U</a>'
+copyright: 'Copyright &copy; 2017 <a href="https://madrus4u.com">Madrus4U</a>'
 
 # Google Analytics
 google_analytics:
