@@ -59,14 +59,29 @@ extra:
     github: 'madrus'
     twitter: 'madrusnl'
 
+# Extensions
 markdown_extensions:
   - admonition
   - codehilite(css_class=code):
       guess_lang: false
-  - fontawesome_markdown
+      linenums: true
+  - footnotes
   - nl2br
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.smartsymbols
+  - fontawesome_markdown
   - smarty:
       smart_angled_quotes: true
+  - toc:
+      permalink: true
+
 
 #Copyright
 copyright: 'Copyright &copy; 2017 <a href="https://madrus4u.com">Madrus4U</a>'
