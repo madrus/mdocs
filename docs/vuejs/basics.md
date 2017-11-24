@@ -6,10 +6,12 @@
 
 ## Installation
 
+Start by installing `yarn` from [yarn website](https://yarnpkg.com/).
+
 ### Quick and dirty
 
 ```bash
-npm i -g vue-cli
+yarn global add vue-cli
 vue init webpack-simple my-app
 cd my-app
 yarn install
@@ -20,7 +22,7 @@ yarn run dev
 ### Normal Development
 
 ```bash
-npm i -g vue-cli
+yarn global add vue-cli
 vue init webpack my-app
 cd my-app
 yarn install
@@ -52,7 +54,7 @@ Single-file components are the superior choice. If you’re unable to include a 
 
 #### x-templates
 
-With `x-templates`, your template is still defined in the page, but within a script tag, and will, therefore, avoid processing by the DOM parser. The script tag is marked with text/x-template and referenced by an id in your component definition.
+With `x-templates`, your template is still defined in the page, but within a script tag, and will, therefore, avoid processing by the DOM parser. The script tag is marked with `text/x-template` and referenced by an id in your component definition.
 
 ```javascript
 Vue.component('my-component', {
