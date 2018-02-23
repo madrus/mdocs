@@ -16,23 +16,25 @@ pages:
     - Styling: engine/styling.md
   - Aurelia:
     - Technicalities: aurelia/technicalities.md
-  - .NET Core:
-    - New Project: dotnet/new_project.md
-    - Notes: dotnet/notes.md
-    - Tips: dotnet/tips.md
   - Git:
     - GitFlow: git/gitflow.md
     - Tools: git/tools.md
     - Styling: git/styling.md
     - SSH: git/ssh.md
-  - Vue.js:
-    - Basics: vuejs/basics.md
   - Mac:
     - NGINX: mac/nginx.md
     - SSH on Sierra: mac/ssh.md
+  - .NET Core:
+    - New Project: dotnet/new_project.md
+    - Notes: dotnet/notes.md
+    - Tips: dotnet/tips.md
   - Umbraco:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
+  - Vue.js:
+    - Basics: vuejs/basics.md
+  - Webpack:
+    - Basics: webpack/basics.md
   - Playground:
     - TODOs: playground/todo.md
     - Test Document: playground/test.md
