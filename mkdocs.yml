@@ -15,7 +15,7 @@ pages:
     - Technicalities: engine/technicalities.md
     - Styling: engine/styling.md
   - Aurelia:
-    - Technicalities: aurelia/technicalities.md
+    - Some Technical Notes: aurelia/technicalities.md
   - Git:
     - GitFlow: git/gitflow.md
     - Tools: git/tools.md
@@ -24,6 +24,7 @@ pages:
   - Mac:
     - NGINX: mac/nginx.md
     - SSH on Sierra: mac/ssh.md
+    - Tips & Tricks: mac/tips.md
   - .NET Core:
     - New Project: dotnet/new_project.md
     - Notes: dotnet/notes.md
