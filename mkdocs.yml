@@ -33,9 +33,9 @@ pages:
     - Technicalities: umbraco/technicalities.md
     - FAQ: umbraco/faq.md
   - Vue.js:
-    - Basics: vuejs/basics.md
+    - Vue.js Basics: vuejs/basics.md
   - Webpack:
-    - Basics: webpack/basics.md
+    - Webpack Basics: webpack/basics.md
   - Playground:
     - TODOs: playground/todo.md
     - Test Document: playground/test.md

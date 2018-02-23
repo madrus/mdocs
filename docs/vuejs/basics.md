@@ -1,5 +1,3 @@
-# Basics of Vue.js
-
 [TOC]
 
 ---
