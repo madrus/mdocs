@@ -1,6 +1,6 @@
-# Git Prompt Styling
+[TOC]
 
-### Powerline Fonts
+## Powerline Fonts
 
 Taken from the [Powerline fonts](https://github.com/powerline/fonts) repository. Start by cloning:
 
@@ -35,9 +35,9 @@ pip install --user powerline-status
 
 ---
 
-### Cmder
+## Cmder
 
-#### Main Font
+### Main Font
 
 I like these fonts for the terminal:
 
@@ -45,7 +45,7 @@ I like these fonts for the terminal:
 * Droid Sans Mono Slashed for Powerline
 * Anonymice Powerline
 
-#### Color Scheme
+### Color Scheme
 
 I like __Murena Scheme__ with some tweaks in __Features/Colors__:
 

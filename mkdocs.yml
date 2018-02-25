@@ -34,29 +34,6 @@ extra:
     github: 'madrus'
     twitter: 'madrusnl'
 
-# Extensions
-markdown_extensions:
-  - admonition
-  - codehilite:
-      guess_lang: false
-      linenums: true
-  - footnotes
-  - nl2br
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
-  - pymdownx.magiclink
-  - pymdownx.mark
-  - pymdownx.superfences
-  - pymdownx.smartsymbols
-  - fontawesome_markdown
-  - smarty:
-      smart_angled_quotes: true
-  - toc:
-      permalink: true
-
 #Copyright
 copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
 
@@ -64,6 +41,39 @@ copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
 google_analytics:
   - 'UA-52692182-5'
   - 'auto'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - fontawesome_markdown
+  - def_list
+  - footnotes
+  - meta
+  - nl2br
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - smarty:
+      smart_angled_quotes: true
+  - toc:
+      permalink: true
 
 # Pages structure
 pages:
@@ -75,9 +85,9 @@ pages:
     - Some Technical Notes: aurelia/technicalities.md
   - Git:
     - GitFlow: git/gitflow.md
-    - Tools: git/tools.md
-    - Styling: git/styling.md
-    - SSH: git/ssh.md
+    - Git Prompt Styling: git/styling.md
+    - Set up SSH: git/ssh.md
+    - Git Command Line Tools: git/tools.md
   - Mac:
     - NGINX: mac/nginx.md
     - SSH on Sierra: mac/ssh.md

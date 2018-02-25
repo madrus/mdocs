@@ -1,18 +1,20 @@
-# GitFlow, a Git Workflow Extension
+[TOC]
 
-### Introduction
+## Introduction
+
+__GitFlow__ is a Git Workflow Extension. The following diagram gives a good idea how it works.
 
 ![GitFlow](../img/gitflow.png)
 
 ---
 
-### Installation
+## Installation
 
-#### Prerequisites
+### Prerequisites
 
 Make sure you have __Git__ installed. Note the path to the `Git` directory. In this manual, we will use `C:\Program Files\Git`.
 
-#### Prepare the GitFlow local repository
+### Prepare the GitFlow local repository
 
 !!! warning "External dependencies"
 
@@ -49,7 +51,7 @@ git submodule status
  2fb06af13de884e9680f14a00c82e52a67c867f1 shFlags (1.0.3)
 ```
 
-#### Install GitFlow
+### Install GitFlow
 
 Run the following commands with the correct path to your __Git__ installation:
 
@@ -58,7 +60,7 @@ cd contrib
 msysgit-install.cmd "C:\Program Files\Git"
 ```
 
-#### Test GitFlow installation
+### Test GitFlow installation
 
 Test the installation by running
 
@@ -85,3 +87,4 @@ Available subcommands are:
 Try 'git flow <subcommand> help' for details.
 ```
 
+---
