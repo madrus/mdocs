@@ -1,7 +1,3 @@
-[TOC]
-
----
-
 ## Installation
 
 Start by installing `yarn` from [yarn website](https://yarnpkg.com/).

@@ -97,8 +97,8 @@ pages:
     - Notes: dotnet/notes.md
     - Tips: dotnet/tips.md
   - Umbraco:
-    - Technicalities: umbraco/technicalities.md
-    - FAQ: umbraco/faq.md
+    - Technical details: umbraco/technicalities.md
+    - Issues and solutions: umbraco/faq.md
   - Vue.js:
     - Vue.js Basics: vuejs/basics.md
   - Webpack:

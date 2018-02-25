@@ -1,6 +1,4 @@
-# Issues and solutions
-
-### Bundling and minifying
+## Bundling and minifying
 
 Most of the information comes from two articles: [How to bundle CSS and JS](https://our.umbraco.org/forum/developers/razor/72069-how-to-bundle-css-and-js) and [Bundling and minification in Umbraco](https://gist.github.com/jkarsrud/5143239).
 
@@ -24,15 +22,15 @@ Most of the information comes from two articles: [How to bundle CSS and JS](http
 
 ---
 
-### Web Deployment - Could not find part of the path
+## Web Deployment - Could not find part of the path
 
-#### Question
+### Question
 
 Error during web deploy
 
 > Could not open Source file: Could not find a part of the path 'J:\U\Ed4u\Ed4u\App_Plugins\LeBlender\Web.config;\App_Plugins\LeBlender\Web.config'.
 
-#### Answer
+### Answer
 
 Find the deployment profile `energydiet4u.nl - Web Deploy.pubxml`
 
@@ -46,15 +44,15 @@ and add the following key to the `PropertyGroup` section:
 
 ---
 
-### Web Deployment - Group policy prevents Roslyn's csc.exe from running
+## Web Deployment - Group policy prevents Roslyn's csc.exe from running
 
-#### Question
+### Question
 
 Website runtime error after deployment to GoDaddy:
 
 ![CodeDOM error](../img/roslyn_csc_error.PNG)
 
-#### Answer
+### Answer
 
 Since the .NET 4.5 version, Roslyn compilation is the default way of compiling. This means if you create any web application either Web Forms or MVC using .NET 4.5 you get this Roslyn csc.exe compilation pre-installed in your project.
 
