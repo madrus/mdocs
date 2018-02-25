@@ -1,5 +1,3 @@
-[TOC]
-
 ## Installing prerequisites
 
 if you want to participate in development of this project, you need to have the latest version of __Python 2.7__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
