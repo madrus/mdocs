@@ -1,13 +1,10 @@
-# Git Command Line Tools
-
 [TOC]
 
----
-### ConEmu
+## ConEmu
 
 Here is the main link to [Conemu](https://conemu.github.io/) website. 
 
-#### Show Branch Name on Command Line
+### Show Branch Name on Command Line
 
 Run `GitShowBranch /i` to install showing branch, `GitShowBranch /u` to uninstall.
 
@@ -23,7 +20,7 @@ cmd /k ver & GitShowBranch /i
 
 ---
 
-#### Add ConEmu to the Windows context menu
+### Add ConEmu to the Windows context menu
 
 It is convenient to be able to open the __ConEmu__ console at the current location. You would then want to be able to either
 
@@ -59,11 +56,11 @@ You can also create the __Admin__ version of the same command with minimal chang
 
 ---
 
-### Cmder
+## Cmder
 
 This tool combines most of the features of [Conemu](#conemu) and [Clink](https://mridgers.github.io/clink/).
 
-#### Environment variables
+### Environment variables
 
 !!! warning "No spaces in the path names!"
 
@@ -77,7 +74,7 @@ Add the path to `Cmder.exe` to the `PATH` variable:
 
 `C:\PROGRA~1\Cmder`
 
-#### Shortcut to open Cmder in a chosen folder
+### Shortcut to open Cmder in a chosen folder
 
 1. Open a terminal as an __Administrator__
 2. Navigate to the directory in which you have placed __Cmder__
@@ -85,7 +82,7 @@ Add the path to `Cmder.exe` to the `PATH` variable:
 
 In the Windows explorer window right click in or on a directory to see `Cmder Here` in the context menu.
 
-#### Configuring Tasks
+### Configuring Tasks
 
 Here is a good example of how to configure the environment for editing files not related to Visual Studio and .NET. Another neat functionality are customized Tasks. Use those to store different project workspaces. One task equals one workspace. Thanks to that it is possible to easily start another 'project' and initialize it by opening specific folders and specific files in Vim. It is a lot faster than doing everything manually.
 
@@ -105,7 +102,7 @@ What does those commands do?
 3. Initializes shell in this new window and splits current screen into `75%/25% horizontaly`
 4. Initializes shell in new (25%) window and splits it up into `33.3%/66.6% vertically`. Then initializes shell in the new (66.6%) window and splits it up into `50%/50% vertically`.
 
-#### Aliases
+### Aliases
 
 You can create an alias to any command by an `alias` command, e.g.:
 
@@ -121,24 +118,24 @@ Undo the alias by `unalias push`.
 
 The aliases can be found in `config` subdirectory of the cmder install directory in the `user-aliases.cmd` file or by running `alias` command with no parameters.
 
-#### Standard Aliases
+### Standard Aliases
 
 * `cmderr` - open cmder window in the cmder install directory, e.g. `C:\Program Files\Cmder`
 * `history` - show latest commands
 
-#### How to update ConEmu within Cmder
+### How to update ConEmu within Cmder
 
 __Maximus5__, the author of Cmder, explains how to update ConEmu to a new version. Current Cmder can contain an older ConEmu version. To update ConEmu, get the new package from the [ConEmu website](https://conemu.github.io) and copy its content to 'your cmder installation'/vendor/conemu-maximus5 folder.
 
-#### Links
+### Links
 
 * [Cmder: Super Command Line Tool Window](https://www.youtube.com/watch?v=ncBPkuhpszY)
 
 ---
 
-### Far Manager
+## Far Manager
 
-#### Add Far Manager to the Windows context menu
+### Add Far Manager to the Windows context menu
 
 It is convenient to be able to open the __Far Manager__ at the current location. You would then want to be able to either
 
@@ -163,8 +160,74 @@ Subkey: __command__
 | :---------- | :------- | :--------------------------------------------------------------- |
 | `(Default)` | `REG_SZ` | `"C:\Program Files\Far Manager\Far.exe"` `"%`__X__`" "%`__X__`"` |
 
-!!! danger "Replace X with a number!"
+!!! DANGER "Replace X with a number!"
 
     In the `shell`, replace X with __1__ and in the `Background/shell` with __2__.
+
+---
+
+## POSH-GIT for PowerShell
+
+__POSH-GIT__ is a PowerShell module that shows the current branch of the git repository and understands git commands.
+
+### Installation
+
+The easiest way is to use PowerShell of Chocolatey.
+
+#### PowerShell
+
+``` powershell
+PowerShellGet\Install-Module posh-git -Scope CurrentUser
+```
+
+__Note:__ If you get an error message from `Install-Module` about NuGet being required to interact with NuGet-based repositories, execute the following commands to bootstrap the NuGet provider:
+
+``` PowerShell
+Install-PackageProvider NuGet -Force
+Import-PackageProvider NuGet -Force
+```
+
+Then retry the `Install-Module` command above.
+
+#### Chocolatey
+
+``` bash
+choco install poshgit
+```
+
+#### Updates
+
+Update to a newer version by executing the command:
+
+``` powershell
+Update-Module posh-git
+```
+
+### How to use
+
+Open the PowerShell command prompt and run:
+
+``` bash
+Import-Module posh-git
+```
+
+If you are lazy to do it every time, add the command to your profile. Here is how.
+
+- start PowerShell command prompt and run `$profile`
+- you will see the path and name of your profile file, e.g. `C:\Users\YourUserName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1`
+- if this file does not exist, create it
+- add `Import-Module posh-git` to that file
+
+### Use it with Integrated Terminal in VS Code
+
+Add the following setting to the VS Code User Settings:
+
+``` json
+"terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe,
+```
+
+Toggle the Integrated Terminal window with ++ctrl+grave++.
+
+
 
 ---

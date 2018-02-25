@@ -1,13 +1,47 @@
-# Some technical details
+[TOC]
 
-### Project layout
+## Installing prerequisites
+
+if you want to participate in development of this project, you need to have the latest version of __Python 2.7__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
+
+After that, install __mkdocs__ and related packages:
+
+```bash
+pip install -U mkdocs mkdocs-material
+pip install -U fontawesome-markdown
+pip install -U pygments pymdown-extensions
+```
+
+---
+
+## Project Layout
 
 ```yml
 mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+    ...       # Other markdown pages, and other files.
+    /images   # Images used in the documents
 ```
+
+---
+
+## Running the project in DEV
+
+Open the command prompt in the project root directory and type:
+
+```bash
+mkdocs serve
+```
+
+Or, if you need to run it on a specific port, e.g. 8080, you can do one of the following:
+
+```bash
+mkdocs serve --dev-addr:8080
+mkdocs serve -a :8080
+```
+
+Then open your browser and navigate to [http://localhost:8000](http://localhost:8000/) or whatever port number you have configured.
 
 ---
 
