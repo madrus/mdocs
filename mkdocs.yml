@@ -8,38 +8,6 @@ site_url: 'http://madrus4u.com/mdocs/'
 #repo_name: 'GitHub'  # will it work with GitLab?
 repo_url: 'https://github.com/madrus/mdocs'
 
-# Pages structure
-pages:
-  - Home: index.md
-  - MkDocs Engine:
-    - Technicalities: engine/technicalities.md
-    - Styling: engine/styling.md
-  - Aurelia:
-    - Some Technical Notes: aurelia/technicalities.md
-  - Git:
-    - GitFlow: git/gitflow.md
-    - Tools: git/tools.md
-    - Styling: git/styling.md
-    - SSH: git/ssh.md
-  - Mac:
-    - NGINX: mac/nginx.md
-    - SSH on Sierra: mac/ssh.md
-    - Tips & Tricks: mac/tips.md
-  - .NET Core:
-    - New Project: dotnet/new_project.md
-    - Notes: dotnet/notes.md
-    - Tips: dotnet/tips.md
-  - Umbraco:
-    - Technicalities: umbraco/technicalities.md
-    - FAQ: umbraco/faq.md
-  - Vue.js:
-    - Vue.js Basics: vuejs/basics.md
-  - Webpack:
-    - Webpack Basics: webpack/basics.md
-  - Playground:
-    - TODOs: playground/todo.md
-    - Test Document: playground/test.md
-
 # Documentation and theme
 theme:
   name: 'material'
@@ -51,7 +19,7 @@ theme:
 
 # Options
 extra:
-  version: 0.2.0
+  version: 0.3.0
   logo: 'img/logo.png'
   palette:
     primary: 'blue grey'
@@ -89,11 +57,42 @@ markdown_extensions:
   - toc:
       permalink: true
 
-
 #Copyright
-copyright: 'Copyright &copy; 2017 <a href="https://madrus4u.com">Madrus4U</a>'
+copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
 
 # Google Analytics
 google_analytics:
   - 'UA-52692182-5'
   - 'auto'
+
+# Pages structure
+pages:
+  - Home: index.md
+  - MkDocs Engine:
+    - Technicalities: engine/technicalities.md
+    - Styling: engine/styling.md
+  - Aurelia:
+    - Some Technical Notes: aurelia/technicalities.md
+  - Git:
+    - GitFlow: git/gitflow.md
+    - Tools: git/tools.md
+    - Styling: git/styling.md
+    - SSH: git/ssh.md
+  - Mac:
+    - NGINX: mac/nginx.md
+    - SSH on Sierra: mac/ssh.md
+    - Tips & Tricks: mac/tips.md
+  - .NET Core:
+    - New Project: dotnet/new_project.md
+    - Notes: dotnet/notes.md
+    - Tips: dotnet/tips.md
+  - Umbraco:
+    - Technicalities: umbraco/technicalities.md
+    - FAQ: umbraco/faq.md
+  - Vue.js:
+    - Vue.js Basics: vuejs/basics.md
+  - Webpack:
+    - Webpack Basics: webpack/basics.md
+  - Playground:
+    - TODOs: playground/todo.md
+    - Test Document: playground/test.md

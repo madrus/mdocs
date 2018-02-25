@@ -1,12 +1,12 @@
 # Welcome to My Personal Docs
 
-### About this documentation
+## About this documentation
 
 Collecting tips and tricks is huge fun. I am doing it "along the way" every time I get stuck and later find the solution. Every bit of information here has at some point proved to be useful to me. So, the documentation is never complete and finished. __It is always "work in progress"__.
 
 ---
 
-### Installing prerequisites
+## Installing prerequisites
 
 In order to view the documents offline, you need Python and the following dependencies:
 
@@ -17,7 +17,7 @@ pip install -U mkdocs-material fontawesome-markdown
 
 ---
 
-### Running the project locally
+## Running the project locally
 
 Open the command prompt in the project root directory and type:
 
@@ -29,7 +29,7 @@ Then open your browser and navigate to [http://localhost:8000](http://localhost:
 
 ---
 
-### Publishing the project
+## Publishing the project
 
 To publish the project to __GitHub Pages__ as a subdomain, e.g. `/mdocs` of the main [your-github-login.github.io](your-github-login.github.io) website, one needs first to create the repository with that name, e.g. `mdocs` and add it to one's project as a remote. Now, open the command prompt in the root directory (on the `master` branch) and type:
 
@@ -41,7 +41,7 @@ After that, the project website is available at [your-github-login.github.io/mdo
 
 ---
 
-### Theme Customization
+## Theme Customization
 
 A lot can be found on the [main website](http://squidfunk.github.io/mkdocs-material/customization/)
  itself.
@@ -50,7 +50,7 @@ The color table to choose the main and accent colors can be found on the [Gettin
 
 ---
 
-### Themes
+## Themes
 
 * [MkDocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
 * 12 [Bootswatch](http://mkdocs.github.io/mkdocs-bootswatch/) themes
@@ -60,7 +60,7 @@ The color table to choose the main and accent colors can be found on the [Gettin
 
 ---
 
-### References
+## References
 
 Here are the most important links that have inspired me:
 
@@ -68,3 +68,5 @@ Here are the most important links that have inspired me:
 * MkDocs [User Guide](http://www.mkdocs.org/user-guide/writing-your-docs/)
 * [Material theme](http://squidfunk.github.io/mkdocs-material/) for MkDocs
 * Material Design [pallette colors](https://www.materialui.co/colors)
+
+---
