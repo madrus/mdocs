@@ -1,4 +1,54 @@
-# Custom Styling
+## Theme Customization
+
+A lot can be found on the [main website](http://squidfunk.github.io/mkdocs-material/customization/)
+ itself.
+
+The color table to choose the main and accent colors can be found on the [Getting Started](http://squidfunk.github.io/mkdocs-material/getting-started/) page.
+
+### Themes
+
+* [MkDocs Themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+* 12 [Bootswatch](http://mkdocs.github.io/mkdocs-bootswatch/) themes
+* [Cinder](http://sourcefoundry.org/cinder/) theme
+* [Alabaster](https://github.com/iamale/mkdocs-alabaster) theme (quite simple)
+* [Bootstrap](https://github.com/mkdocs/mkdocs-bootstrap) theme
+
+### Custom Theme
+
+!!! Note
+    If you are looking for third party themes, they are listed in the MkDocs
+    [community wiki](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
+
+It is possible to add extra customization via a __Custom Theme__ option.
+
+* create `custom_theme` and `custom_theme/css` directories parallel to the `docs` directory
+* inside the `custom_theme/css` directory create `extra.less` file with your styles
+* use any LESS compiler to compile the `extra.less` file to the minified `extra.min.css` and its map `extra.min.css.map`
+* add the following lines to `mkdoc.yml` under the `theme` variable:
+
+``` yaml
+theme
+  theme_dir: custom_theme
+  extra_css:
+  - css/extra.min.css
+```
+
+- now when you build and serve the website, you should see the custom styling in action
+
+Similarly, it is possible to add extra JavaScript inside the `custom_theme/js` directory. You add the corresponding setting to the `mkdocs.yml` file:
+
+``` yaml
+theme
+  theme_dir: custom_theme
+  extra_javascript:
+  - js/your-js-file.min.js
+```
+
+The [10 Tips for Writing JavaScript without jQuery](https://tutorialzine.com/2014/06/10-tips-for-writing-javascript-without-jquery) article is a good read to write custom JavaScript without using jQuery.
+
+---
+
+## Extensions
 
 ### Admonition extension
 
@@ -6,7 +56,7 @@
 
 #### Syntax
 
-```none
+``` none
 !!! special_word "some text within double quotes"
     Any number of lines aligned with the special_word
 ```
@@ -29,16 +79,14 @@ These special words result in a colored adminition blocks. It is nice to experim
 * `danger`, `error` - pink/red
 
 !!! note 
-
     The special word can be also any other word. In that case, the color will always be light blue.
 
 #### Some examples
 
 A custom text message on the first line...
 
-```none
+``` none
 !!! note "Explicit title within double quotes"
-
     Any number of other indented markdown elements.
     And this is the second paragraph.
 ```
@@ -46,57 +94,50 @@ A custom text message on the first line...
 ...replaces the 1st word:
 
 !!! note "Explicit title within double quotes"
-
     Any number of other indented markdown elements.
     And this is the second paragraph.
 
 Any single word on the first line...
 
-```none
+``` none
 !!! hint
-
     You should note that the title will be automatically capitalized.
 ```
 
 ...will be capitalized:
 
 !!! hint
-
     You should note that the title will be automatically capitalized.
 
 The empty custom title...
 
-```none
+``` none
 !!! warning ""
-
     This is an admonition box without a title.
 ```
 
 ...results in no title:
 
 !!! warning ""
-
     This is an admonition box without a title.
 
-The word "warning" plus custom title...
+The word "danger" plus custom title...
 
-```none
+``` none
 !!! danger "Don't try this at home"
-
     Or you will regret it for the rest of your life!
 ```
 
 ...results in the red background:
 
 !!! danger "Don't try this at home"
-
     Or you will regret it for the rest of your life!
 
 ### SmartyPants extension
 
 Adding
 
-```ruby
+``` yaml
 - smarty:
     smart_angled_quotes: true
 ```
@@ -105,7 +146,7 @@ to `markdown_extentions` gives you the possibility to print out nicely looking A
 
 You write:
 
-```none
+``` none
 'single quotes'
 "double qoutes"
 <<angled quotes>>
@@ -129,13 +170,13 @@ You get:
 
 Adding
 
-```ruby
-- nl2br
+``` yaml
+  - nl2br
 ```
 
 to `markdown_extentions` creates a newline within fences when you make a newline in Markdown. You type:
 
-```none
+``` none
 line 1
 line 2
 ```
@@ -148,38 +189,20 @@ line 1 line 2
 
 With `nl2br` you see this:
 
-```none
+``` none
 line 1
 line 2
 ```
 
 ---
 
-### Custom Theme
+## References
 
-!!! Note
+Here are the most important links that have inspired me:
 
-    If you are looking for third party themes, they are listed in the MkDocs
-    [community wiki](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes).
+* Latest official MkDocs [documentation](http://mkdocs.readthedocs.io/en/latest/)
+* MkDocs [User Guide](http://www.mkdocs.org/user-guide/writing-your-docs/)
+* [Material theme](http://squidfunk.github.io/mkdocs-material/) for MkDocs
+* Material Design [pallette colors](https://www.materialui.co/colors)
 
-It is possible to add extra customization via a __Custom Theme__ option.
-
-* create the `custom_theme` and `custom_theme/css` directories under `doc_dir` (see `mkdocs.yml` file)
-* inside the `custom_theme/css` directory create `extra.less` file with your styles
-* use any LESS compiler to compile the `extra.less` file to the minified `extra.min.css` and its map `extra.min.css.map`
-* add the following lines to `mkdoc.yml` under the `doc_dir` variable:
-
-```ruby
-  theme_dir: custom_theme
-  extra_css: 
-  - css/extra.min.css
-```
-
-* now when you build and serve the website, you should see the custom styling in action
-
-Similarly, it is possible to add extra JavaScript inside the `custom_theme/js` directory. You add the corresponding setting to the `mkdocs.yml` file:
-
-```ruby
-  extra_javascript: 
-  - js/your-js-file.min.js
-```
+---

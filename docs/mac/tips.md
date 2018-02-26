@@ -6,6 +6,12 @@ Suppose you have create a `run.sh` file and you want to be able to run it with `
 #!/bin/sh
 ```
 
+or like this:
+
+```none
+#!/bin/bash
+```
+
 Then in the folder with your file run this command to add execute rights to the file:
 
 ```bash

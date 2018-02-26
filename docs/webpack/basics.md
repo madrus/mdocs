@@ -15,4 +15,6 @@ Taken from the [Everything is a plugin! Mastering webpack from the inside out](h
 
 More information can be found in the [Concepts](https://webpack.js.org/concepts/) section of the `Webpack` documentation.
 
+In the [Single Page Applications with Vue.js](https://www.pluralsight.com/courses/vue-js-single-page-applications) PluralSight course, Bill Stavroulakis shows step by step how to add `webpack` and build it out together with the Vue.js solution.
+
 ---

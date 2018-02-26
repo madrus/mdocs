@@ -5,17 +5,27 @@ site_author: Madrus
 site_url: 'http://madrus4u.com/mdocs/'
 
 # Repository
-#repo_name: 'GitHub'  # will it work with GitLab?
-repo_url: 'https://github.com/madrus/mdocs'
+repo_name: madrus/mdocs
+repo_url: https://github.com/madrus/mdocs
+edit_uri: ''
+
+#Copyright
+copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
 
 # Documentation and theme
 theme:
   name: 'material'
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: 'blue grey'
+    accent: 'lime'
+  custom_dir: theme
   favicon: 'img/favicon.ico'
-
-# Extra assets
-#extra_css:
-#  - 'css/extra.css'
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
 
 # Options
 extra:
@@ -34,9 +44,6 @@ extra:
     github: 'madrus'
     twitter: 'madrusnl'
 
-#Copyright
-copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
-
 # Google Analytics
 google_analytics:
   - 'UA-52692182-5'
@@ -52,7 +59,6 @@ markdown_extensions:
   - def_list
   - footnotes
   - meta
-  - nl2br
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -79,8 +85,9 @@ markdown_extensions:
 pages:
   - Home: index.md
   - MkDocs Engine:
-    - Technicalities: engine/technicalities.md
-    - Styling: engine/styling.md
+    - Getting started: engine/technicalities.md
+    - Custom Styling: engine/styling.md
+    - More on MkDocs Material: engine/install.md
   - Aurelia:
     - Some Technical Notes: aurelia/technicalities.md
   - Git:

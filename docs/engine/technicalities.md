@@ -1,10 +1,10 @@
 ## Installing prerequisites
 
-if you want to participate in development of this project, you need to have the latest version of __Python 2.7__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
+if you want to create your own project like this one, you need to have the latest version of __Python 2.7__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
 
 After that, install __mkdocs__ and related packages:
 
-```bash
+``` bash
 pip install -U mkdocs mkdocs-material
 pip install -U fontawesome-markdown
 pip install -U pygments pymdown-extensions
@@ -14,7 +14,7 @@ pip install -U pygments pymdown-extensions
 
 ## Project Layout
 
-```yml
+``` yaml
 mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.
@@ -28,22 +28,20 @@ docs/
 
 Open the command prompt in the project root directory and type:
 
-```bash
+``` bash
 mkdocs serve
 ```
 
 Or, if you need to run it on a specific port, e.g. 8080, you can do one of the following:
 
-```bash
+``` bash
 mkdocs serve --dev-addr:8080
 mkdocs serve -a :8080
 ```
 
 Then open your browser and navigate to [http://localhost:8000](http://localhost:8000/) or whatever port number you have configured.
 
----
-
-### Useful Commands
+### Some Useful Commands
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
@@ -70,7 +68,7 @@ What would you drink, :fa-coffee: or :fa-beer:?
 
 For this example, you must install the `fontawesome_markdown` extension with `pip`. Right now version `0.2.5` is the latest but it doesn't work out of the box. Instead, you have to install the latest version from the github repository. You can do that with the command below:
 
-```bash
+``` bash
 pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 ```
 
@@ -78,34 +76,34 @@ You may need to include __-U__ in the above command if you already have this ext
 
 Then add the below to your `mkdocs.yml` file.
 
-```none
+``` yaml
 markdown_extensions:
   - fontawesome_markdown
 ```
 
 ---
 
+## Deployment
+
 ### Deployment to GitHub Pages directly
 
-The first step you'll need to do is simply make sure you have a __gh-pages__ branch that exists, if it doesn't:
+To publish the project to __GitHub Pages__ as a subdomain, e.g. `/mdocs` of the main [your-github-login.github.io](your-github-login.github.io) website, you need first to create a repository with that name, e.g. `mdocs` and add it to your project as a remote.
 
-```bash
+Next make sure you have a __gh-pages__ branch that exists. If it doesn't:
+
+``` bash
 git checkout -b gh-pages
 git rm -rf .
 git push --set-upstream origin gh-pages
 ```
 
-Then run this command:
+Now, open the command prompt in the root directory (on the `master` branch) and type:
 
-```bash
+``` bash
 mkdocs gh-deploy
 ```
 
-This will push the __master__  branch to the remote __gh-pages__. After that, you can view your website here:
-
-[http://your-github-name.github.io/mkdocs-repo-name](http://your-github-name.github.io/mkdocs-repo-name)
-
----
+This will push the __master__  branch to the remote __gh-pages__. After that, the project website is available at [your-github-login.github.io/mdocs](your-github-login.github.io/mdocs).
 
 ### Deployment to GitHub pages via Travis CI
 
@@ -118,7 +116,7 @@ In the Travis CI settings of your project add a new __GITHUB_TOKEN__ environment
 
 Configure the `.travis.yml` file. You may start with something like this:
 
-```ruby
+``` yaml
 sudo: false
 language: python
 python: '2.7'
@@ -141,19 +139,19 @@ Also, I have put deployment inside the __script__ fase instead of __after_succes
 
 Next, you need to have __travis__ Rubygem installed on your local machine. If not, install it:
 
-```bash
+``` bash
 gem install travis
 ```
 
 Using __travis__, add the encrypted token to `.travis.yml`:
 
-```bash
+``` bash
 travis encrypt GITHUB_TOKEN="the-token-from-github" --add
 ```
 
 This will add the following block at the end of the file:
 
-```ruby
+``` yaml
 env:
   global:
   - secure: "lots-of-seemingly-random-characters"
