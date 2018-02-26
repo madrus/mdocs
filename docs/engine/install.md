@@ -132,10 +132,8 @@ Design color palette. Valid values are: `red`, `pink`, `purple`, `deep purple`,
 If the color is set via this configuration, an additional CSS file that
 defines the color palette is automatically included. If you want to keep things
 lean, clone the repository and recompile the theme with your custom colors set.
-See the guide on [customization][11] for more information.
 
-  [10]: http://www.materialui.co/colors
-  [11]: customization.md
+[10]: http://www.materialui.co/colors
 
 #### Primary colors
 

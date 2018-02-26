@@ -1,3 +1,6 @@
-h3#color-palette {
-  color: red;
+/**
+ * Add your custom styles here
+ */
+[data-md-color-primary="blue-grey"] .md-typeset a {
+  font-weight: 700;
 }
