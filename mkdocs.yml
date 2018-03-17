@@ -16,8 +16,8 @@ copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
 theme:
   name: 'material'
   language: en
-  feature:
-    tabs: true
+  # feature:
+  #   tabs: true
   palette:
     primary: 'blue grey'
     accent: 'lime'
@@ -59,6 +59,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - meta
+  - nl2br
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -103,6 +104,8 @@ pages:
     - New Project: dotnet/new_project.md
     - Notes: dotnet/notes.md
     - Tips: dotnet/tips.md
+  - PowerShell:
+    - Debugging PowerShell in VS Code: powershell/vscode.md
   - Umbraco:
     - Technical details: umbraco/technicalities.md
     - Issues and solutions: umbraco/faq.md
