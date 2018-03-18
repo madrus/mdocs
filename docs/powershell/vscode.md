@@ -1,3 +1,7 @@
+!!! WARNING ""
+
+    This article describes the new version of PowerShell, `PowerShell Core v6.0`, which is a new generation of Powershell. It is cross-platform and at the moment implements only the most important functionality. Unfortunately, it has no modules to manage IIS.
+
 ## Recommended Prerequisites
 
 To effectively debug `PowerShell` in `Visual Studio Code` you might consider to carry out the following steps:
