@@ -1,3 +1,5 @@
+# Frequently Asked Questions
+
 ## Bundling and minifying
 
 Most of the information comes from two articles: [How to bundle CSS and JS](https://our.umbraco.org/forum/developers/razor/72069-how-to-bundle-css-and-js) and [Bundling and minification in Umbraco](https://gist.github.com/jkarsrud/5143239).
@@ -12,7 +14,7 @@ Most of the information comes from two articles: [How to bundle CSS and JS](http
 
 * It is also important to make sure that `bundles` are included in the `umbracoReservedPaths`:
 
-```xml
+``` xml
   <appSettings>
     ...
     <add key="umbracoReservedPaths" value="~/umbraco,~/install/,~/bundles/" />
@@ -34,7 +36,7 @@ Error during web deploy
 
 Find the deployment profile `energydiet4u.nl - Web Deploy.pubxml`
 
-![energydiet4u.nl - Web Deploy.pubxml](../img/webdeploy.PNG)
+![energydiet4u.nl - Web Deploy.pubxml](../img/webdeploy.png)
 
 and add the following key to the `PropertyGroup` section:
 
@@ -50,7 +52,7 @@ and add the following key to the `PropertyGroup` section:
 
 Website runtime error after deployment to GoDaddy:
 
-![CodeDOM error](../img/roslyn_csc_error.PNG)
+![CodeDOM error](../img/roslyn_csc_error.png)
 
 ### Answer
 
