@@ -83,7 +83,7 @@ markdown_extensions:
       permalink: true
 
 # Pages structure
-pages:
+nav:
   - Home: index.md
   - MkDocs Engine:
     - Getting started: engine/technicalities.md

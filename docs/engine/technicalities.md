@@ -1,3 +1,5 @@
+# Technical Information
+
 ## Installing prerequisites
 
 if you want to create your own project like this one, you need to have the latest version of __Python 2.7__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
@@ -39,7 +41,7 @@ mkdocs serve --dev-addr:8080
 mkdocs serve -a :8080
 ```
 
-Then open your browser and navigate to [http://localhost:8000](http://localhost:8000/) or whatever port number you have configured.
+Then open your browser and navigate to <http://localhost:8000> or whatever port number you have configured.
 
 ### Some Useful Commands
 
@@ -87,7 +89,7 @@ markdown_extensions:
 
 ### Deployment to GitHub Pages directly
 
-To publish the project to __GitHub Pages__ as a subdomain, e.g. `/mdocs` of the main [your-github-login.github.io](your-github-login.github.io) website, you need first to create a repository with that name, e.g. `mdocs` and add it to your project as a remote.
+To publish the project to __GitHub Pages__ as a subdomain, e.g. `/mdocs` of the main <your-github-login.github.io> website, you need first to create a repository with that name, e.g. `mdocs` and add it to your project as a remote.
 
 Next make sure you have a __gh-pages__ branch that exists. If it doesn't:
 
@@ -103,7 +105,7 @@ Now, open the command prompt in the root directory (on the `master` branch) and 
 mkdocs gh-deploy
 ```
 
-This will push the __master__  branch to the remote __gh-pages__. After that, the project website is available at [your-github-login.github.io/mdocs](your-github-login.github.io/mdocs).
+This will push the __master__  branch to the remote __gh-pages__. After that, the project website is available at <your-github-login.github.io/mdocs>.
 
 ### Deployment to GitHub pages via Travis CI
 
