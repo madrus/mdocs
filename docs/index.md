@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/madrus/mdocs.svg?branch=master)](https://travis-ci.org/madrus/mdocs)
+
 # Welcome to My Personal Docs
 
 ## About this documentation

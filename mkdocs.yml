@@ -97,6 +97,7 @@ nav:
     - Set up SSH: git/ssh.md
     - Git Command Line Tools: git/tools.md
   - Mac:
+    - Brew: mac/brew.md
     - NGINX: mac/nginx.md
     - SSH on Sierra: mac/ssh.md
     - Tips & Tricks: mac/tips.md
@@ -106,9 +107,6 @@ nav:
     - Tips: dotnet/tips.md
   - PowerShell:
     - Debugging PowerShell in VS Code: powershell/vscode.md
-  - Umbraco:
-    - Technical details: umbraco/technicalities.md
-    - Issues and solutions: umbraco/faq.md
   - Vue.js:
     - Vue.js Basics: vuejs/basics.md
   - Webpack:
