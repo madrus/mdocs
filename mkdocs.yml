@@ -96,6 +96,7 @@ nav:
     - Git Prompt Styling: git/styling.md
     - Set up SSH: git/ssh.md
     - Git Command Line Tools: git/tools.md
+    - GitDiff: git/gitdiff.md
   - Mac:
     - Brew: mac/brew.md
     - NGINX: mac/nginx.md
