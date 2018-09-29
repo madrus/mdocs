@@ -1,16 +1,12 @@
-[TOC]
-
----
+# Material Design HSL Colors
 
 Material Design colors from <https://www.google.com/design/spec/style/color.html#color-color-palette>
 
 Converted with <http://hslpicker.com/>
 
----
-
 ## Red
 
-```
+``` none
 500 hsla(4,   90%,  58%, 1)
 50  hsla(351, 100%, 96%, 1)
 100 hsla(354, 100%, 90%, 1)
@@ -33,7 +29,7 @@ A700 hsla(0,    100%, 42%, 1)
 
 ## Main Material Design Colors
 
-```
+``` none
 red           hsla(4,   90%,  58%, 1)
 pink          hsla(340, 82%,  52%, 1)
 purple        hsla(291, 64%,  42%, 1)
