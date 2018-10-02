@@ -1,178 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>http://madrus4u.com/mdocs//</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//engine/technicalities/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/start/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//engine/styling/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/cheatsheet/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//engine/install/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/styling/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//aurelia/technicalities/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/install/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//git/gitflow/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/deployment/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//git/styling/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/md_hsl_colors/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//git/ssh/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/engine/technicalities/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//git/tools/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/aurelia/technicalities/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//mac/nginx/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/git/gitflow/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//mac/ssh/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/git/styling/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//mac/tips/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/git/ssh/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//dotnet/new_project/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/git/tools/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//dotnet/notes/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/git/gitdiff/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//dotnet/tips/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/mac/brew/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//powershell/vscode/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/mac/nginx/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//umbraco/technicalities/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/mac/ssh/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//umbraco/faq/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/mac/tips/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//vuejs/basics/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/dotnet/new_project/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//webpack/basics/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/dotnet/notes/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
-    
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//playground/todo/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/dotnet/tips/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>http://madrus4u.com/mdocs//playground/test/</loc>
-     <lastmod>2018-03-18</lastmod>
+     <loc>http://madrus4u.com/mdocs/powershell/vscode/</loc>
+     <lastmod>2018-10-02</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
+    <url>
+     <loc>http://madrus4u.com/mdocs/vuejs/basics/</loc>
+     <lastmod>2018-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://madrus4u.com/mdocs/webpack/basics/</loc>
+     <lastmod>2018-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://madrus4u.com/mdocs/playground/todo/</loc>
+     <lastmod>2018-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>http://madrus4u.com/mdocs/playground/test/</loc>
+     <lastmod>2018-10-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>

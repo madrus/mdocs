@@ -25,6 +25,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -34,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.0.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
@@ -43,44 +47,70 @@
     
     
   
-      <link rel="stylesheet" href="../../assets/stylesheets/application-5b1b46901f.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
   <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
   </head>
   
     
     
-    
-      <body data-md-color-primary="blue-grey" data-md-color-accent="lime">
-    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="lime">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#styling" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -93,34 +123,36 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  MkDocs Engine
-                </span>
-              
+              <span class="md-header-nav__topic">
+                Madrus's Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Custom Styling
+              </span>
             
-            Custom Styling
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -150,7 +182,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -168,6 +200,9 @@
     
     <div class="md-container">
       
+        
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -176,12 +211,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://madrus4u.com/mdocs/" title="Madrus's Docs" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     Madrus's Docs
   </label>
   
@@ -196,7 +231,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -248,8 +283,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../technicalities/" title="Getting started" class="md-nav__link">
+    <a href="../start/" title="Getting started" class="md-nav__link">
       Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cheatsheet/" title="Markdown Cheatsheet" class="md-nav__link">
+      Markdown Cheatsheet
     </a>
   </li>
 
@@ -263,10 +310,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         Custom Styling
       </label>
     
@@ -278,8 +327,10 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -344,6 +395,40 @@
     Some examples
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-custom-text-message-on-the-first-line" title="A custom text message on the first line..." class="md-nav__link">
+    A custom text message on the first line...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#any-single-word-on-the-first-line" title="Any single word on the first line..." class="md-nav__link">
+    Any single word on the first line...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-empty-custom-title" title="The empty custom title..." class="md-nav__link">
+    The empty custom title...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-word-danger-plus-custom-title" title="The word "danger" plus custom title..." class="md-nav__link">
+    The word "danger" plus custom title...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -365,17 +450,19 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lato-font" title="Lato Font" class="md-nav__link">
+    Lato Font
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
-  </a>
-  
-</li>
+      
       
       
       
@@ -394,6 +481,42 @@
   <li class="md-nav__item">
     <a href="../install/" title="More on MkDocs Material" class="md-nav__link">
       More on MkDocs Material
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../deployment/" title="Deployment" class="md-nav__link">
+      Deployment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../md_hsl_colors/" title="HSL Colors" class="md-nav__link">
+      HSL Colors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../technicalities/" title="Technicalitites" class="md-nav__link">
+      Technicalitites
     </a>
   </li>
 
@@ -506,6 +629,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/gitdiff/" title="GitDiff" class="md-nav__link">
+      GitDiff
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -529,6 +664,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mac/brew/" title="Brew" class="md-nav__link">
+      Brew
+    </a>
+  </li>
+
         
           
           
@@ -677,58 +824,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
-      Umbraco
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Umbraco
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../umbraco/technicalities/" title="Technical details" class="md-nav__link">
-      Technical details
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../umbraco/faq/" title="Issues and solutions" class="md-nav__link">
-      Issues and solutions
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
       Vue.js
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-8">
         Vue.js
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -758,13 +857,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-9">
       Webpack
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-9">
         Webpack
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -794,13 +893,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-11">
+    <label class="md-nav__link" for="nav-10">
       Playground
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
+      <label class="md-nav__title" for="nav-10">
         Playground
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -849,8 +948,10 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -915,6 +1016,40 @@
     Some examples
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-custom-text-message-on-the-first-line" title="A custom text message on the first line..." class="md-nav__link">
+    A custom text message on the first line...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#any-single-word-on-the-first-line" title="Any single word on the first line..." class="md-nav__link">
+    Any single word on the first line...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-empty-custom-title" title="The empty custom title..." class="md-nav__link">
+    The empty custom title...
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-word-danger-plus-custom-title" title="The word "danger" plus custom title..." class="md-nav__link">
+    The word "danger" plus custom title...
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -936,17 +1071,19 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lato-font" title="Lato Font" class="md-nav__link">
+    Lato Font
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#references" title="References" class="md-nav__link">
-    References
-  </a>
-  
-</li>
+      
       
       
       
@@ -963,9 +1100,8 @@
               
                 
                 
-                  <h1>Custom Styling</h1>
-                
-                <h2 id="theme-customization">Theme Customization<a class="headerlink" href="#theme-customization" title="Permanent link">&para;</a></h2>
+                <h1 id="styling">Styling<a class="headerlink" href="#styling" title="Permanent link">&para;</a></h1>
+<h2 id="theme-customization">Theme Customization<a class="headerlink" href="#theme-customization" title="Permanent link">&para;</a></h2>
 <p>A lot can be found on the <a href="http://squidfunk.github.io/mkdocs-material/customization/">main website</a><br />
  itself.</p>
 <p>The color table to choose the main and accent colors can be found on the <a href="http://squidfunk.github.io/mkdocs-material/getting-started/">Getting Started</a> page.</p>
@@ -990,7 +1126,7 @@
 <li>use any LESS compiler to compile the <code>extra.less</code> file to the minified <code>extra.min.css</code> and its map <code>extra.min.css.map</code></li>
 <li>add the following lines to <code>mkdoc.yml</code> under the <code>theme</code> variable:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span>
@@ -1004,7 +1140,7 @@
 <li>now when you build and serve the website, you should see the custom styling in action</li>
 </ul>
 <p>Similarly, it is possible to add extra JavaScript inside the <code>custom_theme/js</code> directory. You add the corresponding setting to the <code>mkdocs.yml</code> file:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">theme</span>
@@ -1020,7 +1156,7 @@
 <h3 id="admonition-extension">Admonition extension<a class="headerlink" href="#admonition-extension" title="Permanent link">&para;</a></h3>
 <p><a href="https://pythonhosted.org/Markdown/extensions/admonition.html">Admonition extension</a> for the MkDocs Markdown provides for a way to draw attention of the reader. In order to use this extension</p>
 <h4 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! special_word &quot;some text within double quotes&quot;
     Any number of lines aligned with the special_word
 </pre></div>
@@ -1048,10 +1184,12 @@
 <p>The special word can be also any other word. In that case, the color will always be light blue.</p>
 </div>
 <h4 id="some-examples">Some examples<a class="headerlink" href="#some-examples" title="Permanent link">&para;</a></h4>
-<p>A custom text message on the first line&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<h5 id="a-custom-text-message-on-the-first-line">A custom text message on the first line&hellip;<a class="headerlink" href="#a-custom-text-message-on-the-first-line" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! note &quot;Explicit title within double quotes&quot;
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! note &quot;Explicit title within double quotes&quot;
+
     Any number of other indented markdown elements.
     And this is the second paragraph.
 </pre></div>
@@ -1063,9 +1201,11 @@
 <p>Any number of other indented markdown elements.<br />
 And this is the second paragraph.</p>
 </div>
-<p>Any single word on the first line&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! hint
+<h5 id="any-single-word-on-the-first-line">Any single word on the first line&hellip;<a class="headerlink" href="#any-single-word-on-the-first-line" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! hint
+
     You should note that the title will be automatically capitalized.
 </pre></div>
 </td></tr></table>
@@ -1075,9 +1215,11 @@ And this is the second paragraph.</p>
 <p class="admonition-title">Hint</p>
 <p>You should note that the title will be automatically capitalized.</p>
 </div>
-<p>The empty custom title&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! warning &quot;&quot;
+<h5 id="the-empty-custom-title">The empty custom title&hellip;<a class="headerlink" href="#the-empty-custom-title" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! warning &quot;&quot;
+
     This is an admonition box without a title.
 </pre></div>
 </td></tr></table>
@@ -1086,9 +1228,11 @@ And this is the second paragraph.</p>
 <div class="admonition warning">
 <p>This is an admonition box without a title.</p>
 </div>
-<p>The word &ldquo;danger&rdquo; plus custom title&hellip;</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! danger &quot;Don&#39;t try this at home&quot;
+<h5 id="the-word-danger-plus-custom-title">The word &ldquo;danger&rdquo; plus custom title&hellip;<a class="headerlink" href="#the-word-danger-plus-custom-title" title="Permanent link">&para;</a></h5>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>!!! danger &quot;Don&#39;t try this at home&quot;
+
     Or you will regret it for the rest of your life!
 </pre></div>
 </td></tr></table>
@@ -1100,70 +1244,81 @@ And this is the second paragraph.</p>
 </div>
 <h3 id="smartypants-extension">SmartyPants extension<a class="headerlink" href="#smartypants-extension" title="Permanent link">&para;</a></h3>
 <p>Adding</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">smarty</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">smart_angled_quotes</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </td></tr></table>
 
 <p>to <code>markdown_extentions</code> gives you the possibility to print out nicely looking ASCII dashes, quotes and ellipes:</p>
-<p>You write:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>&#39;single quotes&#39;
-&quot;double qoutes&quot;
-&lt;&lt;angled quotes&gt;&gt;
-... ellipsis
--- ndash
---- mdash
-</pre></div>
-</td></tr></table>
-
-<p>You get:</p>
-<p>&lsquo;single quotes&rsquo;<br />
-&ldquo;double qoutes&rdquo;<br />
-&laquo;angled quotes&raquo;<br />
-&hellip; ellipsis<br />
-&ndash; ndash<br />
-&mdash; mdash</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>you write</strong></th>
+<th align="center"><strong>you get</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>'single quotes'</code></td>
+<td align="center">&lsquo;single quotes&rsquo;</td>
+</tr>
+<tr>
+<td align="center"><code>&quot;double qoutes&quot;</code></td>
+<td align="center">&ldquo;double qoutes&rdquo;</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;&lt;angled quotes&gt;&gt;</code></td>
+<td align="center">&laquo;angled quotes&raquo;</td>
+</tr>
+<tr>
+<td align="center"><code>... ellipsis</code></td>
+<td align="center">&hellip; ellipsis</td>
+</tr>
+<tr>
+<td align="center"><code>-- ndash</code></td>
+<td align="center">&ndash; ndash</td>
+</tr>
+<tr>
+<td align="center"><code>--- mdash</code></td>
+<td align="center">&mdash; mdash</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h3 id="nl2br-extension">nl2br extension<a class="headerlink" href="#nl2br-extension" title="Permanent link">&para;</a></h3>
 <p>Adding</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">nl2br</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">nl2br</span>
 </pre></div>
 </td></tr></table>
 
 <p>to <code>markdown_extentions</code> creates a newline within fences when you make a newline in Markdown. You type:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>line 1
 line 2
 </pre></div>
 </td></tr></table>
 
 <p>Without <code>nl2br</code> you see this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>line 1 line 2
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>line 1 line 2
 </pre></div>
 </td></tr></table>
 
 <p>With <code>nl2br</code> you see this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>line 1
 line 2
 </pre></div>
 </td></tr></table>
 
 <hr />
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>Here are the most important links that have inspired me:</p>
-<ul>
-<li>Latest official MkDocs <a href="http://mkdocs.readthedocs.io/en/latest/">documentation</a></li>
-<li>MkDocs <a href="http://www.mkdocs.org/user-guide/writing-your-docs/">User Guide</a></li>
-<li><a href="http://squidfunk.github.io/mkdocs-material/">Material theme</a> for MkDocs</li>
-<li>Material Design <a href="https://www.materialui.co/colors">pallette colors</a></li>
-</ul>
+<h3 id="lato-font">Lato Font<a class="headerlink" href="#lato-font" title="Permanent link">&para;</a></h3>
+<p>This font is one of the free Google Fonts. Here is the link to the <a href="https://fonts.google.com/specimen/Lato?selection.family=Lato">Lato Google Font</a> page.</p>
+<p>In order to use this font, the following line is adde to the <code>/css/extra.less</code> file:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">import</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://fonts.googleapis.com/css?family=Lato&#39;</span><span class="o">)</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
 <hr />
                 
                   
@@ -1171,6 +1326,8 @@ line 2
               
               
                 
+
+
               
             </article>
           </div>
@@ -1183,7 +1340,7 @@ line 2
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../technicalities/" title="Getting started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../cheatsheet/" title="Markdown Cheatsheet" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1192,7 +1349,7 @@ line 2
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting started
+                Markdown Cheatsheet
               </span>
             </div>
           </a>
@@ -1224,9 +1381,9 @@ line 2
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -1238,14 +1395,14 @@ line 2
       
     </div>
     
-      <script src="../../assets/javascripts/application-84693e5e49.js"></script>
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
       
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-52692182-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-52692182-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>

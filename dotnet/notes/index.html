@@ -25,6 +25,10 @@
       
         <meta name="lang:search.language" content="en">
       
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
         <meta name="lang:search.result.none" content="No matching documents">
       
         <meta name="lang:search.result.one" content="1 matching document">
@@ -34,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-0.17.1, mkdocs-material-2.0.2">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
@@ -43,44 +47,70 @@
     
     
   
-      <link rel="stylesheet" href="../../assets/stylesheets/application-5b1b46901f.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.451f80e5.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
       
     
   <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
 
     
-      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+      <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
   </head>
   
     
     
-    
-      <body data-md-color-primary="blue-grey" data-md-color-accent="lime">
-    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="lime">
   
     <svg class="md-svg">
       <defs>
         
         
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
         
       </defs>
     </svg>
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
-    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../../#notes-on-aspnet-core" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -93,34 +123,36 @@
         </a>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
       <div class="md-flex__cell md-flex__cell--stretch">
-        <span class="md-flex__ellipsis md-header-nav__title">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
             
-              
-                <span class="md-header-nav__parent">
-                  .NET Core
-                </span>
-              
+              <span class="md-header-nav__topic">
+                Madrus's Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Notes
+              </span>
             
-            Notes
           
-        </span>
+        </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
             
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="search"></label>
-  <div class="md-search__inner">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
-      <label class="md-icon md-search__icon" for="search"></label>
-      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -150,7 +182,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -168,6 +200,9 @@
     
     <div class="md-container">
       
+        
+      
+      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -176,12 +211,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" data-md-level="0">
-  <label class="md-nav__title md-nav__title--site" for="drawer">
-    <span class="md-nav__button md-logo">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://madrus4u.com/mdocs/" title="Madrus's Docs" class="md-nav__button md-logo">
       
         <i class="md-icon"></i>
       
-    </span>
+    </a>
     Madrus's Docs
   </label>
   
@@ -196,7 +231,7 @@
     
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#github" width="24" height="24"></use>
+          <use xlink:href="#__github" width="24" height="24"></use>
         </svg>
       </div>
     
@@ -246,8 +281,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/technicalities/" title="Getting started" class="md-nav__link">
+    <a href="../../engine/start/" title="Getting started" class="md-nav__link">
       Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/cheatsheet/" title="Markdown Cheatsheet" class="md-nav__link">
+      Markdown Cheatsheet
     </a>
   </li>
 
@@ -272,6 +319,42 @@
   <li class="md-nav__item">
     <a href="../../engine/install/" title="More on MkDocs Material" class="md-nav__link">
       More on MkDocs Material
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/deployment/" title="Deployment" class="md-nav__link">
+      Deployment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/md_hsl_colors/" title="HSL Colors" class="md-nav__link">
+      HSL Colors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/technicalities/" title="Technicalitites" class="md-nav__link">
+      Technicalitites
     </a>
   </li>
 
@@ -384,6 +467,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/gitdiff/" title="GitDiff" class="md-nav__link">
+      GitDiff
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -407,6 +502,18 @@
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mac/brew/" title="Brew" class="md-nav__link">
+      Brew
+    </a>
+  </li>
+
         
           
           
@@ -491,12 +598,12 @@
 
   <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="toc">
+      <label class="md-nav__link md-nav__link--active" for="__toc">
         Notes
       </label>
     
@@ -511,7 +618,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -837,6 +944,8 @@
   </a>
   
 </li>
+      
+      
       
       
       
@@ -910,58 +1019,10 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
     <label class="md-nav__link" for="nav-8">
-      Umbraco
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        Umbraco
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../umbraco/technicalities/" title="Technical details" class="md-nav__link">
-      Technical details
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../umbraco/faq/" title="Issues and solutions" class="md-nav__link">
-      Issues and solutions
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
       Vue.js
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
+      <label class="md-nav__title" for="nav-8">
         Vue.js
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -991,13 +1052,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
     
-    <label class="md-nav__link" for="nav-10">
+    <label class="md-nav__link" for="nav-9">
       Webpack
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
+      <label class="md-nav__title" for="nav-9">
         Webpack
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1027,13 +1088,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
-    <label class="md-nav__link" for="nav-11">
+    <label class="md-nav__link" for="nav-10">
       Playground
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
+      <label class="md-nav__title" for="nav-10">
         Playground
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1085,7 +1146,7 @@
     
   
   
-    <label class="md-nav__title" for="toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -1414,6 +1475,8 @@
       
       
       
+      
+      
     </ul>
   
 </nav>
@@ -1445,12 +1508,12 @@
 <li>views for <code>/product</code> uri associated with <code>ProductController</code> should all reside in the <code>/Views/Product</code> folder.</li>
 <li>MVC expects that the <code>default view</code> for an <code>action method</code> should be named after that method. For example, the default view associated with an action method called <code>List</code> should be called <code>List.cshtml</code>. Thus, for the <code>List action method</code> in the <code>ProductController</code> class, the <code>default view</code> is expected to be <code>/Views/Product/List.cshtml</code>. The <code>default view</code> is used when you return the result of calling the <code>View</code> method in an action method, like this:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="k">return</span> <span class="nf">View</span><span class="p">();</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="k">return</span> <span class="nf">View</span><span class="p">();</span>
 </pre></div>
 </td></tr></table>
 
 <p>You can specify a different view by name, like this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="k">return</span> <span class="nf">View</span><span class="p">(</span><span class="s">&quot;MyOtherView&quot;</span><span class="p">);</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="k">return</span> <span class="nf">View</span><span class="p">(</span><span class="s">&quot;MyOtherView&quot;</span><span class="p">);</span>
 </pre></div>
 </td></tr></table>
 
@@ -1458,7 +1521,7 @@
 <li>When looking for a <code>view</code>, MVC looks in the folder named after the controller and then in the <code>/Views/Shared</code> folder. This means that I can put views that will be used by more than one controller in the <code>/Views/Shared</code> folder and MVC will find them.</li>
 <li>The naming convention for <code>layouts</code> is to prefix the file with an underscore (<code>_</code>) character, and layout files are placed in the <code>/Views/Shared</code> folder. This layout is applied to all views by default through the <code>/Views/_ViewStart.cshtml</code> file. If you do not want the default layout applied to views, you can change the settings in <code>ViewStart.cshtml</code> (or delete the file entirely) to specify another layout in the view, like this:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="err">@</span><span class="p">{</span>
     <span class="n">Layout</span> <span class="p">=</span> <span class="s">&quot;~/_MyLayout.cshtml&quot;</span><span class="p">;</span>
@@ -1469,7 +1532,7 @@
 <ul>
 <li>Or you can disable any layout for a given view, like this:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="err">@</span><span class="p">{</span>
     <span class="n">Layout</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
@@ -1481,7 +1544,7 @@
 <h3 id="extension-methods">Extension methods<a class="headerlink" href="#extension-methods" title="Permanent link">&para;</a></h3>
 <h4 id="class-extensions">Class extensions<a class="headerlink" href="#class-extensions" title="Permanent link">&para;</a></h4>
 <p>Suppose we have a simple class:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1502,7 +1565,7 @@
 </td></tr></table>
 
 <p>We want to extend its functionality with a new method to calculate the total amount:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1525,14 +1588,14 @@
 </td></tr></table>
 
 <p>We can then use this extension method like this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">ShoppingCart</span> <span class="n">cart</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ShoppingCart</span> <span class="p">{</span> <span class="n">Products</span> <span class="p">=</span> <span class="n">Product</span><span class="p">.</span><span class="n">GetProducts</span><span class="p">()</span> <span class="p">};</span>
 <span class="kt">decimal</span> <span class="n">cartTotal</span> <span class="p">=</span> <span class="n">cart</span><span class="p">.</span><span class="n">TotalPrices</span><span class="p">();</span>
 </pre></div>
 </td></tr></table>
 
 <h4 id="interface-extensions">Interface extensions<a class="headerlink" href="#interface-extensions" title="Permanent link">&para;</a></h4>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1575,7 +1638,7 @@
 </td></tr></table>
 
 <p>We can rewrite our extension method like this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1598,7 +1661,7 @@
 </td></tr></table>
 
 <p>and use it with any object of type <code>IEnumerable&lt;Product&gt;</code> like <code>ShoppingCart</code> and <code>Product</code> array:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1622,7 +1685,7 @@
 
 <h4 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h4>
 <p>Extension methods can be used to <code>filter</code> collections of objects. An extension method that operates on an <code>IEnumerable&lt;T&gt;</code> and that also returns an <code>IEnumerable&lt;T&gt;</code> can use the <code>yield</code> keyword to apply selection criteria to items in the source data to produce a reduced set of results.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1667,7 +1730,7 @@
 <hr />
 <h3 id="lambda-anonymous-functions">Lambda anonymous functions<a class="headerlink" href="#lambda-anonymous-functions" title="Permanent link">&para;</a></h3>
 <p>We can repeat this process indefinitely and create a different filter method for every property and every combination of properties that we are interested in. A more elegant approach is to separate out the code that processes the enumeration from the selection criteria. C# makes this easy by allowing functions to be passed around as objects. We can then create a single extension method that filters an enumeration of Product objects but that delegates the decision about which ones are included in the results to a separate function.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1694,7 +1757,7 @@
 </td></tr></table>
 
 <p>Now, we can use this <code>Filter</code> function as follows:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1709,7 +1772,7 @@
 </td></tr></table>
 
 <p><code>Lambdas</code> can also be used in class properties, e.g.:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="kt">bool</span> <span class="n">NameBeginsWithS</span> <span class="p">=&gt;</span> <span class="n">Name</span><span class="p">?[</span><span class="m">0</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;S&#39;</span><span class="p">;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">public</span> <span class="kt">bool</span> <span class="n">NameBeginsWithS</span> <span class="p">=&gt;</span> <span class="n">Name</span><span class="p">?[</span><span class="m">0</span><span class="p">]</span> <span class="p">==</span> <span class="sc">&#39;S&#39;</span><span class="p">;</span>
 </pre></div>
 </td></tr></table>
 
@@ -1717,7 +1780,7 @@
 <h3 id="asynchronous-methods">Asynchronous methods<a class="headerlink" href="#asynchronous-methods" title="Permanent link">&para;</a></h3>
 <p>Add <code>&quot;System.Net.Http&quot;: &quot;4.1.0&quot;</code> dependency in <code>project.json</code>.</p>
 <p>Here is how we could make an asynchronous call &ldquo;the hard way&rdquo;:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1740,7 +1803,7 @@
 </td></tr></table>
 
 <p>And here is the clever way:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1757,7 +1820,7 @@
 </td></tr></table>
 
 <p>And we could use this in our controller:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1792,13 +1855,13 @@
 <hr />
 <h3 id="getting-property-names-with-nameof">Getting property names with nameof<a class="headerlink" href="#getting-property-names-with-nameof" title="Permanent link">&para;</a></h3>
 <p>If we use lambdas the classic way:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">products</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="err">$</span><span class="s">&quot;Name: {p.Name}, Price: {p.Price}&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">products</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="err">$</span><span class="s">&quot;Name: {p.Name}, Price: {p.Price}&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
 <p>we of course get no intellisense on <code>Name:</code> and <code>Price:</code>. So, if we change the property name in the class and forget to change these strings here, we get a mismatch.</p>
 <p>Fortunately, we can now rewrite the same code like this:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">products</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="err">$</span><span class="s">&quot;{nameof(p.Name)}: {p.Name}, {nameof(p.Price)}: {p.Price}&quot;</span><span class="p">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">products</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">p</span> <span class="p">=&gt;</span> <span class="err">$</span><span class="s">&quot;{nameof(p.Name)}: {p.Name}, {nameof(p.Price)}: {p.Price}&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1811,7 +1874,7 @@
 <li>add <code>&quot;System.Net.Http&quot;: &quot;4.1.0&quot;</code> dependency in <code>project.json</code></li>
 <li>add <code>Mvc</code> to <code>Startup.cs</code>:</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -1900,7 +1963,7 @@
 <h4 id="view-start-file">View Start File<a class="headerlink" href="#view-start-file" title="Permanent link">&para;</a></h4>
 <p>Normally, we have to specify the layout file we want in every view. Therefore, if we need to rename the layout file, we are going to have to find every view that refers to it and make a change, which will be an error-prone process and counter to the general theme of easy maintenance that runs through MVC development.</p>
 <p>We can resolve this by using a <code>view start file</code>. When it renders a view, MVC will look for a file called <code>_ViewStart.cshtml</code> and we can put it in the <code>Views</code> folder. The contents of this file will be treated as though they were contained in the view file itself, and we can use this feature to automatically set a value for the Layout property.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">@</span><span class="p">{</span>
     <span class="n">Layout</span> <span class="p">=</span> <span class="s">&quot;_BasicLayout&quot;</span><span class="p">;</span>
@@ -1919,7 +1982,7 @@
 <p>The <code>ViewBag</code> property returns a <code>dynamic object</code> that can be used to define arbitrary properties. Since the <code>ViewBag</code> is dynamic, we don’t have to declare the property names in advance, but it does mean that Visual Studio is unable to provide autocomplete suggestions for view bag properties.</p>
 <h4 id="attribute-values">Attribute values<a class="headerlink" href="#attribute-values" title="Permanent link">&para;</a></h4>
 <p>We can also use Razor expressions to set the value of <code>element attributes</code>, not only on the content.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1933,12 +1996,12 @@
 
 <h4 id="switch-statement">Switch statement<a class="headerlink" href="#switch-statement" title="Permanent link">&para;</a></h4>
 <p>We have to cast the dynamic ViewBag properties to the right type once, inside the condition:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>@switch ((int)ViewBag.StockLevel) {...}
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>@switch ((int)ViewBag.StockLevel) {...}
 </pre></div>
 </td></tr></table>
 
 <p>After that, inside the body, we dont need to do it any more:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>default:
     @: @ViewBag.StockLevel in Stock
@@ -1951,25 +2014,25 @@
 <h3 id="visual-studio-tips-and-tricks">Visual Studio tips and tricks<a class="headerlink" href="#visual-studio-tips-and-tricks" title="Permanent link">&para;</a></h3>
 <h4 id="enable-developer-exception-page">Enable Developer Exception Page<a class="headerlink" href="#enable-developer-exception-page" title="Permanent link">&para;</a></h4>
 <p>In <code>Startup.cs</code> add this line to the <code>Configure</code> method:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseDeveloperExceptionPage</span><span class="p">();</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseDeveloperExceptionPage</span><span class="p">();</span>
 </pre></div>
 </td></tr></table>
 
 <hr />
 <h3 id="browser-link-loader">Browser Link Loader<a class="headerlink" href="#browser-link-loader" title="Permanent link">&para;</a></h3>
 <p>Add</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s">&quot;Microsoft.VisualStudio.Web.BrowserLink.Loader&quot;</span><span class="p">:</span> <span class="s">&quot;14.0.0&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s">&quot;Microsoft.VisualStudio.Web.BrowserLink.Loader&quot;</span><span class="p">:</span> <span class="s">&quot;14.0.0&quot;</span>
 </pre></div>
 </td></tr></table>
 
 <p>to <code>project.json</code> dependencies list. Also add</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseBrowserLink</span><span class="p">();</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseBrowserLink</span><span class="p">();</span>
 </pre></div>
 </td></tr></table>
 
 <p>to the <code>Configure</code> method of <code>Startup.cs</code>.</p>
 <p>Run the project without debugging (Ctrl + F5) and you see this kind of code added to the HTML:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -1998,12 +2061,12 @@
 <hr />
 <h3 id="static-files">Static files<a class="headerlink" href="#static-files" title="Permanent link">&para;</a></h3>
 <p>ASP.NET Core includes support for delivering <code>static files</code> from the wwwroot folder to clients but it isn’t enabled by default when the Empty template is used to create the project. To enable static file support, add</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s">&quot;Microsoft.AspNetCore.StaticFiles&quot;</span><span class="p">:</span> <span class="s">&quot;1.0.0&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s">&quot;Microsoft.AspNetCore.StaticFiles&quot;</span><span class="p">:</span> <span class="s">&quot;1.0.0&quot;</span>
 </pre></div>
 </td></tr></table>
 
 <p>to <code>project.json</code> dependencies list. Also add</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseStaticFiles</span><span class="p">();</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">app</span><span class="p">.</span><span class="n">UseStaticFiles</span><span class="p">();</span>
 </pre></div>
 </td></tr></table>
 
@@ -2019,7 +2082,7 @@
 <li>create <code>test</code> folder inside the solution folder next to <code>src</code> folder</li>
 <li>add new <code>.NET Core | Class Library (.NET Core)</code> project inside the <code>test</code> folder</li>
 <li>add this code to its <code>project.json</code> file (check the latest versions):<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2065,7 +2128,7 @@
 </ul>
 </li>
 <li>add the main project reference to the dependencies, e.g.<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2084,7 +2147,7 @@
 <h4 id="fact-and-theory">Fact and Theory<a class="headerlink" href="#fact-and-theory" title="Permanent link">&para;</a></h4>
 <ul>
 <li>In the <code>xUnit</code> framework, a <code>Fact</code> is one single unit test. Example:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2116,7 +2179,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>A <code>Theory</code> is a way to parametrize the unit test in such a way that it becomes possible to run the same test multiple times, each time with a different set of parameter values. Example:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2170,7 +2233,7 @@
 </ul>
 <h4 id="getting-test-data-from-a-method-or-property">Getting Test Data from a Method or Property<a class="headerlink" href="#getting-test-data-from-a-method-or-property" title="Permanent link">&para;</a></h4>
 <p>We can create methods or properties giving us the enumerations for the test parameter values in a separate class, e.g. <code>ProductTestData.cs</code>. Then we can use <code>MemberData</code> attribute to specify it for the unit test to use. Example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[Theory]</span>
 <span class="na">[ClassData(typeof(ProductTestData))]</span>
@@ -2179,7 +2242,7 @@
 </td></tr></table>
 
 <p>If we want to include the test data in the same class as the unit tests, then you can use the <code>MemberData</code> attribute instead of <code>ClassData</code>. The <code>MemberData</code> attribute is configured using a string that specifies the name of a static method that will provide an <code>IEnumerable&lt;object[]&gt;</code>, where each object array in the sequence is a set of arguments for the test method. Example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[Theory]</span>
 <span class="na">[MemberData(&quot;GetData&quot;)]</span>
@@ -2188,7 +2251,7 @@
 </td></tr></table>
 
 <p>and the <code>GetData</code> should look something like this</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2218,14 +2281,14 @@
 <li><code>Source: https://www.myget.org/F/aspnet-contrib/api/v3/index.json</code></li>
 </ul>
 <p>Add these two packages to the <code>package.json</code> in the test project:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;moq.netcore&quot;</span><span class="err">:</span> <span class="s2">&quot;4.4.0-beta8&quot;</span>
 <span class="s2">&quot;System.Diagnostics.TraceSource&quot;</span><span class="err">:</span> <span class="s2">&quot;4.0.0&quot;</span>
 </pre></div>
 </td></tr></table>
 
 <p>Usage example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2270,7 +2333,7 @@
 <ul>
 <li>Create a new empty <code>ASP.NET Core Web Application (.NET Core)</code> project/solution.</li>
 <li>Add these packages/tools to the <code>project.json</code> file:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2299,7 +2362,7 @@
 </td></tr></table></li>
 <li>In addition to the packages in the <code>dependencies</code> section, there is an addition to the <code>tools</code> section of the <code>project.json</code> file that configures the <code>Microsoft.AspNetCore.Razor.Tools</code> package for use in Visual Studio and enables IntelliSense for the built-in tag helpers, which are used to create HTML content that is tailored to the configuration of the MVC application.</li>
 <li>Here is the <code>Startup.cs</code>:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2354,14 +2417,14 @@
 <li>The <code>Configure</code> method is used to set up the features that receive and process <code>HTTP requests</code>.</li>
 <li>add these folders: <code>Models</code>, <code>Controllers</code>, <code>Views</code></li>
 <li>in the <code>Views</code> folder add <code>_ViewImports.cshtml</code> file:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">@using</span> <span class="n">SportsStore</span><span class="p">.</span><span class="n">Models</span>
   <span class="n">@addTagHelper</span> <span class="p">*,</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">AspNetCore</span><span class="p">.</span><span class="n">Mvc</span><span class="p">.</span><span class="n">TagHelpers</span>
 </pre></div>
 </td></tr></table></li>
 <li>create the unit test project <code>SportsStore.Tests</code> in the <code>test</code> folder.</li>
 <li>Configure its <code>project .json</code> as follows:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2405,7 +2468,7 @@
 <li>Make sure that both <code>project.json</code> files refer to the same <code>ASP.NET Core MVC</code> version.</li>
 <li>Add your model class <code>Product.cs</code>, repository interface <code>IProductRepository</code> and a simple fake repository <code>FakeProductRepository</code></li>
 <li>Register the fake repository as a service in <code>Startup.cs</code>:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2420,11 +2483,11 @@
 <li><code>Views/Shared/_Layout.cshtml</code></li>
 <li><code>Views/_ViewStart.cshtml</code> refering to <code>_Layout.cshtml</code> by default</li>
 <li>Example of setting up the default route in <code>Startup.cs</code>. Substitute<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">app</span><span class="p">.</span><span class="n">UseMvcWithDefaultRoute</span><span class="p">();</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="n">app</span><span class="p">.</span><span class="n">UseMvcWithDefaultRoute</span><span class="p">();</span>
 </pre></div>
 </td></tr></table></li>
 <li>with<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2441,7 +2504,7 @@
 <hr />
 <h3 id="scaffolding">Scaffolding<a class="headerlink" href="#scaffolding" title="Permanent link">&para;</a></h3>
 <p>Some people prefer to have certain features automatically created when they create new controller or views. That is called <code>scaffolding</code>. If you want that, add the following packages to the <code>project.json</code> file:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2499,7 +2562,7 @@
 <h3 id="setup-the-database">Setup the database<a class="headerlink" href="#setup-the-database" title="Permanent link">&para;</a></h3>
 <ul>
 <li>add <code>EntityFramework</code> packages to <code>package.json</code>:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2511,7 +2574,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>and the tools:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2527,7 +2590,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>The <code>database context class</code> is the bridge between the <code>application</code> and the <code>EF Core</code> and provides access to the application’s data using model objects. To create the database context class for the <code>SportsStore</code> application, we add a class file called <code>ApplicationDbContext.cs</code> to the <code>Models</code> folder:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2551,7 +2614,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>To populate the database initially with some data, we use <code>SeedData.cs</code> class:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2613,7 +2676,7 @@
 <li>The static <code>EnsurePopulated</code> method receives an <code>IApplicationBuilder</code> argument, which is the class used in the <code>Configure</code> method of the <code>Startup</code> class to register middleware classes to handle HTTP requests, which is where we ensure that the database has content.</li>
 <li>The <code>EnsurePopulated</code> method obtains an <code>ApplicationDbContext</code> object through the <code>IApplicationBuilder</code> interface and uses it to check whether there are any <code>Product</code> objects in the database. If there are no objects, then the database is populated using a collection of <code>Product</code> objects using the <code>AddRange</code> method and then written to the database using the <code>SaveChanges</code> method.</li>
 <li>The next step is to create a class that implements the <code>IProductRepository</code> interface and gets its data using <code>Entity Framework Core</code> from the <code>ApplicationDbContext</code>.<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2643,7 +2706,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>create <code>appsettings.json</code> file in the project root folder based on the <code>ASP.NET Configuration File</code> template and configure the connection string:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2659,7 +2722,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>add a new dependency to read the <code>json</code> configuration file:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  <span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
@@ -2669,7 +2732,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>configure the <code>Startup.cs</code>:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2741,7 +2804,7 @@
 </pre></div>
 </td></tr></table></li>
 <li>open <code>Tools | Nuget Package Manager | Package Manager Console</code> to create and apply database migrations:<br />
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>  Add-Migration Initial
   Update-Database
 </pre></div>
@@ -2759,7 +2822,7 @@
 <hr />
 <h3 id="installing-bootstrap-package">Installing Bootstrap package<a class="headerlink" href="#installing-bootstrap-package" title="Permanent link">&para;</a></h3>
 <p>Add <code>bower.json</code> file to the project root:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2783,7 +2846,7 @@
 <p>But we can make them more user friendly by creating a scheme that follows the pattern of <code>composable URLs</code>, which look like this:</p>
 <p><code>http://localhost/Page2</code></p>
 <p>To do that we register a new route in our MVC middleware (<code>Configure</code> method in <code>Startup.cs</code>):</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">routes</span><span class="p">.</span><span class="n">MapRoute</span><span class="p">(</span>
@@ -2797,7 +2860,7 @@
 <hr />
 <h3 id="enabling-sessions">Enabling Sessions<a class="headerlink" href="#enabling-sessions" title="Permanent link">&para;</a></h3>
 <p>Add these new packages to the <code>package.json</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;Microsoft.AspNetCore.Session&quot;</span><span class="err">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="err">,</span>
 <span class="s2">&quot;Microsoft.Extensions.Caching.Memory&quot;</span><span class="err">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="err">,</span>
@@ -2806,7 +2869,7 @@
 </td></tr></table>
 
 <p>Register new services and middleware to the <code>Startup.cs</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2843,7 +2906,7 @@
 </ul>
 <h4 id="adding-migrations">Adding migrations<a class="headerlink" href="#adding-migrations" title="Permanent link">&para;</a></h4>
 <p>Suppose we add a new <code>DbSet</code> to our <code>ApplicationDbContext.cs</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2880,7 +2943,7 @@
 <hr />
 <h3 id="using-tempdata">Using TempData<a class="headerlink" href="#using-tempdata" title="Permanent link">&para;</a></h3>
 <p>We are using TempData in the POST method in a controller:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2925,7 +2988,7 @@
 <hr />
 <h3 id="adding-identity">Adding Identity<a class="headerlink" href="#adding-identity" title="Permanent link">&para;</a></h3>
 <p>Add a new dependency to <code>project.json</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;dependencies&quot;</span><span class="err">:</span> <span class="p">{</span>
@@ -2936,7 +2999,7 @@
 </td></tr></table>
 
 <p>Add a new <code>AppIdentityDbContext</code> class to <code>Models</code> folder:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -2961,7 +3024,7 @@
 </td></tr></table>
 
 <p>and a new connection string in <code>appsettings.json</code> file:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -2980,7 +3043,7 @@
 </td></tr></table>
 
 <p>Add new services to <code>ConfigureServices</code> in <code>Startup.cs</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3003,7 +3066,7 @@
 </td></tr></table>
 
 <p>and new entries in <code>Configure</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3018,7 +3081,7 @@
 </td></tr></table>
 
 <p><code>IdentitySeedData</code> should be created in the <code>Models</code> folder to create an administrative account.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
  3
  4
@@ -3084,7 +3147,7 @@
 <hr />
 <h3 id="adding-authorization">Adding Authorization<a class="headerlink" href="#adding-authorization" title="Permanent link">&para;</a></h3>
 <p>When <code>ASP.NET Core Identity</code> is in place, we can apply <code>Authorization</code>. We don’t want to stop unauthenticated users from accessing the other action methods in the <code>Order</code> controller, so we have applied the <code>Authorize</code> attribute only to the <code>List</code> and <code>MarkShipped</code> methods.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
@@ -3101,7 +3164,7 @@
 </td></tr></table>
 
 <p>We want to protect <strong>all of the action methods</strong> defined by the <code>Admin</code> controller, and we can do this by applying the <code>Authorize</code>attribute to the controller class, which then applies the authorization policy to all the action methods it contains.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="na">[Authorize]</span>
 <span class="k">public</span> <span class="k">class</span> <span class="nc">AdminController</span> <span class="p">:</span> <span class="n">Controller</span>
@@ -3125,6 +3188,8 @@
               
               
                 
+
+
               
             </article>
           </div>
@@ -3178,9 +3243,9 @@
           </div>
         
         powered by
-        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        <a href="https://www.mkdocs.org">MkDocs</a>
         and
-        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+        <a href="https://squidfunk.github.io/mkdocs-material/">
           Material for MkDocs</a>
       </div>
       
@@ -3192,14 +3257,14 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application-84693e5e49.js"></script>
+      <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"0.17.1",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
       
-      <script>!function(e,t,a,n,o,c,i){e.GoogleAnalyticsObject=o,e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date,c=t.createElement(a),i=t.getElementsByTagName(a)[0],c.async=1,c.src=n,i.parentNode.insertBefore(c,i)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-52692182-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var t=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",t,e.href)})});var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})</script>
+        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-52692182-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
       
     
   </body>
