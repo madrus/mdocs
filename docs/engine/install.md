@@ -1,8 +1,6 @@
-## Installation
+# Formal Installation Guide 
 
-Taken from [this website](http://wiljenumdesign.nl/getting-started/).
-
-### Installing MkDocs
+## Install MkDocs
 
 Before installing [MkDocs](http://www.mkdocs.org/), you need to make sure you have `Python` and `pip` – the Python package manager – up and running. You can verify if you're already good to go with the following commands:
 
@@ -22,9 +20,9 @@ pip install mkdocs && mkdocs --version
 
 Material requires MkDocs >= 0.17.1.
 
-### Installing Material
+## Install Material
 
-#### using pip
+### using pip
 
 Material can be installed with pip:
 
@@ -32,9 +30,9 @@ Material can be installed with pip:
 pip install mkdocs-material
 ```
 
-#### using choco
+### using choco
 
-If you're on Windows you can use `Chocolatey` to install Material:
+If you're on Windows, you can use `Chocolatey` to install Material:
 
 ``` bash
 choco install mkdocs-material
@@ -42,7 +40,7 @@ choco install mkdocs-material
 
 This will install all required dependencies like Python and MkDocs.
 
-#### cloning from GitHub
+### cloning from GitHub
 
 Material can also be used without a system-wide installation by cloning the repository into a subfolder of your project's root directory:
 
@@ -52,19 +50,21 @@ git clone https://github.com/squidfunk/mkdocs-material.git
 
 This is especially useful if you want to [extend the theme](http://wiljenumdesign.nl/customization/#extending-the-theme) and [override some parts](http://wiljenumdesign.nl/customization/#overriding-partials) of the theme. The theme will reside in the folder `mkdocs-material/material`.
 
-### Troubleshooting
+## Troubleshooting
 
 !!! WARNING "Installation on macOS"
-    When you're running the pre-installed version of Python on macOS, pip tries to install packages in a folder for which your user might not have the adequate permissions. There are two possible solutions for this:
 
-    1. Installing in user space (recommended): Provide the --user flag to the install command and pip will install the package in a user-site location. This is the recommended way.
+    When you're running the pre-installed version of Python on macOS, `pip` tries to install packages in a folder for which your user might not have the adequate permissions. There are two possible solutions for this:
 
-    1. Switching to a homebrewed Python: Upgrade your Python installation to a self-contained solution by installing Python with Homebrew. This should eliminate a lot of problems you may be having with pip.
+    1. Installing in user space (recommended): Provide the `--user` flag to the install command and `pip` will install the package in a user-site location. This is the recommended way.
+
+    1. Switching to a homebrewed Python: Upgrade your Python installation to a self-contained solution by installing Python with Homebrew. This should eliminate a lot of problems you may be having with `pip`.
 
 !!! FAILURE "Error: unrecognized theme 'material'"
+
     If you run into this error, the most common reason is that you installed MkDocs through some package manager (e.g. Homebrew or apt-get) and the Material theme through pip, so both packages end up in different locations. MkDocs only checks its install location for themes.
 
-### Alternative: Using Docker
+## Alternative: Using Docker
 
 If you're familiar with __Docker__, the official [Docker image](https://hub.docker.com/r/squidfunk/mkdocs-material/) for Material comes with all dependencies pre-installed and ready-to-use with the latest version published on `PyPI`, packaged in a very small image. Pull it with:
 
@@ -109,7 +109,7 @@ Now you can point your browser to http://localhost:8000 and the Material theme s
 
 ## Configuration
 
-### Color palette
+## Color palette
 
 A default hue is defined for every primary and accent color on Google's
 Material Design [color palette][10], which makes it very easy to change the
@@ -135,12 +135,13 @@ lean, clone the repository and recompile the theme with your custom colors set.
 
 [10]: http://www.materialui.co/colors
 
-#### Primary colors
+### Primary colors
 
 > Default: `indigo`
 
 Click on a tile to change the primary color of the theme:
 
+<div class="flex-container">
 <button data-md-color-primary="red">Red</button>
 <button data-md-color-primary="pink">Pink</button>
 <button data-md-color-primary="purple">Purple</button>
@@ -161,6 +162,7 @@ Click on a tile to change the primary color of the theme:
 <button data-md-color-primary="grey">Grey</button>
 <button data-md-color-primary="blue-grey">Blue Grey</button>
 <button data-md-color-primary="white">White</button>
+</div>
 
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
@@ -171,12 +173,13 @@ Click on a tile to change the primary color of the theme:
   })
 </script>
 
-#### Accent colors
+### Accent colors
 
 > Default: `indigo`
 
 Click on a tile to change the accent color of the theme:
 
+<div class="flex-container">
 <button data-md-color-accent="red">Red</button>
 <button data-md-color-accent="pink">Pink</button>
 <button data-md-color-accent="purple">Purple</button>
@@ -193,6 +196,7 @@ Click on a tile to change the accent color of the theme:
 <button data-md-color-accent="amber">Amber</button>
 <button data-md-color-accent="orange">Orange</button>
 <button data-md-color-accent="deep-orange">Deep Orange</button>
+</div>
 
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-accent]");
@@ -215,9 +219,10 @@ theme:
 Color names are case-insensitive, but must match the names of the Material Design color palette. Valid values are: `red`, `pink`, `purple`, `deep purple`, `indigo`, `blue`, `light blue`, `cyan`, `teal`, `green`, `light green`, `lime`, `yellow`, `amber`, `orange`, `deep orange`, `brown`, `grey`, `blue grey` and `white`. The last four colors can only be used as a primary color.
 
 !!! TIP "Compile your own custom color theme"
+
     If the color is set via this configuration, an additional CSS file that defines the color palette is automatically included. If you want to keep things lean, __clone the repository and recompile the theme with your custom colors set__. See the [guide on customization](http://wiljenumdesign.nl/customization/) for more information.
 
-### Font family
+## Font family
 
 > Default: `Roboto` and `Roboto Mono`
 
@@ -237,7 +242,7 @@ theme:
   font: false
 ```
 
-### Logo
+## Logo
 
 > Default icon: `school`
 
@@ -256,9 +261,9 @@ theme:
     icon: 'cloud'
 ```
 
-### Language
+## Language
 
-#### Localization
+### Localization
 
 > Default: `en`
 
@@ -270,6 +275,7 @@ theme:
 ```
 
 !!! IMPORTANT "Make your own translations"
+
     If the language is not specified, Material falls back to English. To create a translation for another language, copy the localization file of an existing language, name the new file using the [2-letter language code](https://www.w3schools.com/tags/ref_language_codes.asp) and adjust all translations:
 
     ``` yaml
@@ -278,7 +284,7 @@ theme:
 
     Feel free to contribute your localization to Material for MkDocs by opening a Pull Request.
 
-### Site search
+## Site search
 
 > Default: `en`
 
@@ -292,9 +298,10 @@ extra:
 
 All defined languages are used only for stemming. This will automatically load the stemmers for the specified languages and set them up with site search.
 
-At the time of writing, the following languages are supported: English `en`, French `fr`, German `de`, Spanish `es`, Italian `it`, Danish `da`, Portugese `pt`, Finnish fi, Romanian ro, Hungarian hu, Russian `ru`, Norwegian `no`, Swedish `sv`, Japanese `ja` and Turkish `tr`.
+At the time of writing, the following languages are supported: English `en`, French `fr`, German `de`, Spanish `es`, Italian `it`, Danish `da`, Portugese `pt`, Finnish `fi`, Romanian `ro`, Hungarian `hu`, Russian `ru`, Norwegian `no`, Swedish `sv`, Japanese `ja` and Turkish `tr`.
 
 !!! WARNING "Only specify the languages you really need"
+
     Be aware that including support for other languages increases the general JavaScript payload by around 20kb (without gzip) and by another 15-30kb per language.
 
 The separator for tokenization can be customized which makes it possible to index parts of words that are separated by `-` or `.`:
@@ -305,7 +312,7 @@ extra:
     tokenizer: '[\s\-\.]+'
 ```
 
-### Favicon
+## Favicon
 
 > Default: `assets/images/favicon.png`
 
@@ -316,9 +323,9 @@ theme:
   favicon: 'assets/images/favicon.ico'
 ```
 
-### Features
+## Features
 
-#### Tabs
+### Tabs
 
 > Default: `false`
 
@@ -334,7 +341,7 @@ theme:
 
 ## Customization
 
-### Adding a source repository
+## Adding a source repository
 
 To include a link to the repository of your project within your documentation, set the following variables via your project's `mkdocs.yml`:
 
@@ -348,11 +355,12 @@ The name of the repository will be rendered next to the search bar on big screen
 If the repository is hosted in a private environment, the service logo can be set explicitly by setting `extra.repo_icon` to `github`, `gitlab` or `bitbucket`.
 
 !!! QUESTION "Why is there an edit button at the top of every article?"
+
     If the `repo_url` is set to a _GitHub_ or _BitBucket_ repository, and the `repo_name` is set to _GitHub_ or _BitBucket_ (implied by default), an edit button will appear at the top of every article. This is the automatic behavior that MkDocs implements. Set `edit_uri` to an empty string to disable this automatic behavior.
 
     See the [MkDocs documentation](http://www.mkdocs.org/user-guide/configuration/#edit_uri) on more guidance regarding the `edit_uri` attribute, which defines whether the edit button is shown or not.
 
-### Adding social links
+## Adding social links
 
 Social accounts can be linked in the footer of the documentation using the automatically included [FontAwesome webfont](http://fontawesome.io/icons/). The `type` must denote the name of the social service, e.g. `github`, `twitter` or `linkedin` and the `link` must contain the URL you want to link to:
 
@@ -369,7 +377,7 @@ extra:
 
 The links are generated in order and the `type` of the links must match the name of the FontAwesome glyph. The `fa` is automatically added, so `github` will result in `fa fa-github`.
 
-### More advanced customization
+## More advanced customization
 
 If you want to change the general appearance of the Material theme, see [this article](https://squidfunk.github.io/mkdocs-material/customization/) for more information on advanced customization.
 
@@ -377,7 +385,7 @@ If you want to change the general appearance of the Material theme, see [this ar
 
 ## Integrations
 
-### Google Analytics
+## Google Analytics
 
 MkDocs makes it easy to integrate site tracking with Google Analytics. Besides basic tracking, clicks on all outgoing links can be tracked as well as how site search is used. Tracking can be activated in your project's `mkdocs.yml`:
 
@@ -389,7 +397,7 @@ google_analytics:
 
 ---
 
-### Disqus
+## Disqus
 
 Material for MkDocs is integrated with [Disqus](https://disqus.com/), so if you want to add a comments section to your documentation set the shortname of your Disqus project in your `mkdocs.yml`:
 
@@ -401,6 +409,7 @@ extra:
 The comments section is inserted on every page, except the index page. Additionally, a new entry at the bottom of the table of contents is generated that is linking to the comments section. The necessary JavaScript is automatically included.
 
 !!! WARNING "Requirements"
+
     `site_url` value must be set in `mkdocs.yml` for the Disqus integration to load properly.
 
 ---

@@ -26,6 +26,8 @@ theme:
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
+  extra_css:
+  - 'assets/stylesheets/extra.css'
 
 # Options
 extra:
