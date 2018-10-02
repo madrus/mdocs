@@ -122,7 +122,7 @@ Configure the `.travis.yml` file. You may start with something like this:
 ``` yaml
 sudo: false
 language: python
-python: '2.7'
+python: '3.6'
 install:
 - pip install --upgrade pip
 - pip install -r requirements.txt
