@@ -105,13 +105,14 @@ Now, open the command prompt in the root directory (on the `master` branch) and 
 mkdocs gh-deploy
 ```
 
-This will push the __master__  branch to the remote __gh-pages__. After that, the project website is available at <your-github-login.github.io/mdocs>.
+This will push the __master__  branch to the remote __gh-pages__. After that, the project website is available at `your-github-login.github.io/mdocs`.
 
 ### Deployment to GitHub pages via Travis CI
 
 Go to your GitHub account and create a new __Personal access token__ in your Developer settings. Copy the hash string.
 
-!!! warning "Keep well the hash string!"
+!!! WARNING "Keep well the hash string!"
+
     You will see it only once when you create it.
 
 In the Travis CI settings of your project add a new __GITHUB_TOKEN__ environment variable with the value of the hash string your have just copied. Don't forget to turn in __ON__ and to __ADD__.

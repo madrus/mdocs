@@ -1,6 +1,6 @@
 sudo: false
 language: python
-python: '2.7'
+python: '3.6'
 install:
 - pip install -U pip
 - pip install -r requirements.txt
@@ -12,6 +12,7 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  keep-history: true
   local_dir: site
   on:
     branch: master
