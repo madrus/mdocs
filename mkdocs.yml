@@ -23,11 +23,17 @@ theme:
     accent: 'lime'
   custom_dir: theme
   favicon: 'img/favicon.ico'
+  logo: 'img/logo.png'
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
   extra_css:
   - 'assets/stylesheets/extra.css'
+  # - 'https://use.fontawesome.com/releases/v5.3.1/css/all.css'
+  # - 'https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css'
+  # extra_javascript:
+  # - 'https://use.fontawesome.com/releases/v5.3.1/js/all.js'
+  # - 'https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js'
 
 # Options
 extra:
@@ -53,15 +59,20 @@ google_analytics:
 
 # Extensions
 markdown_extensions:
-  - admonition
-  - codehilite:
+  - fenced_code
+  - fontawesome_markdown
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
       guess_lang: false
       linenums: true
-  - fontawesome_markdown
-  - def_list
-  - footnotes
-  - meta
-  - nl2br
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.nl2br
+  - markdown.extensions.smarty:
+      smart_angled_quotes: true
+  - markdown.extensions.toc:
+      permalink: true
   - pymdownx.arithmatex
   - pymdownx.betterem:
       smart_enable: all
@@ -79,10 +90,6 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-  - smarty:
-      smart_angled_quotes: true
-  - toc:
-      permalink: true
 
 # Pages structure
 nav:

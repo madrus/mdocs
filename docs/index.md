@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/madrus/mdocs.svg?branch=master)](https://travis-ci.org/madrus/mdocs)
 
-# Welkom!
+# Welcome!
 
 ## About this documentation
 
 ### WTF?
 
-You may ask yourself a question: "What's the point of having a __Markdown__ documentation website if there are tools like [Atlassian Confluence](https://www.atlassian.com/software/confluence) or [Microsoft Sharepoint](https://products.office.com/en-us/sharepoint/collaboration)?" Indeed, what?
+You may ask yourself a question: "What's the point of having a __Markdown__ documentation website if there are tools like [Atlassian Confluence](https://www.atlassian.com/software/confluence) or [Microsoft Sharepoint](https://products.office.com/en-us/sharepoint/collaboration)?" Indeed, WHAT?
 
 ### BEFORE: Confluence and Sharepoint
 

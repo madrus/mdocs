@@ -10,8 +10,8 @@ Have the latest version of __Python 3.6__ installed, which can be downloaded fro
 
 Add the following two paths to your Windows `Path` user environment variable:
 
-- `C:\Users\`__`YourUserName`__`\AppData\Local\Programs\Python\Python36-32`
-- `C:\Users\`__`YourUserName`__`\AppData\Local\Programs\Python\Python36-32\Scripts`
+- `C:\Users\YourUserName\AppData\Local\Programs\Python\Python36-32`
+- `C:\Users\YourUserName\AppData\Local\Programs\Python\Python36-32\Scripts`
 
 Now, run any shell script (`cmd`, `git-bash` or `PowerShell`) and install/upgrade __mkdocs__ and related packages:
 
@@ -61,15 +61,19 @@ Then open your browser and navigate to [http://localhost:8000](http://localhost:
 
 ---
 
-## Font Awesome
+## FontAwesome
 
-[Font Awesome](https://fortawesome.github.io) gives you scalable vector icons that can instantly be customized -- size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these [examples](http://fontawesome.io/examples/).
+!!! WARNING "Up to Python 3.4"
 
-[Font Awesome Markdown](http://bmcorser.github.io/fontawesome-markdown/) is a Markdown extension that looks for things like `:fa-coffee:` (:fa-coffee:) or `:fa-refresh:` (:fa-refresh:) and replaces them with the Font Awesome icon markup.
+    According to the author, Python versions above 3.4 are probably not supported yet. See the [setup.py](https://github.com/bmcorser/fontawesome-markdown/blob/master/setup.py) file for the `classifiers` section.
+
+[FontAwesome](https://fortawesome.github.io) gives you scalable vector icons that can instantly be customized -- size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these [examples](http://fontawesome.io/examples/).
+
+[FontAwesome Markdown](http://bmcorser.github.io/fontawesome-markdown/) is a Markdown extension that looks for things like `:fa-coffee:` (:fa-coffee:) or `:fa-beer:` (:fa-beer:) and replaces them with the FontAwesome icon markup.
 
 ### Examples
 
-This examples use the fontawesome_markdown extension:
+This example uses the `fontawesome_markdown` extension:
 
 ``` none
 What would you drink, :fa-coffee: or :fa-beer:?
@@ -89,7 +93,7 @@ Then add the below to your `mkdocs.yml` file.
 
 ``` none
 markdown_extensions:
-  - fontawesome_markdown`
+  - fontawesome_markdown
 ```
 
 ---
