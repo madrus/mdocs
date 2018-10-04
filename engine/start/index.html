@@ -118,7 +118,7 @@
       <div class="md-flex__cell md-flex__cell--shrink">
         <a href="http://madrus4u.com/mdocs/" title="Madrus's Docs" class="md-header-nav__button md-logo">
           
-            <i class="md-icon"></i>
+            <img src="../../img/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -214,7 +214,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="http://madrus4u.com/mdocs/" title="Madrus's Docs" class="md-nav__button md-logo">
       
-        <i class="md-icon"></i>
+        <img src="../../img/logo.png" width="48" height="48">
       
     </a>
     Madrus's Docs
@@ -338,8 +338,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#font-awesome" title="Font Awesome" class="md-nav__link">
-    Font Awesome
+  <a href="#fontawesome" title="FontAwesome" class="md-nav__link">
+    FontAwesome
   </a>
   
     <nav class="md-nav">
@@ -923,8 +923,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#font-awesome" title="Font Awesome" class="md-nav__link">
-    Font Awesome
+  <a href="#fontawesome" title="FontAwesome" class="md-nav__link">
+    FontAwesome
   </a>
   
     <nav class="md-nav">
@@ -987,8 +987,8 @@
 <p>Have the latest version of <strong>Python 3.6</strong> installed, which can be downloaded from <a href="https://www.python.org/downloads/">here</a>.</p>
 <p>Add the following two paths to your Windows <code>Path</code> user environment variable:</p>
 <ul>
-<li><code>C:\Users\</code><strong><code>YourUserName</code></strong><code>\AppData\Local\Programs\Python\Python36-32</code></li>
-<li><code>C:\Users\</code><strong><code>YourUserName</code></strong><code>\AppData\Local\Programs\Python\Python36-32\Scripts</code></li>
+<li><code>C:\Users\YourUserName\AppData\Local\Programs\Python\Python36-32</code></li>
+<li><code>C:\Users\YourUserName\AppData\Local\Programs\Python\Python36-32\Scripts</code></li>
 </ul>
 <p>Now, run any shell script (<code>cmd</code>, <code>git-bash</code> or <code>PowerShell</code>) and install/upgrade <strong>mkdocs</strong> and related packages:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install -U mkdocs mkdocs-material fontawesome-markdown pymdown-extensions
@@ -1033,11 +1033,15 @@ mkdocs serve -a :8080
 <li><code>mkdocs help</code> - Print this help message.</li>
 </ul>
 <hr />
-<h2 id="font-awesome">Font Awesome<a class="headerlink" href="#font-awesome" title="Permanent link">&para;</a></h2>
-<p><a href="https://fortawesome.github.io">Font Awesome</a> gives you scalable vector icons that can instantly be customized &ndash; size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these <a href="http://fontawesome.io/examples/">examples</a>.</p>
-<p><a href="http://bmcorser.github.io/fontawesome-markdown/">Font Awesome Markdown</a> is a Markdown extension that looks for things like <code>:fa-coffee:</code> (<i class="fa fa-coffee"></i>) or <code>:fa-refresh:</code> (<i class="fa fa-refresh"></i>) and replaces them with the Font Awesome icon markup.</p>
+<h2 id="fontawesome">FontAwesome<a class="headerlink" href="#fontawesome" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Up to Python 3.4</p>
+<p>According to the author, Python versions above 3.4 are probably not supported yet. See the <a href="https://github.com/bmcorser/fontawesome-markdown/blob/master/setup.py">setup.py</a> file for the <code>classifiers</code> section.</p>
+</div>
+<p><a href="https://fortawesome.github.io">FontAwesome</a> gives you scalable vector icons that can instantly be customized &ndash; size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these <a href="http://fontawesome.io/examples/">examples</a>.</p>
+<p><a href="http://bmcorser.github.io/fontawesome-markdown/">FontAwesome Markdown</a> is a Markdown extension that looks for things like <code>:fa-coffee:</code> (<i class="fa fa-coffee"></i>) or <code>:fa-beer:</code> (<i class="fa fa-beer"></i>) and replaces them with the FontAwesome icon markup.</p>
 <h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
-<p>This examples use the fontawesome_markdown extension:</p>
+<p>This example uses the <code>fontawesome_markdown</code> extension:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>What would you drink, :fa-coffee: or :fa-beer:?
 </pre></div>
 </td></tr></table>
@@ -1052,7 +1056,7 @@ mkdocs serve -a :8080
 <p>Then add the below to your <code>mkdocs.yml</code> file.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>markdown_extensions:
-  - fontawesome_markdown`
+  - fontawesome_markdown
 </pre></div>
 </td></tr></table>
 
