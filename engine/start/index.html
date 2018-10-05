@@ -362,12 +362,25 @@
     Deployment to GitHub Pages
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-to-github-pages-via-travis-ci" title="Deployment to GitHub pages via Travis CI" class="md-nav__link">
-    Deployment to GitHub pages via Travis CI
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-deployment" title="Direct Deployment" class="md-nav__link">
+    Direct Deployment
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#travis-ci-deployment" title="Travis CI Deployment" class="md-nav__link">
+    Travis CI Deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -419,8 +432,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../install/" title="More on MkDocs Material" class="md-nav__link">
-      More on MkDocs Material
+    <a href="../colors/" title="Color Styling" class="md-nav__link">
+      Color Styling
     </a>
   </li>
 
@@ -433,30 +446,6 @@
   <li class="md-nav__item">
     <a href="../deployment/" title="Deployment" class="md-nav__link">
       Deployment
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../md_hsl_colors/" title="HSL Colors" class="md-nav__link">
-      HSL Colors
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../technicalities/" title="Technicalitites" class="md-nav__link">
-      Technicalitites
     </a>
   </li>
 
@@ -947,12 +936,25 @@
     Deployment to GitHub Pages
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-to-github-pages-via-travis-ci" title="Deployment to GitHub pages via Travis CI" class="md-nav__link">
-    Deployment to GitHub pages via Travis CI
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#direct-deployment" title="Direct Deployment" class="md-nav__link">
+    Direct Deployment
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#travis-ci-deployment" title="Travis CI Deployment" class="md-nav__link">
+    Travis CI Deployment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1035,8 +1037,12 @@ mkdocs serve -a :8080
 <hr />
 <h2 id="fontawesome">FontAwesome<a class="headerlink" href="#fontawesome" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">Up to Python 3.4</p>
-<p>According to the author, Python versions above 3.4 are probably not supported yet. See the <a href="https://github.com/bmcorser/fontawesome-markdown/blob/master/setup.py">setup.py</a> file for the <code>classifiers</code> section.</p>
+<p class="admonition-title">Up to Python 3.4?</p>
+<p>Python versions above 3.4 are probably not supported yet. See the <a href="https://github.com/bmcorser/fontawesome-markdown/blob/master/setup.py">setup.py</a> file for the <code>classifiers</code> section, it mentions Python versions up to 3.4.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Does not work on my website (yet)</p>
+<p>FontAwesome Markdown does not work on this documentation website. I am trying to figure out why but so far no success.</p>
 </div>
 <p><a href="https://fortawesome.github.io">FontAwesome</a> gives you scalable vector icons that can instantly be customized &ndash; size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these <a href="http://fontawesome.io/examples/">examples</a>.</p>
 <p><a href="http://bmcorser.github.io/fontawesome-markdown/">FontAwesome Markdown</a> is a Markdown extension that looks for things like <code>:fa-coffee:</code> (<i class="fa fa-coffee"></i>) or <code>:fa-beer:</code> (<i class="fa fa-beer"></i>) and replaces them with the FontAwesome icon markup.</p>
@@ -1062,7 +1068,9 @@ mkdocs serve -a :8080
 
 <hr />
 <h2 id="deployment-to-github-pages">Deployment to GitHub Pages<a class="headerlink" href="#deployment-to-github-pages" title="Permanent link">&para;</a></h2>
-<p>The first step you&rsquo;ll need to do is simply make sure you have a <strong>gh-pages</strong> branch that exists, if it doesn&rsquo;t:</p>
+<h3 id="direct-deployment">Direct Deployment<a class="headerlink" href="#direct-deployment" title="Permanent link">&para;</a></h3>
+<p>To publish the project to <strong>GitHub Pages</strong> as a subdomain, e.g. <code>/mdocs</code> of the main <your-github-login.github.io> website, you need first to create a repository with that name, e.g. <code>mdocs</code> and add it to your project as a remote.</p>
+<p>Next make sure you have a <strong>gh-pages</strong> branch that exists. If it doesn&rsquo;t:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git checkout -b gh-pages
@@ -1071,21 +1079,19 @@ git push --set-upstream origin gh-pages
 </pre></div>
 </td></tr></table>
 
-<p>Then run this command:</p>
+<p>Now, open the command prompt in the root directory (on the <code>master</code> branch) and type:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs gh-deploy
 </pre></div>
 </td></tr></table>
 
-<p>This will push the <strong>master</strong>  branch to the remote <strong>gh-pages</strong>. After that, you can view your website here:</p>
-<p><a href="http://your-github-name.github.io/mkdocs-repo-name">http://your-github-name.github.io/mkdocs-repo-name</a></p>
-<hr />
-<h2 id="deployment-to-github-pages-via-travis-ci">Deployment to GitHub pages via Travis CI<a class="headerlink" href="#deployment-to-github-pages-via-travis-ci" title="Permanent link">&para;</a></h2>
+<p>This will push the <strong>master</strong>  branch to the remote <strong>gh-pages</strong>. After that, the project website is available at <code>your-github-login.github.io/mdocs</code>.</p>
+<h3 id="travis-ci-deployment">Travis CI Deployment<a class="headerlink" href="#travis-ci-deployment" title="Permanent link">&para;</a></h3>
 <p>Go to your GitHub account and create a new <strong>Personal access token</strong> in your Developer settings. Copy the hash string.</p>
 <div class="admonition warning">
 <p class="admonition-title">Keep well the hash string!</p>
 <p>You will see it only once when you create it.</p>
 </div>
-<p>In the Travis CI settings of your project add a new <strong>GH_TOKEN</strong> environment variable with the value of the hash string your have just copied. Don&rsquo;t forget to turn in <strong>ON</strong> and to <strong>ADD</strong>.</p>
+<p>In the Travis CI settings of your project add a new <strong>GITHUB_TOKEN</strong> environment variable with the value of the hash string your have just copied. Don&rsquo;t forget to turn in <strong>ON</strong> and to <strong>ADD</strong>.</p>
 <p>Configure the <code>.travis.yml</code> file. You may start with something like this:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
  2
@@ -1102,15 +1108,15 @@ git push --set-upstream origin gh-pages
 13
 14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">sudo</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="l l-Scalar l-Scalar-Plain">language</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
-<span class="l l-Scalar l-Scalar-Plain">python</span><span class="p p-Indicator">:</span> <span class="s">&#39;2.7&#39;</span>
+<span class="l l-Scalar l-Scalar-Plain">python</span><span class="p p-Indicator">:</span> <span class="s">&#39;3.6&#39;</span>
 <span class="l l-Scalar l-Scalar-Plain">install</span><span class="p p-Indicator">:</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install --upgrade pip</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -U pip</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip</span>
 <span class="l l-Scalar l-Scalar-Plain">script</span><span class="p p-Indicator">:</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git config credential.helper &quot;store --file=.git/credentials&quot;</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;https://${GH_TOKEN}:@github.com&quot; &gt; .git/credentials</span>
-<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs build</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;https://${GITHUB_TOKEN}:@github.com&quot; &gt; .git/credentials</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs build --verbose --clean --strict</span>
 <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">if [ $TRAVIS_TEST_RESULT == 0 ]; then</span>
     <span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force;</span>
   <span class="l l-Scalar l-Scalar-Plain">fi</span>
@@ -1125,7 +1131,7 @@ git push --set-upstream origin gh-pages
 </td></tr></table>
 
 <p>Using <strong>travis</strong>, add the encrypted token to <code>.travis.yml</code>:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>travis encrypt <span class="nv">GH_TOKEN</span><span class="o">=</span><span class="s2">&quot;the-token-from-github&quot;</span> --add
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>travis encrypt <span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s2">&quot;the-token-from-github&quot;</span> --add
 </pre></div>
 </td></tr></table>
 
