@@ -1,13 +1,17 @@
 sudo: false
 language: python
-python: '3.4'
+python: '3.6'
 install:
 - pip install -U pip
 - pip install -r requirements.txt
+- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
 - git config credential.helper 'store --file=.git/credentials'
 - echo 'https://${GITHUB_TOKEN}:@github.com' > .git/credentials
 - mkdocs build --verbose --clean --strict
+- if [ $TRAVIS_TEST_RESULT == 0 ]; then
+    mkdocs gh-deploy --force;
+  fi
 deploy:
   provider: pages
   skip_cleanup: true

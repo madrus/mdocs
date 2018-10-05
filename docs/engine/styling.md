@@ -1,4 +1,4 @@
-# Styling
+# Custom Styling
 
 ## Theme Customization
 
@@ -52,7 +52,7 @@ The [10 Tips for Writing JavaScript without jQuery](https://tutorialzine.com/201
 
 ## Extensions
 
-### Admonition extension
+### Admonition
 
 [Admonition extension](https://pythonhosted.org/Markdown/extensions/admonition.html) for the MkDocs Markdown provides for a way to draw attention of the reader. In order to use this extension
 
@@ -84,7 +84,7 @@ These special words result in a colored adminition blocks. It is nice to experim
 
     The special word can be also any other word. In that case, the color will always be light blue.
 
-#### Some examples
+#### Examples
 
 ##### A custom text message on the first line...
 
@@ -144,7 +144,7 @@ These special words result in a colored adminition blocks. It is nice to experim
 
     Or you will regret it for the rest of your life!
 
-### SmartyPants extension
+### SmartyPants
 
 Adding
 
@@ -198,11 +198,9 @@ line 2
 
 ### Lato Font
 
-This font is one of the free Google Fonts. Here is the link to the [Lato Google Font](https://fonts.google.com/specimen/Lato?selection.family=Lato) page.
+This font is one of the free Google fonts: [Lato Google Font](https://fonts.google.com/specimen/Lato?selection.family=Lato). In order to use it, the following line should be added to the `/spreadsheets/extra.css` file:
 
-In order to use this font, the following line is adde to the `/css/extra.less` file:
-
-```css
+``` css
 @import url('https://fonts.googleapis.com/css?family=Lato');
 ```
 

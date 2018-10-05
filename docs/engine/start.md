@@ -63,9 +63,13 @@ Then open your browser and navigate to [http://localhost:8000](http://localhost:
 
 ## FontAwesome
 
-!!! WARNING "Up to Python 3.4"
+!!! WARNING "Up to Python 3.4?"
 
-    According to the author, Python versions above 3.4 are probably not supported yet. See the [setup.py](https://github.com/bmcorser/fontawesome-markdown/blob/master/setup.py) file for the `classifiers` section.
+    Python versions above 3.4 are probably not supported yet. See the [setup.py](https://github.com/bmcorser/fontawesome-markdown/blob/master/setup.py) file for the `classifiers` section, it mentions Python versions up to 3.4.
+
+!!! NOTE "Does not work on my website (yet)"
+
+    FontAwesome Markdown does not work on this documentation website. I am trying to figure out why but so far no success.
 
 [FontAwesome](https://fortawesome.github.io) gives you scalable vector icons that can instantly be customized -- size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these [examples](http://fontawesome.io/examples/).
 
@@ -100,7 +104,11 @@ markdown_extensions:
 
 ## Deployment to GitHub Pages
 
-The first step you'll need to do is simply make sure you have a __gh-pages__ branch that exists, if it doesn't:
+### Direct Deployment
+
+To publish the project to __GitHub Pages__ as a subdomain, e.g. `/mdocs` of the main <your-github-login.github.io> website, you need first to create a repository with that name, e.g. `mdocs` and add it to your project as a remote.
+
+Next make sure you have a __gh-pages__ branch that exists. If it doesn't:
 
 ``` bash
 git checkout -b gh-pages
@@ -108,41 +116,38 @@ git rm -rf .
 git push --set-upstream origin gh-pages
 ```
 
-Then run this command:
+Now, open the command prompt in the root directory (on the `master` branch) and type:
 
 ``` bash
 mkdocs gh-deploy
 ```
 
-This will push the __master__  branch to the remote __gh-pages__. After that, you can view your website here:
+This will push the __master__  branch to the remote __gh-pages__. After that, the project website is available at `your-github-login.github.io/mdocs`.
 
-[http://your-github-name.github.io/mkdocs-repo-name](http://your-github-name.github.io/mkdocs-repo-name)
-
----
-
-## Deployment to GitHub pages via Travis CI
+### Travis CI Deployment
 
 Go to your GitHub account and create a new __Personal access token__ in your Developer settings. Copy the hash string.
 
-!!! warning "Keep well the hash string!"
+!!! WARNING "Keep well the hash string!"
+
     You will see it only once when you create it.
 
-In the Travis CI settings of your project add a new __GH_TOKEN__ environment variable with the value of the hash string your have just copied. Don't forget to turn in __ON__ and to __ADD__.
+In the Travis CI settings of your project add a new __GITHUB_TOKEN__ environment variable with the value of the hash string your have just copied. Don't forget to turn in __ON__ and to __ADD__.
 
 Configure the `.travis.yml` file. You may start with something like this:
 
 ``` yaml
 sudo: false
 language: python
-python: '2.7'
+python: '3.6'
 install:
-- pip install --upgrade pip
+- pip install -U pip
 - pip install -r requirements.txt
 - pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
 - git config credential.helper "store --file=.git/credentials"
-- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-- mkdocs build
+- echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
+- mkdocs build --verbose --clean --strict
 - if [ $TRAVIS_TEST_RESULT == 0 ]; then
     mkdocs gh-deploy --force;
   fi
@@ -161,7 +166,7 @@ gem install travis
 Using __travis__, add the encrypted token to `.travis.yml`:
 
 ``` bash
-travis encrypt GH_TOKEN="the-token-from-github" --add
+travis encrypt GITHUB_TOKEN="the-token-from-github" --add
 ```
 
 This will add the following block at the end of the file:

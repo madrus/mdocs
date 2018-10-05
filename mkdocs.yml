@@ -98,10 +98,8 @@ nav:
     - Getting started: engine/start.md
     - Markdown Cheatsheet: engine/cheatsheet.md
     - Custom Styling: engine/styling.md
-    - More on MkDocs Material: engine/install.md
+    - Color Styling: engine/colors.md
     - Deployment: engine/deployment.md
-    - HSL Colors: engine/md_hsl_colors.md
-    - Technicalitites: engine/technicalities.md
   - Aurelia:
     - Some Technical Notes: aurelia/technicalities.md
   - Git:
