@@ -1,5 +1,7 @@
 # Markdown Cheatsheet
 
+Hereunder are some of the most common examples to illustrate the `Markdown` syntax.
+
 ## Table of Contents
 
 - [Headers](#headers)

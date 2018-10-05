@@ -99,7 +99,7 @@ nav:
     - Markdown Cheatsheet: engine/cheatsheet.md
     - Custom Styling: engine/styling.md
     - Color Styling: engine/colors.md
-    - Deployment: engine/deployment.md
+    - PowerShell Deployments: engine/deployments.md
   - Aurelia:
     - Some Technical Notes: aurelia/technicalities.md
   - Git:

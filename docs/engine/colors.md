@@ -1,4 +1,4 @@
-# Color Styling
+# Theme Color Styling
 
 __Martin Donath__ a.k.a. __SquidFunc__, the author of the beautiful [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) theme for the famous [MkDocs](https://www.mkdocs.org/) documentation site generator has written a big [Getting Started](https://squidfunk.github.io/mkdocs-material/getting-started/) guide.
 

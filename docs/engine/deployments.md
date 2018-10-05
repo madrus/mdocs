@@ -1,3 +1,6 @@
+# PowerShell Deployments
+
+This section describes some tips for Windows users.
 
 ## Deployment to your local IIS
 
@@ -23,46 +26,6 @@ Now, you should be able to see the website by browsing to [http://localhost:1111
 
 ---
 
-## Deployment to OPS-APP-01
-
-## Website Configuration
-
-The website external url is <https://devopdocs.fivedegrees.is>.
-
-It is hosted in `IIS` on the `OPS-APP-01` server and its local URL is [http://localhost:8881](http://localhost:8881/).
-
----
-
-## Deployment Procedure
-
-!!! WARNING "You need to be Adminstrator"
-
-    In order to be able to deploy the website, you need to have local administrator access on the `OPS-APP-01` server
-
-Here are the step to follow:
-
-- On your local machine:
-  - Build the website locally: `mkdocs build`
-- On the `OPS-APP-01`:
-  - Log in on the server and open the `IIS Manager`
-  - Stop the `FdsDocs` application pool
-  - Delete the contents of the `C:\inetpub\wwwroot\fdsdocs` folder
-- On your local machine:
-  - Copy the contents of the `site` folder to `\\ops-app-01\c$\inetpub\wwwroot\fdsdocs`
-- On the `OPS-APP-01`:
-  - Start the `FdsDocs` application pool
-
-Check the deployment:
-
-- On the `OPS-APP-01`:
-  - open [http://localhost:8881](http://localhost:8881/) and make sure you see the website
-  - try to search for any reasonable search item to see a list of links
-- On your local machine:
-  - Open [http://ops-app-01:8881](http://ops-app-01:8881) and make sure you see the website
-  - try to search for any reasonable search item to see a list of links
-
----
-
 ## Possible Issues
 
 ### Cannot find drive 'IIS'
@@ -79,6 +42,6 @@ You are probably running the script without the elevated rights. Try running the
 
 If the search does not work and in the DevTools you see a 404-error on `./mkdocs/js/search-results-template.mustache`, this can mean that a mime-type is missing for `.mustache`
 
-Open the IIS and click on `OPS-APP-01`. Among the features on the right, find and double-click `MIME Types`. If you miss the mime-type for `.mustache`, add it as `mustache: text/template`.
+Open the IIS Manager and click on the root node. Among the features on the right, find and double-click `MIME Types`. If you miss the mime-type for `.mustache`, add it as `mustache: text/template`.
 
 ---
