@@ -13,7 +13,7 @@
         <meta name="description" content="A short description of my project">
       
       
-        <link rel="canonical" href="http://madrus4u.com/mdocs/engine/deployment/">
+        <link rel="canonical" href="http://madrus4u.com/mdocs/engine/deployments/">
       
       
         <meta name="author" content="Madrus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Deployment - Madrus's Docs</title>
+        <title>PowerShell Deployments - Madrus's Docs</title>
       
     
     
@@ -107,7 +107,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#deployment-to-your-local-iis" tabindex="1" class="md-skip">
+      <a href="../../#powershell-deployments" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -133,7 +133,7 @@
                 Madrus's Docs
               </span>
               <span class="md-header-nav__topic">
-                Deployment
+                PowerShell Deployments
               </span>
             
           
@@ -336,18 +336,22 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Deployment
+        PowerShell Deployments
       </label>
     
-    <a href="./" title="Deployment" class="md-nav__link md-nav__link--active">
-      Deployment
+    <a href="./" title="PowerShell Deployments" class="md-nav__link md-nav__link--active">
+      PowerShell Deployments
     </a>
     
       
 <nav class="md-nav md-nav--secondary">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
@@ -356,27 +360,6 @@
         <li class="md-nav__item">
   <a href="#deployment-to-your-local-iis" title="Deployment to your local IIS" class="md-nav__link">
     Deployment to your local IIS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-to-ops-app-01" title="Deployment to OPS-APP-01" class="md-nav__link">
-    Deployment to OPS-APP-01
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#website-configuration" title="Website Configuration" class="md-nav__link">
-    Website Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-procedure" title="Deployment Procedure" class="md-nav__link">
-    Deployment Procedure
   </a>
   
 </li>
@@ -846,6 +829,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -853,27 +838,6 @@
         <li class="md-nav__item">
   <a href="#deployment-to-your-local-iis" title="Deployment to your local IIS" class="md-nav__link">
     Deployment to your local IIS
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-to-ops-app-01" title="Deployment to OPS-APP-01" class="md-nav__link">
-    Deployment to OPS-APP-01
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#website-configuration" title="Website Configuration" class="md-nav__link">
-    Website Configuration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deployment-procedure" title="Deployment Procedure" class="md-nav__link">
-    Deployment Procedure
   </a>
   
 </li>
@@ -922,9 +886,9 @@
               
                 
                 
-                  <h1>Deployment</h1>
-                
-                <h2 id="deployment-to-your-local-iis">Deployment to your local IIS<a class="headerlink" href="#deployment-to-your-local-iis" title="Permanent link">&para;</a></h2>
+                <h1 id="powershell-deployments">PowerShell Deployments<a class="headerlink" href="#powershell-deployments" title="Permanent link">&para;</a></h1>
+<p>This section describes some tips for Windows users.</p>
+<h2 id="deployment-to-your-local-iis">Deployment to your local IIS<a class="headerlink" href="#deployment-to-your-local-iis" title="Permanent link">&para;</a></h2>
 <p>You can host the website automatically in the local <code>IIS</code> as <a href="http://localhost:1111">http://localhost:1111</a>. That is done by the <code>deploy_to_local_iis.ps1</code> script.</p>
 <p>Here are the steps:</p>
 <ul>
@@ -944,39 +908,6 @@
 
 <p>Now, you should be able to see the website by browsing to <a href="http://localhost:1111">http://localhost:1111</a>.</p>
 <hr />
-<h2 id="deployment-to-ops-app-01">Deployment to OPS-APP-01<a class="headerlink" href="#deployment-to-ops-app-01" title="Permanent link">&para;</a></h2>
-<h2 id="website-configuration">Website Configuration<a class="headerlink" href="#website-configuration" title="Permanent link">&para;</a></h2>
-<p>The website external url is <a href="https://devopdocs.fivedegrees.is">https://devopdocs.fivedegrees.is</a>.</p>
-<p>It is hosted in <code>IIS</code> on the <code>OPS-APP-01</code> server and its local URL is <a href="http://localhost:8881/">http://localhost:8881</a>.</p>
-<hr />
-<h2 id="deployment-procedure">Deployment Procedure<a class="headerlink" href="#deployment-procedure" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">You need to be Adminstrator</p>
-<p>In order to be able to deploy the website, you need to have local administrator access on the <code>OPS-APP-01</code> server</p>
-</div>
-<p>Here are the step to follow:</p>
-<ul>
-<li>On your local machine:</li>
-<li>Build the website locally: <code>mkdocs build</code></li>
-<li>On the <code>OPS-APP-01</code>:</li>
-<li>Log in on the server and open the <code>IIS Manager</code></li>
-<li>Stop the <code>FdsDocs</code> application pool</li>
-<li>Delete the contents of the <code>C:\inetpub\wwwroot\fdsdocs</code> folder</li>
-<li>On your local machine:</li>
-<li>Copy the contents of the <code>site</code> folder to <code>\\ops-app-01\c$\inetpub\wwwroot\fdsdocs</code></li>
-<li>On the <code>OPS-APP-01</code>:</li>
-<li>Start the <code>FdsDocs</code> application pool</li>
-</ul>
-<p>Check the deployment:</p>
-<ul>
-<li>On the <code>OPS-APP-01</code>:</li>
-<li>open <a href="http://localhost:8881/">http://localhost:8881</a> and make sure you see the website</li>
-<li>try to search for any reasonable search item to see a list of links</li>
-<li>On your local machine:</li>
-<li>Open <a href="http://ops-app-01:8881">http://ops-app-01:8881</a> and make sure you see the website</li>
-<li>try to search for any reasonable search item to see a list of links</li>
-</ul>
-<hr />
 <h2 id="possible-issues">Possible Issues<a class="headerlink" href="#possible-issues" title="Permanent link">&para;</a></h2>
 <h3 id="cannot-find-drive-iis">Cannot find drive &lsquo;IIS&rsquo;<a class="headerlink" href="#cannot-find-drive-iis" title="Permanent link">&para;</a></h3>
 <p>When running a deployment PowerShell script, you get the error message:</p>
@@ -987,7 +918,7 @@
 <p>You are probably running the script without the elevated rights. Try running the script as <code>Administrator</code>.</p>
 <h3 id="missing-mime-types">Missing MIME-types<a class="headerlink" href="#missing-mime-types" title="Permanent link">&para;</a></h3>
 <p>If the search does not work and in the DevTools you see a 404-error on <code>./mkdocs/js/search-results-template.mustache</code>, this can mean that a mime-type is missing for <code>.mustache</code></p>
-<p>Open the IIS and click on <code>OPS-APP-01</code>. Among the features on the right, find and double-click <code>MIME Types</code>. If you miss the mime-type for <code>.mustache</code>, add it as <code>mustache: text/template</code>.</p>
+<p>Open the IIS Manager and click on the root node. Among the features on the right, find and double-click <code>MIME Types</code>. If you miss the mime-type for <code>.mustache</code>, add it as <code>mustache: text/template</code>.</p>
 <hr />
                 
                   
