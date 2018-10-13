@@ -110,6 +110,7 @@ nav:
     - GitDiff: git/gitdiff.md
   - Go:
     - Installing Go: go/myinstall.md
+    - Go Notes: go/notes.md
   - Mac:
     - Homebrew: mac/brew.md
     - NGINX: mac/nginx.md
