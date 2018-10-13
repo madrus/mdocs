@@ -518,6 +518,39 @@
     MAC OS X
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uninstalling-go" title="Uninstalling Go" class="md-nav__link">
+    Uninstalling Go
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-mismatch-during-build" title="Version Mismatch During Build" class="md-nav__link">
+    Version Mismatch During Build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -528,6 +561,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../notes/" title="Go Notes" class="md-nav__link">
+      Go Notes
+    </a>
   </li>
 
         
@@ -849,6 +894,39 @@
     MAC OS X
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uninstalling-go" title="Uninstalling Go" class="md-nav__link">
+    Uninstalling Go
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-mismatch-during-build" title="Version Mismatch During Build" class="md-nav__link">
+    Version Mismatch During Build
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -880,6 +958,27 @@
 <li><code>~/.bash_profile</code></li>
 <li><code>~/.bashrc</code></li>
 <li><code>~/.profile</code></li>
+</ul>
+<p>My Go environment variables are all defined in <code>~/.bash_profile</code>.</p>
+<h3 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h3>
+<h4 id="uninstalling-go">Uninstalling Go<a class="headerlink" href="#uninstalling-go" title="Permanent link">&para;</a></h4>
+<p>Uninstalling <code>Golang</code> from <code>Mac OS X</code> machine can be done easily. All you to do is the remove this directory <code>/usr/local/go</code>. Doing this will remove the binaries for <code>Golang</code> but not the residue files which you have installed elsewhere.</p>
+<p>To remove the additional files, you need to check the environment variables for <code>GOPATH</code> and <code>GOROOT</code>. Those the files that you need to delete as well if you plan to remove <code>Golang</code> entirely.</p>
+<h4 id="version-mismatch-during-build">Version Mismatch During Build<a class="headerlink" href="#version-mismatch-during-build" title="Permanent link">&para;</a></h4>
+<p><code>go build</code> produces the following error message:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>compile: version &quot;go1.10.3&quot; does not match go tool version &quot;go1.11&quot;
+</pre></div>
+</td></tr></table>
+
+<ul>
+<li>Check if you have more than one version of <code>Go</code> installed (e.g. <code>.dmg</code>, <code>Homebrew</code>, or <code>gvm</code>). If more than one, remove all except the one you want to use.</li>
+<li>Analyse:<ul>
+<li><code>which go</code></li>
+<li><code>go version</code></li>
+<li><code>go env</code></li>
+<li><code>cat /usr/local/go/VERSION</code></li>
+</ul>
+</li>
 </ul>
 <hr />
                 
@@ -917,13 +1016,13 @@
           </a>
         
         
-          <a href="../../mac/brew/" title="Homebrew" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../notes/" title="Go Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Homebrew
+                Go Notes
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

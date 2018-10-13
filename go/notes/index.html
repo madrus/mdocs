@@ -13,7 +13,7 @@
         <meta name="description" content="A short description of my project">
       
       
-        <link rel="canonical" href="http://madrus4u.com/mdocs/webpack/basics/">
+        <link rel="canonical" href="http://madrus4u.com/mdocs/go/notes/">
       
       
         <meta name="author" content="Madrus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Webpack Basics - Madrus's Docs</title>
+        <title>Go Notes - Madrus's Docs</title>
       
     
     
@@ -107,7 +107,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#webpack-architecture-101" tabindex="1" class="md-skip">
+      <a href="../../#go-notes" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -133,7 +133,7 @@
                 Madrus's Docs
               </span>
               <span class="md-header-nav__topic">
-                Webpack Basics
+                Go Notes
               </span>
             
           
@@ -464,10 +464,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Go
@@ -485,7 +487,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../go/myinstall/" title="Installing Go" class="md-nav__link">
+    <a href="../myinstall/" title="Installing Go" class="md-nav__link">
       Installing Go
     </a>
   </li>
@@ -495,11 +497,89 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../go/notes/" title="Go Notes" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Go Notes
+      </label>
+    
+    <a href="./" title="Go Notes" class="md-nav__link md-nav__link--active">
       Go Notes
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#go-tools" title="Go Tools" class="md-nav__link">
+    Go Tools
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-go-documentation" title="Local Go Documentation" class="md-nav__link">
+    Local Go Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" title="Dependency Management" class="md-nav__link">
+    Dependency Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#godep" title="GODEP" class="md-nav__link">
+    GODEP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gb" title="GB" class="md-nav__link">
+    GB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -716,12 +796,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
     
     <label class="md-nav__link" for="nav-10">
       Webpack
@@ -737,45 +815,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Webpack Basics
-      </label>
-    
-    <a href="./" title="Webpack Basics" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../webpack/basics/" title="Webpack Basics" class="md-nav__link">
       Webpack Basics
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#webpack-architecture-101" title="Webpack Architecture 101" class="md-nav__link">
-    Webpack Architecture 101
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -846,14 +890,56 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#webpack-architecture-101" title="Webpack Architecture 101" class="md-nav__link">
-    Webpack Architecture 101
+  <a href="#go-tools" title="Go Tools" class="md-nav__link">
+    Go Tools
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#local-go-documentation" title="Local Go Documentation" class="md-nav__link">
+    Local Go Documentation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependency-management" title="Dependency Management" class="md-nav__link">
+    Dependency Management
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#godep" title="GODEP" class="md-nav__link">
+    GODEP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gb" title="GB" class="md-nav__link">
+    GB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -874,24 +960,54 @@
               
                 
                 
-                  <h1>Webpack Basics</h1>
-                
-                <h2 id="webpack-architecture-101">Webpack Architecture 101<a class="headerlink" href="#webpack-architecture-101" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p><a href="https://webpack.js.org/">Webpack</a> is based on the <a href="https://github.com/webpack/tapable">Tapable Module</a>.</p>
-</blockquote>
-<p>Here is a concise Webpack workflow description:</p>
-<ul>
-<li>the <code>Compiler</code> reads option and create the <code>Compilation</code></li>
-<li>the <code>Compilation</code> reads the <code>entry property</code>, and sends it through the <code>Normal Module Factory (NMF)</code> to the <code>Resolver</code>to find out if the file exists</li>
-<li>if it exists, the <code>Resolver</code> creates a <code>Module Object</code> from it with the source inside</li>
-<li>if some module is not in <code>JavaScript</code>, e.g. CSS, HTML, etc., the <code>Loaders</code> will transpile it into JavaScript</li>
-<li>then it goes through the <code>Parser</code> that converts it into an <code>Abstract Syntax Tree (AST)</code> to find all <code>require</code>s and <code>import</code>s, in other words all <code>dependencies</code></li>
-<li>this process is <code>recursively repeated</code> for every dependency</li>
-</ul>
-<p>Taken from the <a href="https://www.youtube.com/watch?v=4tQiJaFzuJ8&amp;t=3526s">Everything is a plugin! Mastering webpack from the inside out</a> presentation by <strong>Sean Larkin</strong> at <code>ng-conf 2017</code> in Salt Lake City (UT)</p>
-<p>More information can be found in the <a href="https://webpack.js.org/concepts/">Concepts</a> section of the <code>Webpack</code> documentation.</p>
-<p>In the <a href="https://www.pluralsight.com/courses/vue-js-single-page-applications">Single Page Applications with Vue.js</a> PluralSight course, Bill Stavroulakis shows step by step how to add <code>webpack</code> and build it out together with the Vue.js solution.</p>
+                <h1 id="go-notes">Go Notes<a class="headerlink" href="#go-notes" title="Permanent link">&para;</a></h1>
+<h2 id="go-tools">Go Tools<a class="headerlink" href="#go-tools" title="Permanent link">&para;</a></h2>
+<h3 id="local-go-documentation">Local Go Documentation<a class="headerlink" href="#local-go-documentation" title="Permanent link">&para;</a></h3>
+<p>The Go documentation is also available in a browsable format. This gives you <code>godoc</code> documentation as a local web server. To start your own documentation server, type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>godoc -http<span class="o">=</span>:6060
+</pre></div>
+</td></tr></table>
+
+<p>This command instructs <code>godoc</code> to start a web server on local port <code>6060</code>. If you open your web browser and navigate to <a href="http://localhost:6060">http://localhost:6060</a>, you’ll see a web page with documentation for both the Go standard libraries and any Go source that lives in your <code>GOPATH</code>.</p>
+<p>The best part of Go’s documentation tool is that it works for your code, too. If you follow simple conventions while writing your code, it will automatically include your comments in the Go documentation generated by <code>godoc</code>. To be included in the godoc generated documentation, your code needs to be documented by adding comments that follow a specific convention. Start by adding comments directly above the identifiers you want to document. This works for packages, functions, types, and global variables. Comments can be started using either two slashes, or using the slash-asterisk style.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Retrieve connects to the configuration repository and gathers</span>
+<span class="c1">// various connection settings, usernames, passwords. It returns a</span>
+<span class="c1">// config struct on success, or an error.</span>
+<span class="kd">func</span> <span class="nx">Retrieve</span><span class="p">()</span> <span class="p">(</span><span class="nx">config</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+<span class="c1">// ... omitted</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>If you want to add a large body of text to document your package, include a file called <code>doc.go</code> that declares the same package as your project, and put your package introduction as a comment before the package declaration:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cm">/*</span>
+<span class="cm">  Package usb provides types and functions for working with USB</span>
+<span class="cm">  devices. To connect to a USB device start by creating a new USB</span>
+<span class="cm">  connection with NewConnection</span>
+<span class="cm">  ...</span>
+<span class="cm">*/</span>
+<span class="kn">package</span> <span class="nx">usb</span>
+</pre></div>
+</td></tr></table>
+
+<p>This package documentation will be shown before any type or function documentation is displayed for your package. It also demonstrates using the slash-asterisk type of comment. You can read more about creating good documentation for your code by searching for <em>golang documentation</em> in Google.</p>
+<hr />
+<h2 id="dependency-management">Dependency Management<a class="headerlink" href="#dependency-management" title="Permanent link">&para;</a></h2>
+<h3 id="godep">GODEP<a class="headerlink" href="#godep" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/tools/godep">GODEP</a> is a dependency tool for <code>go</code>.</p>
+<h3 id="gb">GB<a class="headerlink" href="#gb" title="Permanent link">&para;</a></h3>
+<p><a href="https://getgb.io/">GB</a> is a project based build tool for the Go programming language.</p>
 <hr />
                 
                   
@@ -913,7 +1029,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../vuejs/basics/" title="Vue.js Basics" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../myinstall/" title="Installing Go" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -922,19 +1038,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vue.js Basics
+                Installing Go
               </span>
             </div>
           </a>
         
         
-          <a href="../../playground/todo/" title="TODOs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../mac/brew/" title="Homebrew" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                TODOs
+                Homebrew
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
