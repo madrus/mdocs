@@ -108,8 +108,10 @@ nav:
     - Set up SSH: git/ssh.md
     - Git Command Line Tools: git/tools.md
     - GitDiff: git/gitdiff.md
+  - Go:
+    - Installing Go: go/myinstall.md
   - Mac:
-    - Brew: mac/brew.md
+    - Homebrew: mac/brew.md
     - NGINX: mac/nginx.md
     - SSH on Sierra: mac/ssh.md
     - Tips & Tricks: mac/tips.md

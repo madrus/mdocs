@@ -1,4 +1,4 @@
-# Brew Utility
+# Homebrew Utility
 
 ## Updates
 
