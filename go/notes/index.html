@@ -526,12 +526,19 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#go-tools" title="Go Tools" class="md-nav__link">
-    Go Tools
+  <a href="#go-toolset" title="Go Toolset" class="md-nav__link">
+    Go Toolset
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go-playground" title="Go Playground" class="md-nav__link">
+    Go Playground
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#local-go-documentation" title="Local Go Documentation" class="md-nav__link">
@@ -563,6 +570,33 @@
           <li class="md-nav__item">
   <a href="#gb" title="GB" class="md-nav__link">
     GB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slice-capacity" title="Slice Capacity" class="md-nav__link">
+    Slice Capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-function" title="append function" class="md-nav__link">
+    append function
   </a>
   
 </li>
@@ -897,12 +931,19 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#go-tools" title="Go Tools" class="md-nav__link">
-    Go Tools
+  <a href="#go-toolset" title="Go Toolset" class="md-nav__link">
+    Go Toolset
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#go-playground" title="Go Playground" class="md-nav__link">
+    Go Playground
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#local-go-documentation" title="Local Go Documentation" class="md-nav__link">
@@ -943,6 +984,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#syntax" title="Syntax" class="md-nav__link">
+    Syntax
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slice-capacity" title="Slice Capacity" class="md-nav__link">
+    Slice Capacity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append-function" title="append function" class="md-nav__link">
+    append function
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
       
       
       
@@ -961,7 +1029,9 @@
                 
                 
                 <h1 id="go-notes">Go Notes<a class="headerlink" href="#go-notes" title="Permanent link">&para;</a></h1>
-<h2 id="go-tools">Go Tools<a class="headerlink" href="#go-tools" title="Permanent link">&para;</a></h2>
+<h2 id="go-toolset">Go Toolset<a class="headerlink" href="#go-toolset" title="Permanent link">&para;</a></h2>
+<h3 id="go-playground">Go Playground<a class="headerlink" href="#go-playground" title="Permanent link">&para;</a></h3>
+<p><a href="https://play.golang.org/">Go Playground</a> is a great tool to try out your code snippets.</p>
 <h3 id="local-go-documentation">Local Go Documentation<a class="headerlink" href="#local-go-documentation" title="Permanent link">&para;</a></h3>
 <p>The Go documentation is also available in a browsable format. This gives you <code>godoc</code> documentation as a local web server. To start your own documentation server, type:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>godoc -http<span class="o">=</span>:6060
@@ -1008,6 +1078,49 @@
 <p><a href="https://github.com/tools/godep">GODEP</a> is a dependency tool for <code>go</code>.</p>
 <h3 id="gb">GB<a class="headerlink" href="#gb" title="Permanent link">&para;</a></h3>
 <p><a href="https://getgb.io/">GB</a> is a project based build tool for the Go programming language.</p>
+<hr />
+<h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
+<h3 id="slice-capacity">Slice Capacity<a class="headerlink" href="#slice-capacity" title="Permanent link">&para;</a></h3>
+<p>By having the option to set the capacity of a new slice to be the same as the length, you can force the first append operation to detach the new slice from the underlying array. Detaching the new slice from its original source array makes it safe to change.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Create a slice of strings.</span>
+<span class="c1">// Contains a length and capacity of 5 elements.</span>
+<span class="nx">source</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">string</span><span class="p">{</span><span class="s">&quot;Apple&quot;</span><span class="p">,</span> <span class="s">&quot;Orange&quot;</span><span class="p">,</span> <span class="s">&quot;Plum&quot;</span><span class="p">,</span> <span class="s">&quot;Banana&quot;</span><span class="p">,</span> <span class="s">&quot;Grape&quot;</span><span class="p">}</span>
+<span class="c1">// Slice the third element and restrict the capacity.</span>
+<span class="c1">// Contains a length and capacity of 1 element.</span>
+<span class="nx">slice</span> <span class="o">:=</span> <span class="nx">source</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="c1">// Append a new string to the slice.</span>
+<span class="nx">slice</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">slice</span><span class="p">,</span> <span class="s">&quot;Kiwi&quot;</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
+
+<p>Without this third index, appending Kiwi to our slice would’ve changed the value of Banana in index 3 of the underlying array, because all of the remaining capacity would still belong to the slice. But we restricted the capacity of the slice to 1. When we call <code>append</code> for the first time on the slice, it will create a new underlying array of two elements, copy the fruit Plum, add the new fruit Kiwi, and return a new slice that references this underlying array,</p>
+<h3 id="append-function">append function<a class="headerlink" href="#append-function" title="Permanent link">&para;</a></h3>
+<p>The built-in function <code>append</code> is also a <strong>variadic</strong> function. This means you can pass multiple values to be appended in a single slice call. If you use the <strong>&hellip;</strong> operator, you can append all the elements of one slice into another.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// Create two slices each initialized with two integers.</span>
+<span class="nx">s1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
+<span class="nx">s2</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">}</span>
+<span class="c1">// Append the two slices together and display the results.</span>
+<span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;%v\n&quot;</span><span class="p">,</span> <span class="nb">append</span><span class="p">(</span><span class="nx">s1</span><span class="p">,</span> <span class="nx">s2</span><span class="o">...</span><span class="p">))</span>
+
+<span class="nx">Output</span><span class="p">:</span>
+<span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
 <hr />
                 
                   
