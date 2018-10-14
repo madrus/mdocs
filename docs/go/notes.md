@@ -1,6 +1,10 @@
 # Go Notes
 
-## Go Tools
+## Go Toolset
+
+### Go Playground
+
+[Go Playground](https://play.golang.org/) is a great tool to try out your code snippets.
 
 ### Local Go Documentation
 
@@ -45,8 +49,44 @@ This package documentation will be shown before any type or function documentati
 
 [GODEP](https://github.com/tools/godep) is a dependency tool for `go`.
 
-### GB 
+### GB
 
 [GB](https://getgb.io/) is a project based build tool for the Go programming language.
+
+---
+
+## Syntax
+
+### Slice Capacity
+
+By having the option to set the capacity of a new slice to be the same as the length, you can force the first append operation to detach the new slice from the underlying array. Detaching the new slice from its original source array makes it safe to change.
+
+``` go
+// Create a slice of strings.
+// Contains a length and capacity of 5 elements.
+source := []string{"Apple", "Orange", "Plum", "Banana", "Grape"}
+// Slice the third element and restrict the capacity.
+// Contains a length and capacity of 1 element.
+slice := source[2:3:3]
+// Append a new string to the slice.
+slice = append(slice, "Kiwi")
+```
+
+Without this third index, appending Kiwi to our slice would’ve changed the value of Banana in index 3 of the underlying array, because all of the remaining capacity would still belong to the slice. But we restricted the capacity of the slice to 1. When we call `append` for the first time on the slice, it will create a new underlying array of two elements, copy the fruit Plum, add the new fruit Kiwi, and return a new slice that references this underlying array,
+
+### append function
+
+The built-in function `append` is also a __variadic__ function. This means you can pass multiple values to be appended in a single slice call. If you use the __...__ operator, you can append all the elements of one slice into another.
+
+``` go
+// Create two slices each initialized with two integers.
+s1 := []int{1, 2}
+s2 := []int{3, 4}
+// Append the two slices together and display the results.
+fmt.Printf("%v\n", append(s1, s2...))
+
+Output:
+[1 2 3 4]
+```
 
 ---
