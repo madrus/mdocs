@@ -1,14 +1,22 @@
 /**
  * Add your custom styles here
  */
+.md-typeset p,
+.md-typeset ul li,
+.md-typeset ol li {
+  font-size: 0.95em;
+}
 [data-md-color-primary="blue-grey"] .md-typeset a {
   font-weight: 700;
 }
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.md-grid {
+  max-width: 136rem;
 }
-.flex-container button {
-  margin: 0.2rem;
+.md-sidebar {
+  width: 22rem;
+}
+@media only screen and (min-width: 76.25em) {
+  .md-sidebar--secondary {
+    margin-left: 136rem;
+  }
 }
