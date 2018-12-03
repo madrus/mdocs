@@ -100,6 +100,8 @@ nav:
     - Custom Styling: engine/styling.md
     - Color Styling: engine/colors.md
     - PowerShell Deployments: engine/deployments.md
+    - Installation: engine/install.md
+    - Technicalities: engine/technicalities.md
   - Aurelia:
     - Some Technical Notes: aurelia/technicalities.md
   - Git:
@@ -111,6 +113,8 @@ nav:
   - Go:
     - Installing Go: go/myinstall.md
     - Go Notes: go/notes.md
+  - Handy Stuff:
+    - Chocolatey: handy/choco.md
   - Mac:
     - Homebrew: mac/brew.md
     - NGINX: mac/nginx.md
@@ -122,6 +126,9 @@ nav:
     - Tips: dotnet/tips.md
   - PowerShell:
     - Debugging PowerShell in VS Code: powershell/vscode.md
+  - Umbraco:
+    - FAQ: umbraco/faq.md
+    - Technicalities: umbraco/technicalities.md
   - Vue.js:
     - Vue.js Basics: vuejs/basics.md
   - Webpack:
