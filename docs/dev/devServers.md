@@ -1,5 +1,11 @@
 # Development Servers
 
+## Live Server VSCode Extension
+
+[Extension page](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+You must have a `.html` or `.htm` file in the current folder. Just click on <kbd>Go Live</kbd> button on your VSCode taskbar.
+
 ## SERVE
 
 Install:
