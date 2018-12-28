@@ -104,6 +104,10 @@ nav:
     - Technicalities: engine/technicalities.md
   - Aurelia:
     - Some Technical Notes: aurelia/technicalities.md
+  - Dev Stuff:
+    - Chocolatey: dev/choco.md
+    - Dev Servers: dev/devServers.md
+    - TODOs: dev/todo.md
   - Git:
     - GitFlow: git/gitflow.md
     - Git Prompt Styling: git/styling.md
@@ -113,8 +117,6 @@ nav:
   - Go:
     - Installing Go: go/myinstall.md
     - Go Notes: go/notes.md
-  - Handy Stuff:
-    - Chocolatey: handy/choco.md
   - Mac:
     - Homebrew: mac/brew.md
     - NGINX: mac/nginx.md
@@ -133,6 +135,3 @@ nav:
     - Vue.js Basics: vuejs/basics.md
   - Webpack:
     - Webpack Basics: webpack/basics.md
-  - Playground:
-    - TODOs: playground/todo.md
-    - Test Document: playground/test.md

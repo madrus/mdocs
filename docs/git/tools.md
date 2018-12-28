@@ -1,8 +1,8 @@
-[TOC]
+# Handy Tools
 
 ## ConEmu
 
-Here is the main link to [Conemu](https://conemu.github.io/) website. 
+Here is the main link to [Conemu](https://conemu.github.io/) website.
 
 ### Show Branch Name on Command Line
 
@@ -24,7 +24,7 @@ cmd /k ver & GitShowBranch /i
 
 It is convenient to be able to open the __ConEmu__ console at the current location. You would then want to be able to either
 
-1. right click either on the folder itself, or 
+1. right click either on the folder itself, or
 2. right click inside the white area within the folder open in the __Windows Explorer__.
 
 Create (if not already created by the __ConEmu__ installation itself) the same group of keys and string values in the __Windows Registry__ in the following two locations respectively:
@@ -95,7 +95,7 @@ In the Settings navigate to __Startup -> Tasks__ and create a new predefined tas
 -cur_console:d:D:\ "%ProgramFiles%\Git\bin\sh.exe" --login -i cur_console:n:sT66H cmd.exe -new_console:d:D:\ -i -cur_console:n:sT50H
 ```
 
-What does those commands do? 
+#### What those commands do
 
 1. Creates new screen and opens Vim in my Dropbox folder context
 2. Creates new screen with Vim pointing to D:\
@@ -139,7 +139,7 @@ __Maximus5__, the author of Cmder, explains how to update ConEmu to a new versio
 
 It is convenient to be able to open the __Far Manager__ at the current location. You would then want to be able to either
 
-1. right click either on the folder itself, or 
+1. right click either on the folder itself, or
 2. right click inside the white area within the folder open in the __Windows Explorer__.
 
 Create or rename (if already created by the __Far Manager__ installation) the same group of keys and string values in the __Windows Registry__ in the following two locations respectively:
@@ -227,7 +227,5 @@ Add the following setting to the VS Code User Settings:
 ```
 
 Toggle the Integrated Terminal window with ++ctrl+grave++.
-
-
 
 ---
