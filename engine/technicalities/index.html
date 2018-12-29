@@ -13,7 +13,7 @@
         <meta name="description" content="A short description of my project">
       
       
-        <link rel="canonical" href="http://madrus4u.com/mdocs/mac/brew/">
+        <link rel="canonical" href="http://madrus4u.com/mdocs/engine/technicalities/">
       
       
         <meta name="author" content="Madrus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Homebrew - Madrus's Docs</title>
+        <title>Technicalities - Madrus's Docs</title>
       
     
     
@@ -110,7 +110,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#homebrew-utility" tabindex="1" class="md-skip">
+      <a href="#technical-information" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -136,7 +136,7 @@
                 Madrus's Docs
               </span>
               <span class="md-header-nav__topic">
-                Homebrew
+                Technicalities
               </span>
             
           
@@ -263,10 +263,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       MkDocs Engine
@@ -284,7 +286,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/start/" title="Getting started" class="md-nav__link">
+    <a href="../start/" title="Getting started" class="md-nav__link">
       Getting started
     </a>
   </li>
@@ -296,7 +298,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/cheatsheet/" title="Markdown Cheatsheet" class="md-nav__link">
+    <a href="../cheatsheet/" title="Markdown Cheatsheet" class="md-nav__link">
       Markdown Cheatsheet
     </a>
   </li>
@@ -308,7 +310,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/styling/" title="Custom Styling" class="md-nav__link">
+    <a href="../styling/" title="Custom Styling" class="md-nav__link">
       Custom Styling
     </a>
   </li>
@@ -320,7 +322,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/colors/" title="Color Styling" class="md-nav__link">
+    <a href="../colors/" title="Color Styling" class="md-nav__link">
       Color Styling
     </a>
   </li>
@@ -332,7 +334,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/deployments/" title="PowerShell Deployments" class="md-nav__link">
+    <a href="../deployments/" title="PowerShell Deployments" class="md-nav__link">
       PowerShell Deployments
     </a>
   </li>
@@ -344,7 +346,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../engine/install/" title="Installation" class="md-nav__link">
+    <a href="../install/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -354,11 +356,123 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../engine/technicalities/" title="Technicalities" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Technicalities
+      </label>
+    
+    <a href="./" title="Technicalities" class="md-nav__link md-nav__link--active">
       Technicalities
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-prerequisites" title="Installing prerequisites" class="md-nav__link">
+    Installing prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" title="Project Layout" class="md-nav__link">
+    Project Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-project-in-dev" title="Running the project in DEV" class="md-nav__link">
+    Running the project in DEV
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-useful-commands" title="Some Useful Commands" class="md-nav__link">
+    Some Useful Commands
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#font-awesome" title="Font Awesome" class="md-nav__link">
+    Font Awesome
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" title="Deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment-to-github-pages-directly" title="Deployment to GitHub Pages directly" class="md-nav__link">
+    Deployment to GitHub Pages directly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-to-github-pages-via-travis-ci" title="Deployment to GitHub pages via Travis CI" class="md-nav__link">
+    Deployment to GitHub pages via Travis CI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -599,12 +713,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Mac
@@ -620,90 +732,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Homebrew
-      </label>
-    
-    <a href="./" title="Homebrew" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../mac/brew/" title="Homebrew" class="md-nav__link">
       Homebrew
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#updates" title="Updates" class="md-nav__link">
-    Updates
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#results-of-the-first-run" title="Results of the first run" class="md-nav__link">
-    Results of the first run
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#openssl11-111" title="openssl@1.1 -&gt; 1.1.1" class="md-nav__link">
-    openssl@1.1 -&gt; 1.1.1
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mariadb" title="mariadb" class="md-nav__link">
-    mariadb
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nginx" title="nginx" class="md-nav__link">
-    nginx
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-machine" title="docker-machine" class="md-nav__link">
-    docker-machine
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -713,7 +746,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/" title="NGINX" class="md-nav__link">
+    <a href="../../mac/nginx/" title="NGINX" class="md-nav__link">
       NGINX
     </a>
   </li>
@@ -725,7 +758,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../ssh/" title="SSH on Sierra" class="md-nav__link">
+    <a href="../../mac/ssh/" title="SSH on Sierra" class="md-nav__link">
       SSH on Sierra
     </a>
   </li>
@@ -737,7 +770,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tips/" title="Tips & Tricks" class="md-nav__link">
+    <a href="../../mac/tips/" title="Tips & Tricks" class="md-nav__link">
       Tips & Tricks
     </a>
   </li>
@@ -985,44 +1018,77 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#updates" title="Updates" class="md-nav__link">
-    Updates
+  <a href="#installing-prerequisites" title="Installing prerequisites" class="md-nav__link">
+    Installing prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#results-of-the-first-run" title="Results of the first run" class="md-nav__link">
-    Results of the first run
+  <a href="#project-layout" title="Project Layout" class="md-nav__link">
+    Project Layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-the-project-in-dev" title="Running the project in DEV" class="md-nav__link">
+    Running the project in DEV
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#openssl11-111" title="openssl@1.1 -&gt; 1.1.1" class="md-nav__link">
-    openssl@1.1 -&gt; 1.1.1
+  <a href="#some-useful-commands" title="Some Useful Commands" class="md-nav__link">
+    Some Useful Commands
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mariadb" title="mariadb" class="md-nav__link">
-    mariadb
+  <a href="#font-awesome" title="Font Awesome" class="md-nav__link">
+    Font Awesome
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" title="Deployment" class="md-nav__link">
+    Deployment
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deployment-to-github-pages-directly" title="Deployment to GitHub Pages directly" class="md-nav__link">
+    Deployment to GitHub Pages directly
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#nginx" title="nginx" class="md-nav__link">
-    nginx
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-machine" title="docker-machine" class="md-nav__link">
-    docker-machine
+  <a href="#deployment-to-github-pages-via-travis-ci" title="Deployment to GitHub pages via Travis CI" class="md-nav__link">
+    Deployment to GitHub pages via Travis CI
   </a>
   
 </li>
@@ -1049,100 +1115,176 @@
               
                 
                 
-                <h1 id="homebrew-utility">Homebrew Utility<a class="headerlink" href="#homebrew-utility" title="Permanent link">&para;</a></h1>
-<h2 id="updates">Updates<a class="headerlink" href="#updates" title="Permanent link">&para;</a></h2>
-<p>Here is a <code>Terminal</code> alias to get all the updating to happen with a single word <code>brewery</code> command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">alias</span> <span class="nv">brewery</span><span class="o">=</span><span class="s1">&#39;brew update &amp;&amp; brew upgrade &amp;&amp; brew cleanup&#39;</span>
-</pre></div>
-</td></tr></table>
-
-<p>Source: <a href="https://medium.com/@kkostov/how-to-install-node-and-npm-on-macos-using-homebrew-708e2c3877bd">this tip of Konstantin</a></p>
-<hr />
-<h2 id="results-of-the-first-run">Results of the first run<a class="headerlink" href="#results-of-the-first-run" title="Permanent link">&para;</a></h2>
-<p>When I ran it the first time, I got a lot of hints about various upgraded components. I have made note of those I considered important.</p>
-<h3 id="openssl11-111">openssl@1.1 -&gt; 1.1.1<a class="headerlink" href="#openssl11-111" title="Permanent link">&para;</a></h3>
-<p>A CA file has been bootstrapped using certificates from the system keychain. To add additional certificates, place <code>.pem</code> files in <code>/usr/local/etc/openssl@1.1/certs</code></p>
-<p>and run <code>/usr/local/opt/openssl@1.1/bin/c_rehash</code></p>
-<p><code>openssl@1.1</code> is keg-only, which means it was not symlinked into <code>/usr/local</code>, because this is an alternate version of another formula.</p>
-<p>If you need to have <code>openssl@1.1</code> first in your <code>PATH</code> run:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s1">&#39;export PATH=&quot;/usr/local/opt/openssl@1.1/bin:$PATH&quot;&#39;</span> &gt;&gt; ~/.bash_profile
-</pre></div>
-</td></tr></table>
-
-<p>For compilers to find <code>openssl@1.1</code> you may need to set:</p>
+                <h1 id="technical-information">Technical Information<a class="headerlink" href="#technical-information" title="Permanent link">&para;</a></h1>
+<h2 id="installing-prerequisites">Installing prerequisites<a class="headerlink" href="#installing-prerequisites" title="Permanent link">&para;</a></h2>
+<p>if you want to create your own project like this one, you need to have the latest version of <strong>Python 2.7</strong> installed, which can be downloaded from <a href="https://www.python.org/downloads/">here</a>.</p>
+<p>After that, install <strong>mkdocs</strong> and related packages:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">LDFLAGS</span><span class="o">=</span><span class="s2">&quot;-L/usr/local/opt/openssl@1.1/lib&quot;</span>
-<span class="nb">export</span> <span class="nv">CPPFLAGS</span><span class="o">=</span><span class="s2">&quot;-I/usr/local/opt/openssl@1.1/include&quot;</span>
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install -U mkdocs mkdocs-material
+pip install -U fontawesome-markdown
+pip install -U pygments pymdown-extensions
 </pre></div>
 </td></tr></table>
 
-<p>For <code>pkg-config</code> to find <code>openssl@1.1</code> you may need to set:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">export</span> <span class="nv">PKG_CONFIG_PATH</span><span class="o">=</span><span class="s2">&quot;/usr/local/opt/openssl@1.1/lib/pkgconfig&quot;</span>
+<hr />
+<h2 id="project-layout">Project Layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">mkdocs.yml</span>    <span class="c1"># The configuration file.</span>
+<span class="l l-Scalar l-Scalar-Plain">docs/</span>
+    <span class="l l-Scalar l-Scalar-Plain">index.md</span>  <span class="c1"># The documentation homepage.</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>       <span class="c1"># Other markdown pages, and other files.</span>
+    <span class="l l-Scalar l-Scalar-Plain">/images</span>   <span class="c1"># Images used in the documents</span>
 </pre></div>
 </td></tr></table>
 
-<h3 id="mariadb">mariadb<a class="headerlink" href="#mariadb" title="Permanent link">&para;</a></h3>
-<p>A <code>/etc/my.cnf</code> from another install may interfere with a Homebrew-built server starting up correctly.</p>
-<p><code>MySQL</code> is configured to only allow connections from <code>localhost</code> by default.</p>
-<p>To connect: </p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mysql -uroot
+<hr />
+<h2 id="running-the-project-in-dev">Running the project in DEV<a class="headerlink" href="#running-the-project-in-dev" title="Permanent link">&para;</a></h2>
+<p>Open the command prompt in the project root directory and type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs serve
 </pre></div>
 </td></tr></table>
 
-<p>To have launchd start mariadb now and restart at login:</p>
+<p>Or, if you need to run it on a specific port, e.g. 8080, you can do one of the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs serve --dev-addr:8080
+mkdocs serve -a :8080
+</pre></div>
+</td></tr></table>
+
+<p>Then open your browser and navigate to <a href="http://localhost:8000">http://localhost:8000</a> or whatever port number you have configured.</p>
+<h3 id="some-useful-commands">Some Useful Commands<a class="headerlink" href="#some-useful-commands" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
+<li><code>mkdocs build</code> - Build the documentation site.</li>
+<li><code>mkdocs help</code> - Print this help message.</li>
+</ul>
+<hr />
+<h3 id="font-awesome">Font Awesome<a class="headerlink" href="#font-awesome" title="Permanent link">&para;</a></h3>
+<p><a href="https://fortawesome.github.io">Font Awesome</a> gives you scalable vector icons that can instantly be customized &ndash; size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these <a href="http://fontawesome.io/examples/">examples</a>.</p>
+<p><a href="http://bmcorser.github.io/fontawesome-markdown/">Font Awesome Markdown</a> is a Markdown extension that looks for things like <code>:fa-coffee:</code> ( <i class="fa fa-coffee"></i> ) or <code>:fa-beer:</code> ( <i class="fa fa-beer"></i> ) and replaces them with the Font Awesome icon markup.</p>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p>This examples use the fontawesome_markdown extension:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>What would you drink, :fa-coffee: or :fa-beer: ?
+</pre></div>
+</td></tr></table>
+
+<p>What would you drink, <i class="fa fa-coffee"></i> or <i class="fa fa-beer"></i> ?</p>
+<p>For this example, you must install the <code>fontawesome_markdown</code> extension with <code>pip</code> or install the latest version directly from the github repository:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+</pre></div>
+</td></tr></table>
+
+<p>You may need to include <strong>-U</strong> in the above command if you already have this extension installed.</p>
+<p>Then add the below to your <code>mkdocs.yml</code> file.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">markdown_extensions</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">fontawesome_markdown</span>
+</pre></div>
+</td></tr></table>
+
+<p>In my case, this appeared not enough. I have had to add the link to the Font Awesome stylesheet inside the <code>main.html</code> of my custom theme:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew services start mariadb
-<span class="sb">````</span>
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{% extends &quot;base.html&quot; %}
 
-Or, <span class="k">if</span> you don<span class="se">\&#39;</span>t want/need a background service you can just run:
-
-<span class="sb">```</span> bash
-mysql.server start
-</pre></div>
-</td></tr></table>
-
-<h3 id="nginx">nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
-<p><code>Docroot</code> is: <code>/usr/local/var/www</code></p>
-<p>The default port has been set in <code>/usr/local/etc/nginx/nginx.conf</code> to <code>8080</code> so that<br />
-<code>nginx</code> can run without sudo.</p>
-<p><code>nginx</code> will load all files in <code>/usr/local/etc/nginx/servers/</code>.</p>
-<p>To have launchd start <code>nginx</code> now and restart at login:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew services start nginx
-</pre></div>
-</td></tr></table>
-
-<p>Or, if you don&rsquo;t want/need a background service you can just run:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>nginx
-</pre></div>
-</td></tr></table>
-
-<h3 id="docker-machine">docker-machine<a class="headerlink" href="#docker-machine" title="Permanent link">&para;</a></h3>
-<p>Bash completion has been installed to:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>/usr/local/etc/bash_completion.d
-</pre></div>
-</td></tr></table>
-
-<p>zsh completions have been installed to:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>/usr/local/share/zsh/site-functions
-</pre></div>
-</td></tr></table>
-
-<p>To have it launched start <code>docker-machine</code> now and restart at login:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>brew services start docker-machine
-</pre></div>
-</td></tr></table>
-
-<p>Or, if you don&rsquo;t want/need a background service you can just run:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>docker-machine start
+{% block styles %}
+{{ super() }}
+...
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://use.fontawesome.com/releases/v5.6.3/css/all.css&quot;</span> <span class="na">integrity</span><span class="o">=</span><span class="s">&quot;sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/&quot;</span>
+  <span class="na">crossorigin</span><span class="o">=</span><span class="s">&quot;anonymous&quot;</span><span class="p">&gt;</span>
+{% endblock %}
 </pre></div>
 </td></tr></table>
 
 <hr />
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="deployment-to-github-pages-directly">Deployment to GitHub Pages directly<a class="headerlink" href="#deployment-to-github-pages-directly" title="Permanent link">&para;</a></h3>
+<p>To publish the project to <strong>GitHub Pages</strong> as a subdomain, e.g. <code>/mdocs</code> of the main <your-github-login.github.io> website, you need first to create a repository with that name, e.g. <code>mdocs</code> and add it to your project as a remote.</p>
+<p>Next make sure you have a <strong>gh-pages</strong> branch that exists. If it doesn&rsquo;t:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>git checkout -b gh-pages
+git rm -rf .
+git push --set-upstream origin gh-pages
+</pre></div>
+</td></tr></table>
+
+<p>Now, open the command prompt in the root directory (on the <code>master</code> branch) and type:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs gh-deploy
+</pre></div>
+</td></tr></table>
+
+<p>This will push the <strong>master</strong>  branch to the remote <strong>gh-pages</strong>. After that, the project website is available at <your-github-login.github.io/mdocs>.</p>
+<h3 id="deployment-to-github-pages-via-travis-ci">Deployment to GitHub pages via Travis CI<a class="headerlink" href="#deployment-to-github-pages-via-travis-ci" title="Permanent link">&para;</a></h3>
+<p>Go to your GitHub account and create a new <strong>Personal access token</strong> in your Developer settings. Copy the hash string.</p>
+<div class="admonition warning">
+<p class="admonition-title">Keep well the hash string!</p>
+<p>You will see it only once when you create it.</p>
+</div>
+<p>In the Travis CI settings of your project add a new <strong>GITHUB_TOKEN</strong> environment variable with the value of the hash string your have just copied. Don&rsquo;t forget to turn in <strong>ON</strong> and to <strong>ADD</strong>.</p>
+<p>Configure the <code>.travis.yml</code> file. You may start with something like this:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">sudo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="nt">language</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">python</span>
+<span class="nt">python</span><span class="p">:</span> <span class="s">&#39;2.7&#39;</span>
+<span class="nt">install</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install --upgrade pip</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install -r requirements.txt</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip</span>
+<span class="nt">script</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">git config credential.helper &quot;store --file=.git/credentials&quot;</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">echo &quot;https://${GITHUB_TOKEN}:@github.com&quot; &gt; .git/credentials</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">mkdocs build</span>
+<span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">if [ $TRAVIS_TEST_RESULT == 0 ]; then</span>
+    <span class="l l-Scalar l-Scalar-Plain">mkdocs gh-deploy --force;</span>
+  <span class="l l-Scalar l-Scalar-Plain">fi</span>
+</pre></div>
+</td></tr></table>
+
+<p>The credentials here are necessary for the Travis agent to be able to connect to your Github repository and perform the necessary actions with it. Note that the credentials are based on the <strong>Personal access token</strong> you have created.</p>
+<p>Also, I have put deployment inside the <strong>script</strong> fase instead of <strong>after_success</strong> as a workaround (see the tip of Chronial on this <a href="https://github.com/travis-ci/travis-ci/issues/758">Travis issue #758</a>). Otherwise, the batch succeeds with a successful build even if deploy <strong>fails</strong> after it.</p>
+<p>Next, you need to have <strong>travis</strong> Rubygem installed on your local machine. If not, install it:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>gem install travis
+</pre></div>
+</td></tr></table>
+
+<p>Using <strong>travis</strong>, add the encrypted token to <code>.travis.yml</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>travis encrypt <span class="nv">GITHUB_TOKEN</span><span class="o">=</span><span class="s2">&quot;the-token-from-github&quot;</span> --add
+</pre></div>
+</td></tr></table>
+
+<p>This will add the following block at the end of the file:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nt">env</span><span class="p">:</span>
+  <span class="nt">global</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">secure</span><span class="p">:</span> <span class="s">&quot;lots-of-seemingly-random-characters&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now, when you push your changes to the remote <strong>master</strong>, Travis CI should publish the compiled website to <strong>GitHub Pages</strong> if the build succeeds.</p>
                 
                   
                 
@@ -1163,7 +1305,7 @@ mysql.server start
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../go/notes/" title="Go Notes" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../install/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1172,19 +1314,19 @@ mysql.server start
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Go Notes
+                Installation
               </span>
             </div>
           </a>
         
         
-          <a href="../nginx/" title="NGINX" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../aurelia/technicalities/" title="Some Technical Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                NGINX
+                Some Technical Notes
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
