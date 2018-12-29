@@ -83,7 +83,7 @@ markdown_extensions:
   - fontawesome_markdown
 ```
 
-In my case, this appeared not enough. I have had to add the link to the Font Awesome stylesheet inside the `main.html` of my custom theme:
+In my case, this appeared to be not enough. I had to add the link to the Font Awesome stylesheet inside the `main.html` of my custom theme:
 
 ``` html
 {% extends "base.html" %}
