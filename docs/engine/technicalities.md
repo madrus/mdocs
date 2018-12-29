@@ -63,10 +63,10 @@ Then open your browser and navigate to <http://localhost:8000> or whatever port 
 This examples use the fontawesome_markdown extension:
 
 ```none
-What would you drink, :fa-coffee: or :fa-beer:?
+What would you drink, :fa-coffee: or :fa-beer: ?
 ```
 
-What would you drink, :fa-coffee: or :fa-beer:?
+What would you drink, :fa-coffee: or :fa-beer: ?
 
 For this example, you must install the `fontawesome_markdown` extension with `pip` or install the latest version directly from the github repository:
 
