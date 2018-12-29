@@ -56,7 +56,7 @@ Then open your browser and navigate to <http://localhost:8000> or whatever port 
 
 [Font Awesome](https://fortawesome.github.io) gives you scalable vector icons that can instantly be customized -- size, color, drop shadow, and anything that can be done with the power of CSS. For more inpiration see these [examples](http://fontawesome.io/examples/).
 
-[Font Awesome Markdown](http://bmcorser.github.io/fontawesome-markdown/) is a Markdown extension that looks for things like `:fa-coffee:` (:fa-coffee:) or `:fa-refresh:` (:fa-refresh:) and replaces them with the Font Awesome icon markup.
+[Font Awesome Markdown](http://bmcorser.github.io/fontawesome-markdown/) is a Markdown extension that looks for things like `:fa-coffee:` ( :fa-coffee: ) or `:fa-beer:` ( :fa-beer: ) and replaces them with the Font Awesome icon markup.
 
 #### Examples
 
@@ -68,7 +68,7 @@ What would you drink, :fa-coffee: or :fa-beer:?
 
 What would you drink, :fa-coffee: or :fa-beer:?
 
-For this example, you must install the `fontawesome_markdown` extension with `pip`. Right now version `0.2.5` is the latest but it doesn't work out of the box. Instead, you have to install the latest version from the github repository. You can do that with the command below:
+For this example, you must install the `fontawesome_markdown` extension with `pip` or install the latest version directly from the github repository:
 
 ``` bash
 pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
@@ -81,6 +81,19 @@ Then add the below to your `mkdocs.yml` file.
 ``` yaml
 markdown_extensions:
   - fontawesome_markdown
+```
+
+In my case, this appeared not enough. I have had to add the link to the Font Awesome stylesheet inside the `main.html` of my custom theme:
+
+``` html
+{% extends "base.html" %}
+
+{% block styles %}
+{{ super() }}
+...
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous">
+{% endblock %}
 ```
 
 ---

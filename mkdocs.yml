@@ -29,11 +29,11 @@ theme:
   search_index_only: true
   extra_css:
   - 'assets/stylesheets/extra.css'
-  # - 'https://use.fontawesome.com/releases/v5.3.1/css/all.css'
-  # - 'https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css'
-  # extra_javascript:
-  # - 'https://use.fontawesome.com/releases/v5.3.1/js/all.js'
-  # - 'https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js'
+  - 'https://use.fontawesome.com/releases/v5.3.1/css/all.css'
+  - 'https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css'
+  extra_javascript:
+  - 'https://use.fontawesome.com/releases/v5.3.1/js/all.js'
+  - 'https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js'
 
 # Options
 extra:
