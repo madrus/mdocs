@@ -12,7 +12,6 @@ Example:
 ``` bash
 # Before
 $ node ./node_modules/.bin/mocha
-
 # Now with npx:
 $ npx mocha
 ```
