@@ -13,7 +13,7 @@
         <meta name="description" content="A short description of my project">
       
       
-        <link rel="canonical" href="http://madrus4u.com/mdocs/mac/ssh/">
+        <link rel="canonical" href="http://madrus4u.com/mdocs/react/redux/">
       
       
         <meta name="author" content="Madrus">
@@ -42,7 +42,7 @@
     
     
       
-        <title>SSH on Sierra - Madrus's Docs</title>
+        <title>Redux - Madrus's Docs</title>
       
     
     
@@ -110,7 +110,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#ssh-on-sierra" tabindex="1" class="md-skip">
+      <a href="#redux" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -136,7 +136,7 @@
                 Madrus's Docs
               </span>
               <span class="md-header-nav__topic">
-                SSH on Sierra
+                Redux
               </span>
             
           
@@ -611,12 +611,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       Mac
@@ -634,7 +632,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../brew/" title="Homebrew" class="md-nav__link">
+    <a href="../../mac/brew/" title="Homebrew" class="md-nav__link">
       Homebrew
     </a>
   </li>
@@ -646,7 +644,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../nginx/" title="NGINX" class="md-nav__link">
+    <a href="../../mac/nginx/" title="NGINX" class="md-nav__link">
       NGINX
     </a>
   </li>
@@ -656,20 +654,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="SSH on Sierra" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../mac/ssh/" title="SSH on Sierra" class="md-nav__link">
       SSH on Sierra
     </a>
-    
   </li>
 
         
@@ -679,7 +668,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../tips/" title="Tips & Tricks" class="md-nav__link">
+    <a href="../../mac/tips/" title="Tips & Tricks" class="md-nav__link">
       Tips & Tricks
     </a>
   </li>
@@ -790,10 +779,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" checked>
     
     <label class="md-nav__link" for="nav-10">
       React
@@ -809,11 +800,110 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../react/redux/" title="Redux" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Redux
+      </label>
+    
+    <a href="./" title="Redux" class="md-nav__link md-nav__link--active">
       Redux
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-principles-of-redux" title="Three Principles of Redux" class="md-nav__link">
+    Three Principles of Redux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redux-conventions" title="Redux conventions" class="md-nav__link">
+    Redux conventions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-store" title="The Store" class="md-nav__link">
+    The Store
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createstore" title="createStore()" class="md-nav__link">
+    createStore()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-store-methods" title="Three Store Methods" class="md-nav__link">
+    Three Store Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getstate" title="getState()" class="md-nav__link">
+    getState()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispatch" title="dispatch()" class="md-nav__link">
+    dispatch()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe" title="subscribe()" class="md-nav__link">
+    subscribe()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -959,6 +1049,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#three-principles-of-redux" title="Three Principles of Redux" class="md-nav__link">
+    Three Principles of Redux
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redux-conventions" title="Redux conventions" class="md-nav__link">
+    Redux conventions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-store" title="The Store" class="md-nav__link">
+    The Store
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createstore" title="createStore()" class="md-nav__link">
+    createStore()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-store-methods" title="Three Store Methods" class="md-nav__link">
+    Three Store Methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getstate" title="getState()" class="md-nav__link">
+    getState()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispatch" title="dispatch()" class="md-nav__link">
+    dispatch()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe" title="subscribe()" class="md-nav__link">
+    subscribe()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -970,66 +1137,64 @@
               
                 
                 
-                <h1 id="ssh-on-sierra">SSH on Sierra<a class="headerlink" href="#ssh-on-sierra" title="Permanent link">&para;</a></h1>
-<p>These are short notes on how you can set up an SSH connection for GitLab (or any other secure server).</p>
+                <h1 id="redux">Redux<a class="headerlink" href="#redux" title="Permanent link">&para;</a></h1>
+<h2 id="three-principles-of-redux">Three Principles of Redux<a class="headerlink" href="#three-principles-of-redux" title="Permanent link">&para;</a></h2>
+<p>From the Egghead.io course of Dan Abramov:</p>
+<ol>
+<li>Application <strong>state</strong> is one single object no matter how big or small the application.</li>
+<li>State tree is <strong>immutable</strong> (read only). State changes can be added but not modified.</li>
+<li>State mutations are pure functions that take the previous state and the action being dispatched as its arguments, and returns the next state of the application. These functions are called <strong>reducers</strong>.</li>
+</ol>
+<h2 id="redux-conventions">Redux conventions<a class="headerlink" href="#redux-conventions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>If the reducer receives <code>undefined</code> as the state argument, it must return what it considers to be the <strong>initial state</strong> of the application.</li>
+</ol>
+<h2 id="the-store">The Store<a class="headerlink" href="#the-store" title="Permanent link">&para;</a></h2>
+<p>The <strong>store</strong> binds together the <code>three principles of Redux</code>. It holds the current application&rsquo;s state object. It lets you dispatch actions. When you create it, you need to specify the reducer that tells how state is updated with actions.</p>
+<h3 id="createstore">createStore()<a class="headerlink" href="#createstore" title="Permanent link">&para;</a></h3>
+<p>The <code>createStore</code> function from <code>Redux</code> and the <code>store</code> object it returns <strong>provide</strong>:</p>
+<ul>
+<li>the <code>getState</code> method to get the current application state;</li>
+<li>the <code>dispatch</code> method, to change the current application state by dispatching an action, and;</li>
+<li>the <code>subscribe</code> method to subscribe to the changes and re-render our application with the current state of the app.</li>
+</ul>
+<p>The following declarations are the same:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># check if you already have an ssh key</span>
-cat ~/.ssh/id_rsa.pub
-
-<span class="c1"># if not, generate a new key</span>
-ssh-keygen -t rsa -C <span class="s2">&quot;your.email@yourprovider.com&quot;</span> -b <span class="m">4096</span>
-
-<span class="c1"># copy the new key to clipboard</span>
-pbcopy &lt; ~/.ssh/id_rsa.pub
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">React</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;redux&#39;</span>
+<span class="kd">var</span> <span class="nx">createStore</span> <span class="o">=</span> <span class="nx">Redux</span><span class="p">.</span><span class="nx">createStore</span>
 </pre></div>
 </td></tr></table>
 
-<p>Go to <a href="https://gitlab.com/">GitLab</a> and add your new key as explained in their help documentation.</p>
-<p>Test your SSH configuration:</p>
+<h3 id="three-store-methods">Three Store Methods<a class="headerlink" href="#three-store-methods" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>getState()</code></li>
+<li><code>dispatch()</code></li>
+<li><code>subscribe()</code></li>
+</ul>
+<h4 id="getstate">getState()<a class="headerlink" href="#getstate" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># test the key</span>
-ssh -T git@gitlab.com
-
-<span class="c1"># debug the connection</span>
-ssh -Tv git@gitlab.com
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// getState</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">())</span>
 </pre></div>
 </td></tr></table>
 
-<p>When using SSH on my Mac with High Sierra, I noticed that I am required to enter my SSH password every time.<br />
-This is a known issue on Sierra. I have found a good solution to it in <a href="https://akrabat.com/ssh-keys-in-macos-sierra/">this article by Rob Allen</a>. Here are the steps I have taken based on his advice:</p>
+<h4 id="dispatch">dispatch()<a class="headerlink" href="#dispatch" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add your key to id_rsa</span>
-ssh-add -K ~/.ssh/id_rsa
-
-<span class="c1"># make sure you see the saved key</span>
-ssh-add -l
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// dispatch</span>
+<span class="nx">store</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;INCREMENT&#39;</span> <span class="p">})</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">getState</span><span class="p">())</span>
 </pre></div>
 </td></tr></table>
 
-<p>Now you can check you don&rsquo;t need to enter your password by running <code>git status</code> on any GitLab repo.</p>
-<p>Update the SSH config by editing <code>~/.ssh/config</code> and adding:</p>
+<h4 id="subscribe">subscribe()<a class="headerlink" href="#subscribe" title="Permanent link">&para;</a></h4>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Host *
-   AddKeysToAgent yes
-   UseKeychain yes
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// subscribe</span>
+<span class="nx">store</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">render</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
-
-<p>After reboot of your PC, you should still be able to use SSH without having to type in your password.</p>
-<hr />
                 
                   
                 
@@ -1050,7 +1215,7 @@ ssh-add -l
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../nginx/" title="NGINX" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../powershell/vscode/" title="Debugging PowerShell in VS Code" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1059,19 +1224,19 @@ ssh-add -l
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                NGINX
+                Debugging PowerShell in VS Code
               </span>
             </div>
           </a>
         
         
-          <a href="../tips/" title="Tips & Tricks" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../umbraco/faq/" title="FAQ" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Tips & Tricks
+                FAQ
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
