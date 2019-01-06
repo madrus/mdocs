@@ -107,6 +107,7 @@ nav:
   - Dev Stuff:
     - Chocolatey: dev/choco.md
     - Dev Servers: dev/devServers.md
+    - NPX tool: dev/npx.md
     - TODOs: dev/todo.md
   - Git:
     - GitFlow: git/gitflow.md
@@ -128,6 +129,8 @@ nav:
     - Tips: dotnet/tips.md
   - PowerShell:
     - Debugging PowerShell in VS Code: powershell/vscode.md
+  - React:
+    - Redux: react/redux.md
   - Umbraco:
     - FAQ: umbraco/faq.md
     - Technicalities: umbraco/technicalities.md
