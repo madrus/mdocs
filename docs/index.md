@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/madrus/mdocs.svg?branch=master)](https://travis-ci.org/madrus/mdocs)
 
-# Welcome!
+# Welcome
 
 ## About this documentation
 
-### WTF?
+### WTF
 
 You may ask yourself a question: "What's the point of having a __Markdown__ documentation website if there are tools like [Atlassian Confluence](https://www.atlassian.com/software/confluence) or [Microsoft Sharepoint](https://products.office.com/en-us/sharepoint/collaboration)?" Indeed, WHAT?
 
@@ -24,7 +24,7 @@ Collecting tips and tricks can be huge fun. Just do it along the way every time 
 
 Enjoy! :wink:
 
-### Wonna give it a try?
+### Give it a try
 
 Have a look at the [Getting Started](./engine/start.md) document.
 
