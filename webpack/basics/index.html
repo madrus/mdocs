@@ -110,7 +110,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#webpack-architecture-101" tabindex="1" class="md-skip">
+      <a href="#webpack-basics" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -927,6 +927,8 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
         Webpack Basics
@@ -940,6 +942,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -947,6 +951,13 @@
         <li class="md-nav__item">
   <a href="#webpack-architecture-101" title="Webpack Architecture 101" class="md-nav__link">
     Webpack Architecture 101
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-build-or-not-to-build" title="To Build or Not to Build" class="md-nav__link">
+    To Build or Not to Build
   </a>
   
 </li>
@@ -981,6 +992,8 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
@@ -988,6 +1001,13 @@
         <li class="md-nav__item">
   <a href="#webpack-architecture-101" title="Webpack Architecture 101" class="md-nav__link">
     Webpack Architecture 101
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-build-or-not-to-build" title="To Build or Not to Build" class="md-nav__link">
+    To Build or Not to Build
   </a>
   
 </li>
@@ -1009,16 +1029,19 @@
               
                 
                 
-                  <h1>Webpack Basics</h1>
-                
-                <h2 id="webpack-architecture-101">Webpack Architecture 101<a class="headerlink" href="#webpack-architecture-101" title="Permanent link">&para;</a></h2>
+                <h1 id="webpack-basics">Webpack Basics<a class="headerlink" href="#webpack-basics" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Webpack 4</p>
+<p>The notes hereunder are based on the latest (at the moment of writing) version 4 of Webpack.</p>
+</div>
+<h2 id="webpack-architecture-101">Webpack Architecture 101<a class="headerlink" href="#webpack-architecture-101" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><a href="https://webpack.js.org/">Webpack</a> is based on the <a href="https://github.com/webpack/tapable">Tapable Module</a>.</p>
 </blockquote>
 <p>Here is a concise Webpack workflow description:</p>
 <ul>
-<li>the <code>Compiler</code> reads option and create the <code>Compilation</code></li>
-<li>the <code>Compilation</code> reads the <code>entry property</code>, and sends it through the <code>Normal Module Factory (NMF)</code> to the <code>Resolver</code>to find out if the file exists</li>
+<li>the <code>Compiler</code> reads options and creates the <code>Compilation</code></li>
+<li>the <code>Compilation</code> reads the <code>entry property</code>, and sends it through the <code>Normal Module Factory (NMF)</code> to the <code>Resolver</code> to find out if the file exists</li>
 <li>if it exists, the <code>Resolver</code> creates a <code>Module Object</code> from it with the source inside</li>
 <li>if some module is not in <code>JavaScript</code>, e.g. CSS, HTML, etc., the <code>Loaders</code> will transpile it into JavaScript</li>
 <li>then it goes through the <code>Parser</code> that converts it into an <code>Abstract Syntax Tree (AST)</code> to find all <code>require</code>s and <code>import</code>s, in other words all <code>dependencies</code></li>
@@ -1027,6 +1050,43 @@
 <p>Taken from the <a href="https://www.youtube.com/watch?v=4tQiJaFzuJ8&amp;t=3526s">Everything is a plugin! Mastering webpack from the inside out</a> presentation by <strong>Sean Larkin</strong> at <code>ng-conf 2017</code> in Salt Lake City (UT)</p>
 <p>More information can be found in the <a href="https://webpack.js.org/concepts/">Concepts</a> section of the <code>Webpack</code> documentation.</p>
 <p>In the <a href="https://www.pluralsight.com/courses/vue-js-single-page-applications">Single Page Applications with Vue.js</a> PluralSight course, Bill Stavroulakis shows step by step how to add <code>webpack</code> and build it out together with the Vue.js solution.</p>
+<hr />
+<h2 id="to-build-or-not-to-build">To Build or Not to Build<a class="headerlink" href="#to-build-or-not-to-build" title="Permanent link">&para;</a></h2>
+<p><strong>Webpack</strong> is often used with two separate configuations: one for <code>Development</code> and another one for <code>Production</code>. Mostly we use the Development mode to code our project and Production when we want to prepare files for the real deployment. There is, however, a subtle difference between these two modes if one wants to create a separate <code>CSS</code> file with all the styles. The difference is as follows:</p>
+<blockquote>
+<p>Out of the box, loading of the CSS bundle in Development mode does not work because Webpack treats the file as a MIME type <code>text/html</code> and not <code>text/css</code></p>
+</blockquote>
+<p>What happens is that the Webpack loaders normally transpile everything into JavaScript. And all the resources are kept in RAM to speed up recompilations and DOM refreshment. As long as the CSS is transpiled, everything works fine. That is mostly what happens in the Development mode. However, if we force Webpack to create a separate CSS bundle using plugins like <code>mini-css-extract-plugin</code> or <code>extract-text-webpack-plugin</code>, and try to run that in Development mode, we will notice that styles are not loaded and the following error in the console:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>Refused to apply style from `http://localhost:3000/style.css` because its MIME type (`text/html`) is not a supported stylesheet MIME type, and strict MIME checking is enabled.
+</pre></div>
+</td></tr></table>
+
+<p>However, if we CD to our <code>dist</code> folder and run a dedicated <code>Nodejs</code> server like <code>http-server</code> or <code>serve</code>, the website will be loaded and the styles will be applied.</p>
+<p>This may also mean that we need to use two separate <code>index.html</code> files. One inside the <code>src</code> folder for Development, which does not create a separate CSS bundle. Another one in the <code>public</code> folder for Production, which load the separately created CSS bundle. In the later case, we also need to specify the <code>public</code> folder in the <code>html-webpack-plugin</code> configuration.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
+  <span class="k">new</span> <span class="nx">HtmlWebpackPlugin</span><span class="p">({</span>
+    <span class="nx">template</span><span class="o">:</span> <span class="s1">&#39;public/index.html&#39;</span><span class="p">,</span>
+    <span class="nx">favicon</span><span class="o">:</span> <span class="s1">&#39;public/favicon.ico&#39;</span><span class="p">,</span>
+    <span class="nx">inject</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">hash</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">}),</span>
+  <span class="p">...</span>
+<span class="p">]</span>
+</pre></div>
+</td></tr></table>
+
+<div class="admonition info">
+<p class="admonition-title">Performance</p>
+<p>The overal time-to-load when building a separate CSS bundle is much longer than when not doing that.</p>
+</div>
 <hr />
                 
                   
