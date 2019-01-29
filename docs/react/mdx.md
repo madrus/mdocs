@@ -155,4 +155,6 @@ This tells `gatsby-mdx` to recognize both `.mdx` and `.md` extensions when proce
 
 Definitely watch the featured video on the [Docz website](https://www.docz.site/)!
 
+`Docz` is good for React component documentation.
+
 ---
