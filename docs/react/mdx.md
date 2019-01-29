@@ -15,7 +15,9 @@ MDX is a format that lets you seamlessly use JSX in your Markdown documents. You
 
 More documentation can be found in a bunch of `.mdx` files [here](https://github.com/jxnblk/mdx-deck/tree/master/docs).
 
-Kent C. Dodds has a nice how-to video about mdx-deck: [What is MDX](https://www.youtube.com/watch?v=d2sQiI5NFAM&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u). Unfortunately, he gives no example of including a code snippet.
+__Kent C. Dodds__ has a nice how-to video about mdx-deck: [What is MDX](https://www.youtube.com/watch?v=d2sQiI5NFAM&list=PLV5CVI1eNcJgCrPH_e6d57KRUTiDZgs0u). Another, maybe even better video has been published by __Daniel Persson__ (see the [code-surfer plugin](#code-surfer-plugin) section).
+
+Another presentation by __Jason Gretz__ on `mdx-deck` can be found inside the [Vue.js Developer Experience & MDX Slides](https://www.youtube.com/watch?v=UW6YycsYzHY) video between `09:55` and `47:40`. It is called _Sensational Slides with Markdown and JSX_.
 
 ### Build a Custom Provider Component for MDX Deck
 
@@ -102,7 +104,9 @@ Here is how: [Deploy MDX-Deck to Netlify](http://whoisryosuke.com/blog/2018/mdx-
 - [Github repo](https://github.com/pomber/code-surfer)
 - [MDX Deck example slide deck](https://codesurfer.js.org/sample/)
 - [Highlight, Scroll, & Zoom Code Snippets in mdx-deck with Code Surfer <🏄/>](https://elijahmanor.com/code-surfer/)
--
+
+__Daniel Persson__ has published a great video: [Building a slide deck in mdx-deck](https://www.youtube.com/watch?v=e7iVpOliFuk). Here is a link to his corresponding [repository](https://github.com/kalaspuffar/mdx-deck-example) using the `code-surfer` plugin. This repo contains a `.mdx` file showing different usages of the plugin.
+
 ---
 
 ## MDX DOCS
@@ -110,5 +114,45 @@ Here is how: [Deploy MDX-Deck to Netlify](http://whoisryosuke.com/blog/2018/mdx-
 [MDX Docs](https://mdx-docs.now.sh) is a live documentation creation environment based on [MDX](https://mdxjs.com/) and [Next.js](https://nextjs.org/).
 
 Here is a good [example](https://github.com/timothyis/mdx-example), see also this [live demo](https://mdx-example.zeit.sh/) based on it.
+
+---
+
+## MDX and Gatsby
+
+See these links:
+
+1. [Gatsby+MDX: Bringing MDX to Gatsby for ambitious projects](https://gatsby-mdx.netlify.com/)
+1. [Official MDX Gatsby example](https://github.com/mdx-js/mdx/tree/master/examples/gatsby)
+1. [Getting started](https://mdxjs.com/getting-started/gatsby)
+1. [gatsby-plugin-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/)
+1. [Building a Video Blog with Gatsby and Markdown (MDX)](https://scotch.io/tutorials/building-a-video-blog-with-gatsby-and-markdown-mdx) (2019)
+1. [Generate documentation for any React project using GatsbyJS](http://whoisryosuke.com/blog/2018/gatsby-documentation-starter/) and the corresponding [Github repo](https://github.com/whoisryosuke/gatsby-documentation-starter)
+1. [Gatsby MDX Blog Starter Project](https://github.com/rwieruch/gatsby-mdx-blog-starter-project)
+
+### gatsby-mdx plugin
+
+The `gatsby-mdx` plugin allows you to create pages in a Gatsby project using `.mdx` files. If you prefer the `.md` extension on your markdown files, then you can adjust the plugin options to allow that.
+
+```jsx
+// gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-mdx`,
+    options: {
+      extensions: [".mdx", ".md"]
+    }
+  }
+]
+```
+
+This tells `gatsby-mdx` to recognize both `.mdx` and `.md` extensions when processing files.
+
+(Taken from [Allow md As An Extension With gatsby-mdx](https://til.hashrocket.com/posts/0niz0nfdal-allow-md-as-an-extension-with-gatsby-mdx).)
+
+---
+
+## Docz
+
+Definitely watch the featured video on the [Docz website](https://www.docz.site/)!
 
 ---
