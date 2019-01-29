@@ -130,6 +130,9 @@ nav:
   - PowerShell:
     - Debugging PowerShell in VS Code: powershell/vscode.md
   - React:
+    - Material-UI for React: react/material-ui.md
+    - MDX Tools: react/mdx.md
+    - Performance Considerations: react/performance.md
     - Redux: react/redux.md
   - Umbraco:
     - FAQ: umbraco/faq.md

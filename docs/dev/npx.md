@@ -84,9 +84,13 @@ $ npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32
 > yay gist
 ```
 
+---
+
 ## Credits
 
 This information is taken this article: __Harry Mumford-Turner__, "[How to use npx: the npm package runner](https://blog.scottlogic.com/2018/04/05/npx-the-npm-package-runner.html)".
+
+---
 
 ## Goodbye
 
@@ -101,4 +105,20 @@ npx: installed 10 in 5.303s
             (__)\       )\/\
                 ||----w |
                 ||     ||
+```
+
+---
+
+## Egghead.io Course
+
+There is a free `Egghead.io` course on NPX: [Learn about the npx Package Runner](https://elijahmanor.com/npx-course/). Here is the list of lessons:
+
+1. [Use npx to run locally installed node modules](https://egghead.io/lessons/npm-use-npx-to-run-locally-installed-node-modules")
+1. [Use npx to Temporarily Install and Invoke a Package from npm](https://egghead.io/lessons/npm-use-npx-to-temporarily-install-and-invoke-a-package-from-npm")
+1. [Test Different Node Module Versions with npx](https://egghead.io/lessons/npm-test-different-node-module-versions-with-npx)
+1. [Use npx to run commands with different Node.js versions](https://egghead.io/lessons/npm-use-npx-to-run-commands-with-different-node-js-versions)
+1. [Execute npx commands with $npm_ Environment Variables](https://egghead.io/lessons/npm-execute-npx-commands-with-npm_-environment-variables)
+1. [Execute Code from a Remote GitHub Branch with npx](https://egghead.io/lessons/npm-execute-code-from-a-remote-github-branch-with-npx)
+1. [Use npx to execute code from a GitHub gist](https://egghead.io/lessons/npm-use-npx-to-execute-code-from-a-github-gist)
+
 ```
