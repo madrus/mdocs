@@ -118,6 +118,8 @@ nav:
   - Go:
     - Installing Go: go/myinstall.md
     - Go Notes: go/notes.md
+  - GraphQL:
+    - 10 Principles: graphql/ten_principles.md
   - Mac:
     - Homebrew: mac/brew.md
     - NGINX: mac/nginx.md
@@ -130,6 +132,7 @@ nav:
   - PowerShell:
     - Debugging PowerShell in VS Code: powershell/vscode.md
   - React:
+    - Linting: react/linting.md
     - Material-UI for React: react/material-ui.md
     - MDX Tools: react/mdx.md
     - Performance Considerations: react/performance.md
