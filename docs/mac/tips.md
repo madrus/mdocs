@@ -50,3 +50,16 @@ Press once to show hidden files and again to hide them.
 - Hold the 'Option/alt' key, then right click on the Finder icon in the dock and click Relaunch.
 
 ---
+
+## Unblock installations
+
+Beginning with Apple macOS X 10.13, High Sierra blocks by default starting of applications that were not downloaded by authorized by Apple way, not via AppStore or from unauthorized developers that had not paid the Apple Developer certificate. You need to delete attributes that were attached to the files during download.
+
+From your terminal run the following commands:
+
+``` bash
+xattr -c /Applications/WebStorm.app/
+open /Applications/WebStorm.app/
+```
+
+---
