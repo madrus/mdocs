@@ -4,20 +4,29 @@ Taken from [this website](http://wiljenumdesign.nl/getting-started/).
 
 ### Installing MkDocs
 
-Before installing [MkDocs](http://www.mkdocs.org/), you need to make sure you have `Python` and `pip` – the Python package manager – up and running. You can verify if you're already good to go with the following commands:
+Before installing [MkDocs](http://www.mkdocs.org/), you need to make sure you have the latest versions of `Python` and `pip` – the Python package manager – up and running. If not, download them from [the official Python website](https://www.python.org/downloads/).
+
+You can verify if you're already good to go with the following commands:
 
 ``` bash
 python --version
-# Python 2.7.13
+# Python 3.7.3
 pip --version
-# pip 9.0.1
+# pip 19.2.1
 ```
 
-Installing and verifying MkDocs is as simple as:
+On Windows systems, you will probably be missing `pip`. It has to be installed separatly but first downloading [get-pip.py on pipa.io](https://bootstrap.pypa.io/get-pip.py) to any local folder, run any shell script (`cmd`, `git-bash` or `PowerShell`), CD to that folder and run:
 
 ``` bash
-pip install mkdocs && mkdocs --version
-# mkdocs, version 0.17.1
+$ python get-pip.py
+```
+
+Now, install/upgrade __mkdocs__ and related packages:
+
+``` bash
+$ pip install -U mkdocs mkdocs-material fontawesome-markdown pymdown-extensions
+$ mkdocs --version
+# mkdocs, version 1.0.4
 ```
 
 Material requires MkDocs >= 0.17.1.
