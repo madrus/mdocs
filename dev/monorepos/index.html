@@ -1,0 +1,1983 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="A short description of my project">
+      
+      
+        <link rel="canonical" href="http://madrus4u.com/mdocs/dev/monorepos/">
+      
+      
+        <meta name="author" content="Madrus">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
+    
+    
+      
+        <title>Monorepos with Lerna - Madrus's Docs</title>
+      
+    
+    
+
+      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+<link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous">
+
+    
+      <script src="../../assets/javascripts/modernizr.8c900955.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="lime">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#monorepo-with-yarn-and-lerna" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="http://madrus4u.com/mdocs/" title="Madrus's Docs" class="md-header-nav__button md-logo">
+          
+            <img src="../../img/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Madrus's Docs
+              </span>
+              <span class="md-header-nav__topic">
+                Monorepos with Lerna
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/madrus/mdocs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      madrus/mdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="http://madrus4u.com/mdocs/" title="Madrus's Docs" class="md-nav__button md-logo">
+      
+        <img src="../../img/logo.png" width="48" height="48">
+      
+    </a>
+    Madrus's Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/madrus/mdocs" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      madrus/mdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      MkDocs Engine
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        MkDocs Engine
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/start/" title="Getting started" class="md-nav__link">
+      Getting started
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/cheatsheet/" title="Markdown Cheatsheet" class="md-nav__link">
+      Markdown Cheatsheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/styling/" title="Custom Styling" class="md-nav__link">
+      Custom Styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/colors/" title="Color Styling" class="md-nav__link">
+      Color Styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/deployments/" title="PowerShell Deployments" class="md-nav__link">
+      PowerShell Deployments
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/install/" title="Installation" class="md-nav__link">
+      Installation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../engine/technicalities/" title="Technicalities" class="md-nav__link">
+      Technicalities
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Aurelia
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Aurelia
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../aurelia/technicalities/" title="Some Technical Notes" class="md-nav__link">
+      Some Technical Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Dev Stuff
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Dev Stuff
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devServers/" title="Dev Servers" class="md-nav__link">
+      Dev Servers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Monorepos with Lerna
+      </label>
+    
+    <a href="./" title="Monorepos with Lerna" class="md-nav__link md-nav__link--active">
+      Monorepos with Lerna
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces-hoisting-explained" title="Workspaces hoisting explained" class="md-nav__link">
+    Workspaces hoisting explained
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hoisting-without-workspaces" title="Hoisting without workspaces" class="md-nav__link">
+    Hoisting without workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoisting-with-workspaces" title="Hoisting with workspaces" class="md-nav__link">
+    Hoisting with workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nohoist" title="Nohoist" class="md-nav__link">
+    Nohoist
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-yarn-workspaces-with-lerna" title="Set up Yarn Workspaces with Lerna" class="md-nav__link">
+    Set up Yarn Workspaces with Lerna
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-dependencies-of-workspaces" title="Managing dependencies of Workspaces" class="md-nav__link">
+    Managing dependencies of Workspaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-lerna-package" title="Create a new Lerna package" class="md-nav__link">
+    Create a new Lerna package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-existing-project-to-monorepo" title="Add existing project to monorepo" class="md-nav__link">
+    Add existing project to monorepo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-move-existing-package" title="Option 1: move existing package" class="md-nav__link">
+    Option 1: move existing package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-import-existing-package" title="Option 2: import existing package" class="md-nav__link">
+    Option 2: import existing package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-alias-support" title="Path Alias Support" class="md-nav__link">
+    Path Alias Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-publishing-private-packages" title="Creating and publishing private packages" class="md-nav__link">
+    Creating and publishing private packages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versioning" title="Versioning" class="md-nav__link">
+    Versioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npm-packages" title="NPM packages" class="md-nav__link">
+    NPM packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lerna-publish" title="Lerna publish" class="md-nav__link">
+    Lerna publish
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-some-commands" title="Usage (some commands)" class="md-nav__link">
+    Usage (some commands)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-to-public-npm-account" title="Publish to public NPM account" class="md-nav__link">
+    Publish to public NPM account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-only-dist-folder" title="Publish only dist folder" class="md-nav__link">
+    Publish only dist folder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-stuff" title="Useful Stuff" class="md-nav__link">
+    Useful Stuff
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-facebook-commands-for-workspaces" title="Extra Facebook commands for Workspaces" class="md-nav__link">
+    Extra Facebook commands for Workspaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webpack-dependency-version-error" title="Webpack dependency version error" class="md-nav__link">
+    Webpack dependency version error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lerna-workspaces" title="Lerna + Workspaces" class="md-nav__link">
+    Lerna + Workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storybook-lerna-workspaces" title="Storybook + Lerna + Workspaces" class="md-nav__link">
+    Storybook + Lerna + Workspaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../npx/" title="NPX tool" class="md-nav__link">
+      NPX tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../todo/" title="TODOs" class="md-nav__link">
+      TODOs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Git
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Git
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/gitflow/" title="GitFlow" class="md-nav__link">
+      GitFlow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/styling/" title="Git Prompt Styling" class="md-nav__link">
+      Git Prompt Styling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/ssh/" title="Set up SSH" class="md-nav__link">
+      Set up SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/tools/" title="Git Command Line Tools" class="md-nav__link">
+      Git Command Line Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../git/gitdiff/" title="GitDiff" class="md-nav__link">
+      GitDiff
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Go
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Go
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../go/myinstall/" title="Installing Go" class="md-nav__link">
+      Installing Go
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../go/notes/" title="Go Notes" class="md-nav__link">
+      Go Notes
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      GraphQL
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        GraphQL
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../graphql/ten_principles/" title="10 Principles" class="md-nav__link">
+      10 Principles
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Handy Stuff
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        Handy Stuff
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../handy/choco/" title="Chocolatey" class="md-nav__link">
+      Chocolatey
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      Mac
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        Mac
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mac/brew/" title="Homebrew" class="md-nav__link">
+      Homebrew
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mac/nginx/" title="NGINX" class="md-nav__link">
+      NGINX
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mac/ssh/" title="SSH on Sierra" class="md-nav__link">
+      SSH on Sierra
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mac/tips/" title="Tips & Tricks" class="md-nav__link">
+      Tips & Tricks
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      .NET Core
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        .NET Core
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotnet/new_project/" title="New Project" class="md-nav__link">
+      New Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotnet/notes/" title="Notes" class="md-nav__link">
+      Notes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dotnet/tips/" title="Tips" class="md-nav__link">
+      Tips
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      PowerShell
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        PowerShell
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../powershell/vscode/" title="Debugging PowerShell in VS Code" class="md-nav__link">
+      Debugging PowerShell in VS Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      React
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        React
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../react/linting/" title="Linting" class="md-nav__link">
+      Linting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../react/material-ui/" title="Material-UI for React" class="md-nav__link">
+      Material-UI for React
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../react/mdx/" title="MDX Tools" class="md-nav__link">
+      MDX Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../react/performance/" title="Performance Considerations" class="md-nav__link">
+      Performance Considerations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../react/redux/" title="Redux" class="md-nav__link">
+      Redux
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      Vue.js
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        Vue.js
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../vuejs/basics/" title="Vue.js Basics" class="md-nav__link">
+      Vue.js Basics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Webpack
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        Webpack
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../webpack/basics/" title="Webpack Basics" class="md-nav__link">
+      Webpack Basics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#workspaces-hoisting-explained" title="Workspaces hoisting explained" class="md-nav__link">
+    Workspaces hoisting explained
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hoisting-without-workspaces" title="Hoisting without workspaces" class="md-nav__link">
+    Hoisting without workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hoisting-with-workspaces" title="Hoisting with workspaces" class="md-nav__link">
+    Hoisting with workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nohoist" title="Nohoist" class="md-nav__link">
+    Nohoist
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-yarn-workspaces-with-lerna" title="Set up Yarn Workspaces with Lerna" class="md-nav__link">
+    Set up Yarn Workspaces with Lerna
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#managing-dependencies-of-workspaces" title="Managing dependencies of Workspaces" class="md-nav__link">
+    Managing dependencies of Workspaces
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-a-new-lerna-package" title="Create a new Lerna package" class="md-nav__link">
+    Create a new Lerna package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-existing-project-to-monorepo" title="Add existing project to monorepo" class="md-nav__link">
+    Add existing project to monorepo
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-move-existing-package" title="Option 1: move existing package" class="md-nav__link">
+    Option 1: move existing package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-import-existing-package" title="Option 2: import existing package" class="md-nav__link">
+    Option 2: import existing package
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#path-alias-support" title="Path Alias Support" class="md-nav__link">
+    Path Alias Support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-and-publishing-private-packages" title="Creating and publishing private packages" class="md-nav__link">
+    Creating and publishing private packages
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#versioning" title="Versioning" class="md-nav__link">
+    Versioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#npm-packages" title="NPM packages" class="md-nav__link">
+    NPM packages
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lerna-publish" title="Lerna publish" class="md-nav__link">
+    Lerna publish
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage-some-commands" title="Usage (some commands)" class="md-nav__link">
+    Usage (some commands)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-to-public-npm-account" title="Publish to public NPM account" class="md-nav__link">
+    Publish to public NPM account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publish-only-dist-folder" title="Publish only dist folder" class="md-nav__link">
+    Publish only dist folder
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-stuff" title="Useful Stuff" class="md-nav__link">
+    Useful Stuff
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#extra-facebook-commands-for-workspaces" title="Extra Facebook commands for Workspaces" class="md-nav__link">
+    Extra Facebook commands for Workspaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" title="Troubleshooting" class="md-nav__link">
+    Troubleshooting
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#webpack-dependency-version-error" title="Webpack dependency version error" class="md-nav__link">
+    Webpack dependency version error
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" title="References" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lerna-workspaces" title="Lerna + Workspaces" class="md-nav__link">
+    Lerna + Workspaces
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storybook-lerna-workspaces" title="Storybook + Lerna + Workspaces" class="md-nav__link">
+    Storybook + Lerna + Workspaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="monorepo-with-yarn-and-lerna">Monorepo with Yarn and Lerna<a class="headerlink" href="#monorepo-with-yarn-and-lerna" title="Permanent link">&para;</a></h1>
+<p>This document is a collection of facts and observation re. Lerna and Yarn Workspaces. The text pieces come from different articles and from my personal experience.</p>
+<h2 id="workspaces-hoisting-explained">Workspaces hoisting explained<a class="headerlink" href="#workspaces-hoisting-explained" title="Permanent link">&para;</a></h2>
+<h3 id="hoisting-without-workspaces">Hoisting without workspaces<a class="headerlink" href="#hoisting-without-workspaces" title="Permanent link">&para;</a></h3>
+<p><img alt="hoisting-without-workspaces" src="../../img/hoisting-without-workspaces.png" /></p>
+<h3 id="hoisting-with-workspaces">Hoisting with workspaces<a class="headerlink" href="#hoisting-with-workspaces" title="Permanent link">&para;</a></h3>
+<p><img alt="hoisting-with-workspaces" src="../../img/hoisting-with-workspaces.png" /></p>
+<h3 id="nohoist">Nohoist<a class="headerlink" href="#nohoist" title="Permanent link">&para;</a></h3>
+<p><strong>nohoist</strong> enables workspaces to consume 3<sup>rd</sup>-party libraries not yet compatible with its hoisting scheme. The idea is to disable the selected modules from being hoisted to the project root. They were placed in the actual (child) project instead, just like in a standalone, non-workspaces, project.</p>
+<p>Read <a href="https://yarnpkg.com/blog/2018/02/15/nohoist/">here</a> more about <code>nohoist</code> option. <a href="https://github.com/connectdotz/yarn-nohoist-examples">Here</a> you can find some <code>nohoist</code> examples.</p>
+<hr />
+<h2 id="set-up-yarn-workspaces-with-lerna">Set up Yarn Workspaces with Lerna<a class="headerlink" href="#set-up-yarn-workspaces-with-lerna" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Starting Yarn 1.0 Workspaces are enabled by default and you may not need to set the below config. Refer to the updated steps at the following location <a href="https://yarnpkg.com/lang/en/docs/workspaces/">https://yarnpkg.com/lang/en/docs/workspaces/</a></p>
+</blockquote>
+<p>To get started, users must enable Workspaces in Yarn by running the following command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ yarn config <span class="nb">set</span> workspaces-experimental <span class="nb">true</span>
+</pre></div>
+</td></tr></table>
+
+<p>It will add <code>workspaces-experimental true</code> to the <code>.yarnrc</code> file in your OS home folder.</p>
+<blockquote>
+<p>Yarn Workspaces is still considered experimental while gathering feedback from the community.</p>
+</blockquote>
+<p>Yarn hoists common packages to the root <code>node_modules</code> folder. For avid Lerna users this is similar to bootstrapping code via the <code>--hoist</code> flag.</p>
+<p>Starting with Lerna 2.0.0, when you pass the flag <code>--use-workspaces</code> when running Lerna commands, it will use Yarn to bootstrap the project and also it will use package.json/workspaces field to find the packages instead of lerna.json/packages.</p>
+<p>Create a new project and initialize it with Yarn:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ mkdir yarn-ws-lerna <span class="o">&amp;&amp;</span> <span class="nb">cd</span> yarn-ws-lerna
+$ yarn init
+</pre></div>
+</td></tr></table>
+
+<p>Install Lerna globally</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm i -g lerna
+</pre></div>
+</td></tr></table>
+
+<p>or add Lerna as a dev dependency</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ yarn add lerna --dev
+</pre></div>
+</td></tr></table>
+
+<p>and initialize Lerna, which will create a <code>lerna.json</code> and a <code>packages</code> directory:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># if Lerna is installed globally</span>
+$ lerna init
+<span class="c1"># or if it is installed as a dev dependency</span>
+$ npx lerna init
+</pre></div>
+</td></tr></table>
+
+<p>Then we replace the content of the <code>lerna.json</code> file:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;packages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;packages/*&quot;</span><span class="p">],</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;independent&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;npmClient&quot;</span><span class="p">:</span> <span class="s2">&quot;yarn&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;useWorkspaces&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Setting <code>version</code> to <code>independent</code> allows different packages have their own versions. Otherwise, all packages will use the same version number.</p>
+<p>The top-level <code>package.json</code> defines the root of the project, and folders with other package.json files are the Workspaces. Workspaces usually are published to a registry like <strong>NPM</strong>. While the root is not supposed to be consumed as a package, it usually contains the glue code or business specific code that is not useful for sharing with other projects, that is why we mark it as “private”:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="err">...</span>
+  <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="s2">&quot;true&quot;</span><span class="p">,</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="managing-dependencies-of-workspaces">Managing dependencies of Workspaces<a class="headerlink" href="#managing-dependencies-of-workspaces" title="Permanent link">&para;</a></h2>
+<p>If you want to modify a dependency of a Workspace, just run the appropriate command inside the Workspace folder:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> packages/jest-matcher-utils/
+$ yarn add left-pad
+Done in <span class="m">1</span>.77s.
+$ git status
+modified: package.json
+modified: ../../yarn.lock
+</pre></div>
+</td></tr></table>
+
+<blockquote>
+<p>Note that Workspaces don’t have their own <code>yarn.lock</code> files, and the root <code>yarn.lock</code> contains all the dependencies for all the Workspaces. When you want to change a dependency inside a Workspace, the root <code>yarn.lock</code> will be changed as well as the Workspace’s <code>package.json</code>.</p>
+</blockquote>
+<hr />
+<h2 id="create-a-new-lerna-package">Create a new Lerna package<a class="headerlink" href="#create-a-new-lerna-package" title="Permanent link">&para;</a></h2>
+<p>We can create a new <code>@portal/shared-ui</code> package in the <code>packages</code> folder by default:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ lerna create @portal/shared-ui -y
+</pre></div>
+</td></tr></table>
+
+<p>This will create a <code>packages/shared-ui</code> folder with the following structure:</p>
+<p><img alt="new package folder structure" src="../../img/new_package.png" /></p>
+<p>If you have an NPM Org Account which supports private packages, you can add the following to your module’s individual <code>package.json</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="s2">&quot;publishConfig&quot;</span><span class="err">:</span> <span class="p">{</span>
+    <span class="nt">&quot;access&quot;</span><span class="p">:</span> <span class="s2">&quot;restricted&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="add-existing-project-to-monorepo">Add existing project to monorepo<a class="headerlink" href="#add-existing-project-to-monorepo" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Make sure you have no uncommitted changes. Commit them if applicable.</p>
+</blockquote>
+<h3 id="option-1-move-existing-package">Option 1: move existing package<a class="headerlink" href="#option-1-move-existing-package" title="Permanent link">&para;</a></h3>
+<p>&hellip;</p>
+<h3 id="option-2-import-existing-package">Option 2: import existing package<a class="headerlink" href="#option-2-import-existing-package" title="Permanent link">&para;</a></h3>
+<p>Create if it does not exist yet a new git repo in the folder you want to add:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ./src/routes/home
+$ git init .
+$ git add .
+$ git commit -am <span class="s2">&quot;initial commit&quot;</span>
+</pre></div>
+</td></tr></table>
+
+<p>Now go to the root folder of your project and import</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ git ../../..
+<span class="c1"># add preserving the commit history</span>
+$ lerna import ./src/routes/home
+<span class="c1"># add flattening the commit history (e.g. if merge conflicts)</span>
+$ lerna import ./src/routes/home --flatten
+</pre></div>
+</td></tr></table>
+
+<p>This will create a new <code>packages/home</code> folder and copy all files and folders from <code>./src/routes/home</code>.</p>
+<hr />
+<h2 id="path-alias-support">Path Alias Support<a class="headerlink" href="#path-alias-support" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ yarn add module-alias <span class="o">[</span>-W<span class="o">]</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="creating-and-publishing-private-packages">Creating and publishing private packages<a class="headerlink" href="#creating-and-publishing-private-packages" title="Permanent link">&para;</a></h2>
+<h3 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h3>
+<p>When a milestone is completed and we are planning to make a new release, one of the developers (in charge of that particular release) creates a new version by running <code>lerna version</code>. Lerna provides an extremely helpful and easy to use prompt for figuring out the next version:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ lerna version <span class="o">[</span>--force-publish<span class="o">]</span>
+  lerna notice cli v3.8.1
+  lerna info current version <span class="m">0</span>.6.2
+  lerna info Looking <span class="k">for</span> changed packages since v0.6.2
+  ? Select a new version <span class="o">(</span>currently <span class="m">0</span>.6.2<span class="o">)</span> <span class="o">(</span>Use arrow keys<span class="o">)</span>
+  ❯ Patch <span class="o">(</span><span class="m">0</span>.6.3<span class="o">)</span>
+    Minor <span class="o">(</span><span class="m">0</span>.7.0<span class="o">)</span>
+    Major <span class="o">(</span><span class="m">1</span>.0.0<span class="o">)</span>
+    Prepatch <span class="o">(</span><span class="m">0</span>.6.3-alpha.0<span class="o">)</span>
+    Preminor <span class="o">(</span><span class="m">0</span>.7.0-alpha.0<span class="o">)</span>
+    Premajor <span class="o">(</span><span class="m">1</span>.0.0-alpha.0<span class="o">)</span>
+    Custom Prerelease
+    Custom Version
+</pre></div>
+</td></tr></table>
+
+<p>Once a new version is selected, Lerna changes the versions of the packages, creates a tag in the remote repo, and pushes the changes to the remote instance.</p>
+<blockquote>
+<p><strong>NOTE</strong> You may want to run <code>lerna version</code> with <code>--force-publish</code> if you want all packages to have the exact same lineage of versions. So sometimes you will have packages that don’t differ between different versions.</p>
+</blockquote>
+<h3 id="npm-packages">NPM packages<a class="headerlink" href="#npm-packages" title="Permanent link">&para;</a></h3>
+<p>Documentation on how to do this can be found the on the <a href="https://docs.npmjs.com/creating-and-publishing-private-packages">Npmjs website</a>.</p>
+<blockquote>
+<p><strong>Note:</strong> Before you can publish private user-scoped npm packages, you must sign up for a paid npm user account. Additionally, to publish private Org-scoped packages, you must <a href="https://npmjs.com/signup">create an npm user account</a>, then create a <a href="https://www.npmjs.com/signup?next=/org/create">paid npm Org</a>.</p>
+</blockquote>
+<p>Anyone can create an organization with unlimited public packages for free. E.g. this is mine: <a href="https://www.npmjs.com/settings/madrus4u/packages">https://www.npmjs.com/settings/madrus4u/packages</a>.</p>
+<p>The price for private packages is <strong>$7 per user per month</strong>.</p>
+<p>Another article describing how to publish is <a href="https://medium.com/@jsilvax/a-workflow-guide-for-lerna-with-yarn-workspaces-60f97481149d">A Beginner&rsquo;s Guide to Lerna with Yarn Workspaces</a>.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm publish --access public
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="lerna-publish">Lerna publish<a class="headerlink" href="#lerna-publish" title="Permanent link">&para;</a></h2>
+<h3 id="usage-some-commands">Usage (some commands)<a class="headerlink" href="#usage-some-commands" title="Permanent link">&para;</a></h3>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ lerna publish              <span class="c1"># publish packages that have changed since the last release</span>
+$ lerna publish from-git     <span class="c1"># explicitly publish packages tagged in the current commit</span>
+$ lerna publish from-package <span class="c1"># explicitly publish packages where the latest version is not present in the registry</span>
+</pre></div>
+</td></tr></table>
+
+<p>For more info see <a href="https://github.com/lerna/lerna/tree/master/commands/publish">Lerna documentation</a>.</p>
+<h3 id="publish-to-public-npm-account">Publish to public NPM account<a class="headerlink" href="#publish-to-public-npm-account" title="Permanent link">&para;</a></h3>
+<p>Make sure you have an <code>npmjs</code> account, e.g. <code>blabla</code>. Make sure your NPM runs under that account. Log in if necessary.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ npm whoami
+<span class="c1"># if not blabla</span>
+$ npm login
+</pre></div>
+</td></tr></table>
+
+<p>Make sure that all subpackages that you want to publish have namespace <code>@blabla/...</code>, e.g., <code>@blabla/admin</code>, in the <code>package.json</code>:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;@blabla/admin&quot;</span><span class="p">,</span>
+  <span class="err">...</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>This is necessary because pushing to NPM account <code>blabla</code> is possible only for packages like <code>@blabla/...</code>. Otherwise, you may get <code>403</code> error (unauthorised):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>lerna http fetch PUT 403 https://registry.npmjs.com/common 682ms
+lerna ERR! E403 You do not have permission to publish &quot;common&quot;. Are you logged in as the correct user?
+</pre></div>
+</td></tr></table>
+
+<p>or <code>402</code> (no private packages):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>lerna http fetch PUT 402 https://registry.npmjs.org/@blabla%2fcommon 292ms
+lerna ERR! E402 You must sign up for private packages
+</pre></div>
+</td></tr></table>
+
+<p>The root package should be kept private, as it will not be published:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;private&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>The following properties should be added to every <code>package.json</code> in subprojects that need to be pushed to NPM registry:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>{
+    &quot;private&quot;: false,    // to indicate that it is not a private package
+    &quot;license&quot;: &quot;MIT&quot;,    // is required by NPM registry
+    &quot;publishConfig&quot;: {
+        &quot;access&quot;: &quot;public&quot; // also to indicate that it is not a private package
+  },
+}
+</pre></div>
+</td></tr></table>
+
+<h3 id="publish-only-dist-folder">Publish only dist folder<a class="headerlink" href="#publish-only-dist-folder" title="Permanent link">&para;</a></h3>
+<p>In order to make sure that <strong>only</strong> the <code>dist</code> folder gets published, set files and main properties in the leaf package&rsquo;s  <code>package.json</code> file:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;my-leaf-package&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;main&quot;</span><span class="p">:</span> <span class="s2">&quot;dist/app.js&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;files&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;dist&quot;</span> <span class="p">],</span>
+  <span class="nt">&quot;dependencies&quot;</span><span class="p">:</span> <span class="p">{}</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="useful-stuff">Useful Stuff<a class="headerlink" href="#useful-stuff" title="Permanent link">&para;</a></h2>
+<h3 id="extra-facebook-commands-for-workspaces">Extra Facebook commands for Workspaces<a class="headerlink" href="#extra-facebook-commands-for-workspaces" title="Permanent link">&para;</a></h3>
+<p>The following command will display the workspace dependency tree of your current project:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>yarn workspaces info
+</pre></div>
+</td></tr></table>
+
+<p>The next recepe enables you to run the chosen <code>yarn</code> command in the selected workspace (i.e., package):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>yarn workspace &lt;package-name&gt; &lt;command&gt;
+<span class="c1">## e.g.</span>
+yarn workspace project-ui yarn add storybook
+</pre></div>
+</td></tr></table>
+
+<p>If you want to add a common dependency to all packages, go into the project’s root folder and use the <code>-W</code> (or <code>-–ignore-workspace-root-check</code>) flag:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>yarn add some-package -W
+</pre></div>
+</td></tr></table>
+
+<p>Without the flag, <code>yarn</code> will give you an error message telling you to use this flag.</p>
+<p>With the following command, we can add one of our own packages (<code>awesome-components</code>) to another package (<code>awesome-app</code>) as dependency.</p>
+<blockquote>
+<p>It appears that adding local packages should be done by <strong>specifying a version number</strong>, otherwise yarn tries to find the dependency in the registry.</p>
+</blockquote>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>yarn workspace @doppelmutzi/awesome-app add @doppelmutzi/awesome-components@0.1.0 -D
+</pre></div>
+</td></tr></table>
+
+<blockquote>
+<p>Using the workspaces feature, yarn does not add dependencies to <code>node_modules</code> directories in either of your packages  –  only at the root level, i.e., yarn hoists all dependencies to the root level. yarn leverages <em>symlinks</em> to point to the different packages. Thereby, yarn includes the dependencies <strong>only once</strong> in the project.</p>
+</blockquote>
+<hr />
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="webpack-dependency-version-error">Webpack dependency version error<a class="headerlink" href="#webpack-dependency-version-error" title="Permanent link">&para;</a></h3>
+<p><code>yarn start</code> command fails and shows an error message about the wrong webpack dependency version number required by Create React App.</p>
+<p>The workaround is by setting the <code>SKIP_PREFLIGHT_CHECK=true</code> in the <code>.env</code> file:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;SKIP_PREFLIGHT_CHECK=true&quot;</span> &gt;&gt; .env
+</pre></div>
+</td></tr></table>
+
+<hr />
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h3 id="lerna-workspaces">Lerna + Workspaces<a class="headerlink" href="#lerna-workspaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://lerna.js.org/">Lerna website</a></li>
+<li><a href="https://github.com/lerna/lerna">Lerna documentation</a></li>
+<li><a href="https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/">Yarn workspaces</a></li>
+<li><a href="https://medium.com/@hoangbkit/why-monorepo-in-2018-89221acd4bfb">Why startups need to use monorepo in 2019?</a></li>
+<li><a href="https://medium.com/@maoberlehner/monorepos-in-the-wild-33c6eb246cb9">Monorepos in the Wild</a></li>
+</ul>
+<hr />
+<p>I have got most out of these two articles:</p>
+<ul>
+<li>Yarn Workspaces: <a href="https://medium.com/@jsilvax/a-workflow-guide-for-lerna-with-yarn-workspaces-60f97481149d">A Beginner&rsquo;s Guide to Lerna with Yarn Workspaces</a></li>
+<li>Lerna: <a href="https://michalzalecki.com/solve-code-sharing-and-setup-project-with-lerna-and-monorepo/">Solve code sharing and setup project with Lerna and monorepo</a></li>
+</ul>
+<hr />
+<ul>
+<li><a href="https://cmichel.io/splitting-app-into-micro-processes/">Splitting your app into micro-processes</a></li>
+<li><a href="https://doppelmutzi.github.io/monorepo-lerna-yarn-workspaces/">Why Lerna and Yarn Workspaces is a Perfect Match for Building Mono-Repos – A Close Look at Features and Performance</a></li>
+<li><a href="https://medium.com/mitterio/multirepo-to-lerna-js-monorepo-80f6657cb443">Moving from multiple repositories to a lerna-js mono-repo</a></li>
+<li><a href="https://medium.com/@rossbulat/typescript-working-with-paths-packages-and-yarn-workspaces-6fbc7087b325">Typescript: Working with Paths, Packages and Yarn Workspaces</a></li>
+<li><a href="https://samhogy.co.uk/2018/04/moving-to-a-monorepo.html">Moving to a Monorepo</a></li>
+<li><a href="https://www.slideshare.net/samhogy/lerna-the-good-the-bad-and-the-ugly">Lerna: the Good, the Bad and the Ugly (Slideshare)</a></li>
+<li><a href="https://medium.com/naresh-bhatia/sharing-ui-components-with-lerna-and-yarn-workspaces-be1ebca06efe">Sharing UI Components with Lerna and Yarn Workspaces</a></li>
+<li><a href="https://typedoc.org/">TypeDoc - a documentation generator for TypeScript projects</a></li>
+<li><a href="https://medium.com/trabe/monorepo-setup-with-lerna-and-yarn-workspaces-5d747d7c0e91">Monorepo setup with Lerna and Yarn workspaces</a></li>
+<li><strong>Allen Fang</strong></li>
+<li><a href="https://medium.com/shopback-engineering/lerna-tutorial-series-brief-f77f40c5777f">Lerna Tutorial Series: Brief (with Docker containers)</a><ul>
+<li>Source code on Github: <a href="https://github.com/AllenFang/lerna-tutorial-example">lerna-tutorial-example</a></li>
+</ul>
+</li>
+<li><a href="https://medium.com/shopback-engineering/5-things-you-might-be-interested-in-your-flow-config-1ad35b023e93">5 Things You might be Interested in Your Flow Config</a></li>
+<li><a href="https://medium.com/shopback-engineering/5-tips-about-lerna-4186840093f2">5 Tips about lerna</a></li>
+</ul>
+<h3 id="storybook-lerna-workspaces">Storybook + Lerna + Workspaces<a class="headerlink" href="#storybook-lerna-workspaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://medium.com/hy-vee-engineering/creating-a-monorepo-with-lerna-yarn-workspaces-cf163908965d">Creating a Monorepo with Lerna &amp; Yarn Workspaces</a></li>
+<li><a href="https://medium.com/hy-vee-engineering/building-a-ui-component-library-with-styled-components-8f033aaa3d52">Building a UI Component Library with Styled Components</a></li>
+<li><a href="https://github.com/react-workspaces/">React Workspaces Playground</a> - Zero Config Create-React-App Monorepos with Yarn Workspaces, Lerna and React Storybook</li>
+<li><a href="https://react-workspaces.github.io/react-workspaces-playground/">Playground Demo</a></li>
+<li><a href="https://itnext.io/guide-react-app-monorepo-with-lerna-d932afb2e875">Guide - The Multi CRA Lerna Monorepo with Storybook</a></li>
+</ul>
+<hr />
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../devServers/" title="Dev Servers" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Dev Servers
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../npx/" title="NPX tool" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                NPX tool
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.b41f3d20.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+    
+      
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-52692182-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+  </body>
+</html>
