@@ -107,6 +107,7 @@ nav:
   - Dev Stuff:
     - Chocolatey: dev/choco.md
     - Dev Servers: dev/devServers.md
+    - Monorepos with Lerna: dev/monorepos.md
     - NPX tool: dev/npx.md
     - TODOs: dev/todo.md
   - Git:
