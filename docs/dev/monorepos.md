@@ -1,4 +1,4 @@
-# Monorepo with Yarn and Lerna
+# Monorepos with Yarn and Lerna
 
 This document is a collection of facts and observation re. Lerna and Yarn Workspaces. The text pieces come from different articles and from my personal experience.
 
