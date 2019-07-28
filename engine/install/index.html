@@ -1588,21 +1588,29 @@
                 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Taken from <a href="http://wiljenumdesign.nl/getting-started/">this website</a>.</p>
 <h3 id="installing-mkdocs">Installing MkDocs<a class="headerlink" href="#installing-mkdocs" title="Permanent link">&para;</a></h3>
-<p>Before installing <a href="http://www.mkdocs.org/">MkDocs</a>, you need to make sure you have <code>Python</code> and <code>pip</code> – the Python package manager – up and running. You can verify if you&rsquo;re already good to go with the following commands:</p>
+<p>Before installing <a href="http://www.mkdocs.org/">MkDocs</a>, you need to make sure you have the latest versions of <code>Python</code> and <code>pip</code> – the Python package manager – up and running. If not, download them from <a href="https://www.python.org/downloads/">the official Python website</a>.</p>
+<p>You can verify if you&rsquo;re already good to go with the following commands:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
 4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>python --version
-<span class="c1"># Python 2.7.13</span>
+<span class="c1"># Python 3.7.3</span>
 pip --version
-<span class="c1"># pip 9.0.1</span>
+<span class="c1"># pip 19.2.1</span>
 </pre></div>
 </td></tr></table>
 
-<p>Installing and verifying MkDocs is as simple as:</p>
+<p>On Windows systems, you will probably be missing <code>pip</code>. It has to be installed separatly but first downloading <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py on pipa.io</a> to any local folder, run any shell script (<code>cmd</code>, <code>git-bash</code> or <code>PowerShell</code>), CD to that folder and run:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python get-pip.py
+</pre></div>
+</td></tr></table>
+
+<p>Now, install/upgrade <strong>mkdocs</strong> and related packages:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install mkdocs <span class="o">&amp;&amp;</span> mkdocs --version
-<span class="c1"># mkdocs, version 0.17.1</span>
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip install -U mkdocs mkdocs-material fontawesome-markdown pymdown-extensions
+$ mkdocs --version
+<span class="c1"># mkdocs, version 1.0.4</span>
 </pre></div>
 </td></tr></table>
 
