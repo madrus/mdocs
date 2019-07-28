@@ -105,7 +105,6 @@ nav:
   - Aurelia:
     - Some Technical Notes: aurelia/technicalities.md
   - Dev Stuff:
-    - Chocolatey: dev/choco.md
     - Dev Servers: dev/devServers.md
     - Monorepos with Lerna: dev/monorepos.md
     - NPX tool: dev/npx.md
@@ -121,6 +120,8 @@ nav:
     - Go Notes: go/notes.md
   - GraphQL:
     - 10 Principles: graphql/ten_principles.md
+  - Handy Stuff:
+    - Chocolatey: handy/choco.md
   - Mac:
     - Homebrew: mac/brew.md
     - NGINX: mac/nginx.md
@@ -138,9 +139,6 @@ nav:
     - MDX Tools: react/mdx.md
     - Performance Considerations: react/performance.md
     - Redux: react/redux.md
-  - Umbraco:
-    - FAQ: umbraco/faq.md
-    - Technicalities: umbraco/technicalities.md
   - Vue.js:
     - Vue.js Basics: vuejs/basics.md
   - Webpack:
