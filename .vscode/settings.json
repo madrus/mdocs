@@ -7,6 +7,10 @@
     "panel.border": "#0dc753",
     "sideBar.border": "#0dc753",
     "editorGroup.border": "#0dc753",
-    "tab.activeBorder": "#0dc753"
-  }
+    "tab.activeBorder": "#0dc753",
+    "statusBar.background": "#0a973f",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#0dc753"
+  },
+  "peacock.color": "#0a973f"
 }

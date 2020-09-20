@@ -1,6 +1,6 @@
 # Notes on Madrus's Docs
 
-In this documentation, I am collecting tips and tricks that at some point proved to be useful. I am doing it "along the way": every time I get stuck and later later find the solution. Therefore, it is never complete and finished. __It is always work in progress__.
+In this documentation, I am collecting tips and tricks that at some point proved to be useful for me. I am doing it "along the way": every time I get stuck and later later find the solution. Therefore, it is never complete and finished. __It is always work in progress__.
 
 The website can be seen at http://madrus4u.com/mdocs/.
 
@@ -17,8 +17,8 @@ The website can be seen at http://madrus4u.com/mdocs/.
 In order to view the documents offline, you need __Python__ and the following dependencies:
 
 ```bash
-pip install mkdocs pygments pymdown-extensions
-pip install fontawesome-markdown
+pip install -U mkdocs pygments pymdown-extensions
+pip install -U fontawesome-markdown
 ```
 
 ## Running the project in DEV
@@ -51,7 +51,7 @@ You will notice that the website will look like __FeinCMS__ [documentation][fein
 
 ## Material theme
 
-* `pip install mkdocs-material`
+* `pip install -U mkdocs-material`
 * add `theme: 'material'` to the `mkdocs.yml`
 * `mkdocs serve`
 

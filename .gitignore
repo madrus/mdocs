@@ -2,3 +2,4 @@
 terminal.glue
 *.sublime-*
 UsersAndre.credentials
+.vscode

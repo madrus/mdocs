@@ -6,7 +6,7 @@ If you want to participate in development of this project, you need to carry out
 
 Clone the repository to your local machine.
 
-Have the latest version of __Python 3.6__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
+Have the latest version of __Python 3.x__ installed, which can be downloaded from [here](https://www.python.org/downloads/).
 
 Add the following two paths to your Windows `Path` user environment variable:
 
@@ -139,11 +139,11 @@ Configure the `.travis.yml` file. You may start with something like this:
 ``` yaml
 sudo: false
 language: python
-python: '3.6'
+python: '3.7'
 install:
 - pip install -U pip
 - pip install -r requirements.txt
-- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
+#- pip install https://github.com/bmcorser/fontawesome-markdown/archive/master.zip
 script:
 - git config credential.helper "store --file=.git/credentials"
 - echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials

@@ -29,15 +29,15 @@ theme:
   search_index_only: true
   extra_css:
   - 'assets/stylesheets/extra.css'
-  - 'https://use.fontawesome.com/releases/v5.3.1/css/all.css'
-  - 'https://use.fontawesome.com/releases/v5.3.1/css/v4-shims.css'
+  - 'https://use.fontawesome.com/releases/v5.14.0/css/all.css'
+  - 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css'
   extra_javascript:
-  - 'https://use.fontawesome.com/releases/v5.3.1/js/all.js'
-  - 'https://use.fontawesome.com/releases/v5.3.1/js/v4-shims.js'
+  - 'https://use.fontawesome.com/releases/v5.14.0/js/all.js'
+  - 'https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js'
 
 # Options
 extra:
-  version: 0.3.0
+  version: 0.4.0
   logo: 'img/logo.png'
   palette:
     primary: 'blue grey'
@@ -108,6 +108,7 @@ nav:
     - Dev Servers: dev/devServers.md
     - Monorepos with Lerna: dev/monorepos.md
     - NPX tool: dev/npx.md
+    - Rollup: dev/rollup.md
     - TODOs: dev/todo.md
   - Git:
     - GitFlow: git/gitflow.md

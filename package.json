@@ -1,0 +1,14 @@
+{
+  "name": "mdocs",
+  "version": "0.4.0",
+  "description": "my personal blog",
+  "repository": "https://github.com/madrus/mdocs.git",
+  "author": "Andre Roussakoff <madrus@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "mkdocs build",
+    "reqs": "pip install -r requirements.txt --use-feature=2020-resolver",
+    "start": "mkdocs serve --dev-addr 127.0.0.1:3000",
+    "serve": "npx browser-sync ./site --watch"
+  }
+}
