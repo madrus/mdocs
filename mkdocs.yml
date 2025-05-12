@@ -1,61 +1,62 @@
 # Project information
 site_name: "Madrus's Docs"
-site_description: 'A short description of my project'
+site_description: "A short description of my project"
 site_author: Madrus
-site_url: 'http://madrus4u.com/mdocs/'
+site_url: "http://madrus4u.com/mdocs/"
 
 # Repository
 repo_name: madrus/mdocs
 repo_url: https://github.com/madrus/mdocs
-edit_uri: ''
+edit_uri: ""
 
 #Copyright
 copyright: 'Copyright &copy; 2018 <a href="https://madrus4u.com">Madrus4U</a>'
 
 # Documentation and theme
 theme:
-  name: 'material'
+  name: "material"
   language: en
   # feature:
   #   tabs: true
   palette:
-    primary: 'blue grey'
-    accent: 'lime'
-  custom_dir: theme
-  favicon: 'img/favicon.ico'
-  logo: 'img/logo.png'
+    primary: "blue grey"
+    accent: "lime"
+  # custom_dir: theme
+  favicon: "img/favicon.ico"
+  logo: "img/logo.png"
   # Don't include MkDocs' JavaScript
   include_search_page: false
   search_index_only: true
   extra_css:
-  - 'assets/stylesheets/extra.css'
-  - 'https://use.fontawesome.com/releases/v5.14.0/css/all.css'
-  - 'https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css'
+    - "assets/stylesheets/extra.css"
+    - "https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+    - "https://use.fontawesome.com/releases/v5.15.3/css/v4-shims.css"
   extra_javascript:
-  - 'https://use.fontawesome.com/releases/v5.14.0/js/all.js'
-  - 'https://use.fontawesome.com/releases/v5.14.0/js/v4-shims.js'
+    - "https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+    - "https://use.fontawesome.com/releases/v5.15.3/js/v4-shims.js"
+  use_directory_urls: true
 
 # Options
 extra:
-  version: 0.4.0
-  logo: 'img/logo.png'
+  version: 0.4.1
+  logo: "img/logo.png"
   palette:
-    primary: 'blue grey'
-    accent: 'deep orange'
+    primary: "blue grey"
+    accent: "deep orange"
   font:
-    text: 'Roboto'
-    code: 'Roboto Mono'
+    text: "Roboto"
+    code: "Roboto Mono"
   i18n:
-    prev: 'Previous'
-    next: 'Next'
+    prev: "Previous"
+    next: "Next"
   author:
-    github: 'madrus'
-    twitter: 'madrusnl'
+    github: "madrus"
+    twitter: "madrusnl"
 
 # Google Analytics
 google_analytics:
-  - 'UA-52692182-5'
-  - 'auto'
+  - "UA-52692182-5"
+  - "auto"
 
 # Extensions
 markdown_extensions:
@@ -79,8 +80,7 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.critic
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.emoji
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink
@@ -95,52 +95,53 @@ markdown_extensions:
 nav:
   - Home: index.md
   - MkDocs Engine:
-    - Getting started: engine/start.md
-    - Markdown Cheatsheet: engine/cheatsheet.md
-    - Custom Styling: engine/styling.md
-    - Color Styling: engine/colors.md
-    - PowerShell Deployments: engine/deployments.md
-    - Installation: engine/install.md
-    - Technicalities: engine/technicalities.md
+      - Getting started: engine/start.md
+      - Markdown Cheatsheet: engine/cheatsheet.md
+      - Custom Styling: engine/styling.md
+      - Color Styling: engine/colors.md
+      - PowerShell Deployments: engine/deployments.md
+      - Installation: engine/install.md
+      - Technicalities: engine/technicalities.md
   - Aurelia:
-    - Some Technical Notes: aurelia/technicalities.md
+      - Some Technical Notes: aurelia/technicalities.md
   - Dev Stuff:
-    - Dev Servers: dev/devServers.md
-    - Monorepos with Lerna: dev/monorepos.md
-    - NPX tool: dev/npx.md
-    - Rollup: dev/rollup.md
-    - TODOs: dev/todo.md
+      - Dev Servers: dev/devServers.md
+      - Monorepos with Lerna: dev/monorepos.md
+      - NPX tool: dev/npx.md
+      - Rollup: dev/rollup.md
+      - TODOs: dev/todo.md
   - Git:
-    - GitFlow: git/gitflow.md
-    - Git Prompt Styling: git/styling.md
-    - Set up SSH: git/ssh.md
-    - Git Command Line Tools: git/tools.md
-    - GitDiff: git/gitdiff.md
+      - GitFlow: git/gitflow.md
+      - Git Prompt Styling: git/styling.md
+      - Set up SSH: git/ssh.md
+      - Git Command Line Tools: git/tools.md
+      - GitDiff: git/gitdiff.md
   - Go:
-    - Installing Go: go/myinstall.md
-    - Go Notes: go/notes.md
+      - Installing Go: go/myinstall.md
+      - Go Notes: go/notes.md
   - GraphQL:
-    - 10 Principles: graphql/ten_principles.md
+      - 10 Principles: graphql/ten_principles.md
   - Handy Stuff:
-    - Chocolatey: handy/choco.md
+      - Chocolatey: handy/choco.md
   - Mac:
-    - Homebrew: mac/brew.md
-    - NGINX: mac/nginx.md
-    - SSH on Sierra: mac/ssh.md
-    - Tips & Tricks: mac/tips.md
+      - Homebrew: mac/brew.md
+      - NGINX: mac/nginx.md
+      - SSH on Sierra: mac/ssh.md
+      - Tips & Tricks: mac/tips.md
   - .NET Core:
-    - New Project: dotnet/new_project.md
-    - Notes: dotnet/notes.md
-    - Tips: dotnet/tips.md
+      - New Project: dotnet/new_project.md
+      - Notes: dotnet/notes.md
+      - Tips: dotnet/tips.md
   - PowerShell:
-    - Debugging PowerShell in VS Code: powershell/vscode.md
+      - Debugging PowerShell in VS Code: powershell/vscode.md
   - React:
-    - Linting: react/linting.md
-    - Material-UI for React: react/material-ui.md
-    - MDX Tools: react/mdx.md
-    - Performance Considerations: react/performance.md
-    - Redux: react/redux.md
+      - JSS2CSS: react/jss2css.md
+      - Linting: react/linting.md
+      - Material-UI for React: react/material-ui.md
+      - MDX Tools: react/mdx.md
+      - Performance Considerations: react/performance.md
+      - Redux: react/redux.md
   - Vue.js:
-    - Vue.js Basics: vuejs/basics.md
+      - Vue.js Basics: vuejs/basics.md
   - Webpack:
-    - Webpack Basics: webpack/basics.md
+      - Webpack Basics: webpack/basics.md

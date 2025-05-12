@@ -1,8 +1,15 @@
+<!--
+  This template extends the Material base.html and adds custom styles.
+  It also ensures the content block is rendered, so the main content appears.
+-->
 {% extends "base.html" %}
 
 {% block styles %}
-{{ super() }}
-<link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/extra.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-  crossorigin="anonymous">
+  {{ super() }}
+  <link rel="stylesheet" href="{{ base_url }}/assets/stylesheets/extra.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+  {{ super() }}
 {% endblock %}

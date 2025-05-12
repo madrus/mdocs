@@ -1,2 +1,2 @@
 #!/bin/sh
-mkdocs serve -a :8091
+mkdocs serve -a 127.0.0.1:8091
