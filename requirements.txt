@@ -7,7 +7,7 @@ fontawesome-markdown==0.2.6
 Jinja2==3.1.6
 jmespath==0.9.3
 livereload==2.5.2
-Markdown==3.0.1
+Markdown==3.8.1
 MarkupSafe==1.0
 mkdocs==1.2.3
 mkdocs-material==3.2.0
