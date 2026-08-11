@@ -11,7 +11,7 @@ Markdown==3.8.1
 MarkupSafe==1.0
 mkdocs==1.2.3
 mkdocs-material==3.2.0
-pyasn1==0.6.3
+pyasn1==0.6.4
 Pygments==2.20.0
 pymdown-extensions==11.0.1
 python-dateutil==2.7.3
